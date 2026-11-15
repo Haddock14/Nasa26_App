@@ -1,0 +1,2073 @@
+{
+"exactas": {
+"Explorador de rotaciones de cultivos": "Crop Rotation Explorer",
+"Herramienta de apoyo: no reemplaza su criterio ni la revisión de un asesor local.": "A support tool: it does not replace your judgment or a review by a local advisor.",
+"Mapa de campos de cultivo": "Map of crop fields",
+"Fondo del mapa": "Map background",
+"Satélite": "Satellite",
+"Topográfico": "Topographic",
+"Calles": "Streets",
+"Colorear los campos según": "Color fields by",
+"Cultivo sembrado en 2024": "Crop planted in 2024",
+"Años sin cultivo (2017-2024)": "Years without a crop (2017-2024)",
+"Riego por pivote (forma circular)": "Center-pivot irrigation (circular shape)",
+"Sin colorear": "No color",
+"Otras capas": "Other layers",
+"Clima de la región": "Regional climate",
+"Indicador de clima": "Climate indicator",
+"Agua que falta (mm/año)": "Water shortfall (mm/year)",
+"Lluvia anual (mm)": "Annual rainfall (mm)",
+"Días sobre 35 °C": "Days above 35 °C",
+"Aumento de días de calor por década": "Increase in hot days per decade",
+"Heladas tardías por año": "Late frosts per year",
+"Sequedad de primavera (0 a 1)": "Spring dryness (0 to 1)",
+"Riesgo del suelo cerca del campo": "Soil risk near the field",
+"Riesgo del suelo": "Soil risk",
+"Erosión por viento": "Wind erosion",
+"Erosión por lluvia": "Water erosion",
+"Poca agua almacenada": "Little stored water",
+"Cargando los campos de Finney County. La primera vez puede tardar un minuto.": "Loading Finney County fields. The first time may take a minute.",
+"Secciones": "Sections",
+"Mi campo": "My field",
+"Comparar rotaciones": "Compare rotations",
+"Predicción 2027-2029": "2027-2029 forecast",
+"Ayuda y glosario": "Help and glossary",
+"Cargando el modelo de predicción…": "Loading the forecast model…",
+"Cargando…": "Loading…",
+"Lo más importante para usted": "What matters most to you",
+"Marque todas las que quiera. Lo que marque pesa más al ordenar las opciones; si marca todo, todo pesa lo mismo.": "Check as many as you like. What you check weighs more when ranking the options; if you check everything, everything weighs the same.",
+"Agua de riego disponible": "Irrigation water available",
+"Agua de riego": "Irrigation water",
+"No riego": "No irrigation",
+"Milímetros de agua por año que puede aplicar. 25 mm equivalen a una pulgada.": "Millimeters of water per year you can apply. 25 mm equals one inch.",
+"Lo que siembra hoy": "What you plant today",
+"Un cultivo por año, en el orden en que se repiten.": "One crop per year, in the order they repeat.",
+"Cultivos que no puede hacer": "Crops you cannot grow",
+"Por falta de maquinaria o de comprador cerca. Esas opciones se marcarán como no posibles.": "Because of missing equipment or no buyer nearby. Those options will be marked as not possible.",
+"Escenario de clima": "Climate scenario",
+"Clima actual": "Current climate",
+"20 % menos lluvia": "20 % less rain",
+"2 °C más": "2 °C warmer",
+"Ambos": "Both",
+"Recalcula los 45 años de clima con ese cambio para ver qué opciones resisten mejor.": "Recalculates the 45 years of climate with that change to see which options hold up best.",
+"Opciones avanzadas": "Advanced options",
+"Preparación del suelo": "Soil preparation",
+"Siembra directa": "No-till",
+"Labranza mínima": "Minimum tillage",
+"Arado o disco": "Plow or disk",
+"Ganancia mínima necesaria (USD por acre)": "Minimum profit needed (USD per acre)",
+"opcional": "optional",
+"Rotaciones a comparar (una por línea, \"Nombre: cultivo-cultivo-…\"). Cultivos válidos:": "Rotations to compare (one per line, \"Name: crop-crop-…\"; use the Spanish crop names). Valid crops:",
+"Comparar rotaciones ": "Compare rotations ",
+"Agregar un año…": "Add a year…",
+"Agregar un año": "Add a year",
+"Quitar selección": "Clear selection",
+"No hay ningún campo seleccionado": "No field is selected",
+"Haga clic en un campo del mapa para ver lo que se sembró cada año y cómo son el clima, el suelo y el agua de la zona.": "Click a field on the map to see what was planted each year and what the climate, soil and water are like in the area.",
+"Para quitar la selección, haga clic otra vez sobre el campo, en un lugar vacío del mapa, o presione Esc.": "To clear the selection, click the field again, click an empty spot on the map, or press Esc.",
+"Punto seleccionado": "Selected point",
+"Punto seleccionado.": "Point selected.",
+"Punto seleccionado en el mapa.": "Point selected on the map.",
+"Se analiza el clima, el suelo y el agua alrededor de este punto.": "The climate, soil and water around this point are analyzed.",
+"Por su forma circular, probablemente se riega con pivote.": "Because of its circular shape, it is probably irrigated with a center pivot.",
+"Por su forma, probablemente es de secano.": "Because of its shape, it is probably dryland.",
+"Lo que se sembró cada año": "What was planted each year",
+"Rotación detectada:": "Detected rotation:",
+"Fuente: USDA, mapa de cultivos por satélite (Cropland Data Layer). Puede tener errores en campos pequeños.": "Source: USDA satellite crop map (Cropland Data Layer). It may contain errors in small fields.",
+"Buscando lo sembrado en este campo…": "Looking up what was planted in this field…",
+"Buscando lo sembrado en este campo en el mapa de cultivos del USDA…": "Looking up what was planted in this field on the USDA crop map…",
+"Analizando 45 años de clima, el suelo y el agua de la zona…": "Analyzing 45 years of climate, soil and water for the area…",
+"Situación de la zona": "Conditions in the area",
+"Ver explicación y valores": "See explanation and values",
+"Qué significa para su rotación:": "What it means for your rotation:",
+"Cómo leer los estados:": "How to read the ratings:",
+"Bien": "Good",
+"Atención": "Caution",
+"Problema": "Problem",
+"Sin dato": "No data",
+"sin dato": "no data",
+"= no limita los cultivos;": "= does not limit crops;",
+"= limita en algunos años o cultivos;": "= limits some years or crops;",
+"= limita la mayoría de los años y conviene tenerlo en cuenta al elegir la rotación.": "= limits most years and should be considered when choosing the rotation.",
+"Escala de referencia": "Reference scale",
+"En su zona:": "In your area:",
+"Cambios en el clima": "Changes in the climate",
+"Indicador": "Indicator",
+"Cambio": "Change",
+"¿Es seguro?": "Is it certain?",
+"Sí, confirmado": "Yes, confirmed",
+"No: puede ser variación natural": "No: it may be natural variation",
+"Peor": "Worse",
+"Mejor": "Better",
+"Igual": "Same",
+"Sin cambio": "No change",
+"Actual": "Current",
+"El año mes a mes": "The year month by month",
+"Promedios de cada mes, de octubre a septiembre (el año agrícola del trigo).": "Monthly averages, October to September (the wheat crop year).",
+"Mes": "Month",
+"Lluvia (mm)": "Rain (mm)",
+"Agua que necesita un cultivo (mm)": "Water a crop needs (mm)",
+"Agua que falta (mm)": "Water shortfall (mm)",
+"Años con helada": "Years with frost",
+"Situación": "Status",
+"Meses de riesgo para cada cultivo": "Risk months for each crop",
+"Solo se muestran los meses en que el cultivo está en el campo.": "Only the months when the crop is in the field are shown.",
+"Cultivo": "Crop",
+"Aten.": "Caution",
+"Probl.": "Problem",
+"Datos técnicos y fuentes (para asesores)": "Technical data and sources (for advisors)",
+"Datos satelitales": "Satellite data",
+"Consultar Landsat, SMAP, ECOSTRESS y GPM": "Query Landsat, SMAP, ECOSTRESS and GPM",
+"Fuentes": "Sources",
+"Información que falta": "Missing information",
+"Serie año por año": "Year-by-year series",
+"Suelo": "Soil",
+"Agua subterránea (pozos USGS)": "Groundwater (USGS wells)",
+"Rendimientos del condado (USDA NASS)": "County yields (USDA NASS)",
+"Secano": "Dryland",
+"Riego": "Irrigated",
+"cada año": "each year",
+"promedio de 5 años": "5-year average",
+"tendencia": "trend",
+"profundidad del agua respecto del promedio de cada pozo (pies; más = más hondo)": "depth to water relative to each well's average (feet; higher = deeper)",
+"Desempeño de los cultivos": "Crop performance",
+"Lo que realmente pasó con los cultivos según el USDA (rendimientos, superficie cosechada y estado de los campos), comparado con el clima medido por NASA.": "What actually happened to crops according to the USDA (yields, harvested area and field condition), compared with the climate measured by NASA.",
+"En su condado": "In your county",
+"Relación con el clima de su zona (NASA POWER):": "Relationship with your area's climate (NASA POWER):",
+"Una relación \"fuerte\" se repite casi todos los años; \"moderada\", en muchos años; \"débil\" no se muestra.": "A \"strong\" relationship repeats almost every year; \"moderate\", in many years; \"weak\" ones are not shown.",
+"Fuente: USDA NASS, datos del condado.": "Source: USDA NASS, county data.",
+"Fuente: USDA NASS, datos del distrito agrícola (el condado tiene pocos años).": "Source: USDA NASS, agricultural district data (the county has few years).",
+"Estado de los cultivos durante la temporada (Kansas)": "Crop condition during the season (Kansas)",
+"Cada semana, agricultores y técnicos califican los campos de Kansas como muy malos, malos, regulares, buenos o excelentes. El gráfico muestra qué parte está en estado bueno o excelente.": "Every week, farmers and extension staff rate Kansas fields as very poor, poor, fair, good or excellent. The chart shows the share in good or excellent condition.",
+"promedio": "average",
+"año malo (peor 10 %)": "bad year (worst 10 %)",
+"año bueno (mejor 10 %)": "good year (best 10 %)",
+"Humedad del suelo: satélite y terreno": "Soil moisture: satellite and ground",
+"Cada punto es una temporada (abril a septiembre). Por encima de 0, la temporada fue más húmeda que lo normal; por debajo, más seca. Línea verde: informes de terreno del USDA (campos con humedad adecuada en el subsuelo). Línea azul: humedad en la zona de raíces calculada por NASA POWER. Las dos se expresan en la misma escala para poder compararlas.": "Each point is a season (April to September). Above 0, the season was wetter than normal; below, drier. Green line: USDA ground reports (fields with adequate subsoil moisture). Blue line: root-zone moisture calculated by NASA POWER. Both are on the same scale so they can be compared.",
+"terreno (informes USDA)": "ground (USDA reports)",
+"satélite/modelo (NASA POWER)": "satellite/model (NASA POWER)",
+"más húmedo": "wetter",
+"más seco": "drier",
+"normal": "normal",
+"Fechas reales de siembra y cosecha (Kansas)": "Actual planting and harvest dates (Kansas)",
+"Fecha en que se alcanza la mitad de la superficie del estado en cada etapa.": "Date when half of the state's acreage reaches each stage.",
+"Etapa": "Stage",
+"Fecha típica hoy": "Typical date today",
+"Rango habitual": "Usual range",
+"Hace 35-40 años": "35-40 years ago",
+"\"Rango habitual\" va del año temprano al año tardío (8 de cada 10 años caen dentro). Sirve para revisar si las fechas de la rotación propuesta son realistas.": "\"Usual range\" goes from an early year to a late year (8 out of 10 years fall inside). Use it to check whether the proposed rotation's dates are realistic.",
+"siembra": "planting",
+"cosecha": "harvest",
+"espigazón": "heading",
+"floración": "blooming",
+"floración (estigmas)": "silking",
+"encañazón": "jointing",
+"Rendimiento (bu/acre)": "Yield (bu/acre)",
+"lo esperado según la tendencia": "expected from the trend",
+"75 % de lo esperado (año malo)": "75 % of expected (bad year)",
+"rendimiento (bu/acre)": "yield (bu/acre)",
+"rendimiento (lb/acre)": "yield (lb/acre)",
+"rendimiento (ton/acre)": "yield (ton/acre)",
+"Recomendación": "Recommendation",
+"Comparación con su rotación actual": "Comparison with your current rotation",
+"\"Mejor\" o \"Peor\" indica cómo queda cada opción respecto de lo que siembra hoy.": "\"Better\" or \"Worse\" shows how each option compares with what you plant today.",
+"Opción": "Option",
+"Agua": "Water",
+"Ganancia": "Profit",
+"Años malos": "Bad years",
+"Plagas": "Pests",
+"Ganancia típica (USD/acre/año)": "Typical profit (USD/acre/year)",
+"Rotación actual": "Current rotation",
+"No posible": "Not possible",
+"usa menos riego y sufre menos la sequía": "uses less irrigation and suffers less from drought",
+"menos erosión y más materia orgánica": "less erosion and more organic matter",
+"más dinero por acre (diferencia de 10 USD o más)": "more money per acre (a difference of 10 USD or more)",
+"menos años en que se pierde dinero": "fewer years in which money is lost",
+"alterna más cultivos y corta los ciclos de plagas y malezas": "alternates more crops and breaks pest and weed cycles",
+"Ganancia típica": "Typical profit",
+"ingreso por la cosecha menos semillas, fertilizante, químicos, cosecha y riego; no incluye arriendo ni maquinaria propia. Promedio de 45 años de clima.": "harvest income minus seed, fertilizer, chemicals, harvesting and irrigation; does not include rent or owned machinery. Average over 45 years of climate.",
+"Detalle de cada opción": "Details of each option",
+"Resumen:": "Summary:",
+"Cobertura del suelo durante un ciclo": "Soil cover during one cycle",
+"Estado del suelo mes a mes": "Soil status month by month",
+"Con cultivo": "With crop",
+"Con rastrojo (protegido)": "With residue (protected)",
+"Suelo desnudo (riesgo de erosión)": "Bare soil (erosion risk)",
+"Ventajas": "Advantages",
+"Riesgos a considerar": "Risks to consider",
+"Consultar con su asesor": "Check with your advisor",
+"Detalle técnico": "Technical detail",
+"Sin ventajas claras frente a la rotación actual.": "No clear advantages over the current rotation.",
+"Ninguno destacado con estos datos.": "None stand out with these data.",
+"Rendimiento": "Yield",
+"% del máximo": "% of maximum",
+"¿Qué tan confiable es este cálculo?": "How reliable is this calculation?",
+"Comparación del modelo con los rendimientos reales del condado (USDA NASS). Diferencias grandes indican supuestos que un asesor debería revisar.": "Comparison of the model with actual county yields (USDA NASS). Large differences point to assumptions an advisor should review.",
+"Manejo": "Management",
+"Modelo": "Model",
+"Real": "Actual",
+"Diferencia": "Difference",
+"Sin datos para esta zona.": "No data for this area.",
+"secano": "dryland",
+"riego": "irrigated",
+"secano tras barbecho": "dryland after fallow",
+"secano continuo": "continuous dryland",
+"Trigo de invierno": "Winter wheat",
+"Sorgo granífero": "Grain sorghum",
+"Maíz": "Corn",
+"Soja": "Soybeans",
+"Girasol": "Sunflower",
+"Triticale forrajero": "Forage triticale",
+"Cultivo de cobertura": "Cover crop",
+"Alfalfa": "Alfalfa",
+"Barbecho": "Fallow",
+"Pasturas": "Pasture",
+"Trigo": "Wheat",
+"Sorgo": "Sorghum",
+"trigo": "wheat",
+"sorgo": "sorghum",
+"maíz": "corn",
+"soja": "soybeans",
+"girasol": "sunflower",
+"alfalfa": "alfalfa",
+"barbecho": "fallow",
+"Barbecho / sin cultivo": "Fallow / idle",
+"Pastizal / pastura": "Grassland / pasture",
+"Otros henos": "Other hay",
+"Trigo + soja (doble cultivo)": "Wheat + soybeans (double crop)",
+"Trigo + sorgo (doble cultivo)": "Wheat + sorghum (double crop)",
+"Trigo + maíz (doble cultivo)": "Wheat + corn (double crop)",
+"Trigo de primavera": "Spring wheat",
+"Trigo duro": "Durum wheat",
+"Cebada": "Barley",
+"Centeno": "Rye",
+"Avena": "Oats",
+"Triticale": "Triticale",
+"Pastos para semilla": "Grass seed",
+"Canola": "Canola",
+"Frijol": "Dry beans",
+"Otros cultivos": "Other crops",
+"Urbano": "Urban",
+"Matorral": "Shrubland",
+"Bosque": "Forest",
+"Humedal": "Wetland",
+"Otro uso": "Other use",
+"Cobertura en vez de barbecho": "Cover crop instead of fallow",
+"Con leguminosa": "With a legume",
+"Maíz-soja": "Corn-soybeans",
+"Con girasol de raíz profunda": "With deep-rooted sunflower",
+"Forrajera para ganado": "Forage for livestock",
+"alfalfa, barbecho, cobertura, girasol, maíz, soja, sorgo, trigo, triticale": "alfalfa, barbecho, cobertura, girasol, maíz, soja, sorgo, trigo, triticale (Spanish crop keys)",
+"Cuidar el agua": "Save water",
+"Usar poco riego y cultivos que resisten la sequía": "Use little irrigation and drought-tolerant crops",
+"Cuidar el suelo": "Protect the soil",
+"Menos erosión y más materia orgánica": "Less erosion and more organic matter",
+"Ganar más": "Earn more",
+"Mayor ganancia por acre": "Higher profit per acre",
+"Menos años malos": "Fewer bad years",
+"Menos años con pérdida y daños por calor o helada": "Fewer years with losses and heat or frost damage",
+"Menos plagas y malezas": "Fewer pests and weeds",
+"Alternar cultivos distintos": "Alternate different crops",
+"Menos fertilizante": "Less fertilizer",
+"Incluir cultivos que dejan nitrógeno": "Include crops that leave nitrogen",
+"Forraje para animales": "Forage for animals",
+"Producir pasto o ensilaje": "Produce forage or silage",
+"uso eficiente del agua": "efficient water use",
+"tolerancia a calor y heladas": "heat and frost tolerance",
+"aporte de nitrógeno": "nitrogen supply",
+"control de erosión (agua y viento)": "erosion control (water and wind)",
+"aporte de materia orgánica": "organic matter supply",
+"ingreso / mercado": "income / market",
+"corte de ciclos de plagas y malezas": "breaking pest and weed cycles",
+"valor forrajero": "forage value",
+"Ninguno": "None",
+"Más años sin cultivo significan más tiempo con el suelo expuesto al viento.": "More years without a crop mean more time with the soil exposed to wind.",
+"Circular: probable riego por pivote": "Circular: probably center-pivot irrigated",
+"Otra forma: probable secano": "Other shape: probably dryland",
+"Se deduce de la forma del campo; puede no ser exacto.": "Inferred from the field's shape; it may not be accurate.",
+"Primero seleccione un campo.": "Select a field first.",
+"Cargando suelos…": "Loading soils…",
+"Riesgo bajo": "Low risk",
+"Riesgo alto": "High risk",
+"Celdas de unos 50 km. Aléjese en el mapa para ver toda la región.": "Cells of about 50 km. Zoom out on the map to see the whole region.",
+"Sin campo seleccionado: se usará el centro de Finney County.": "No field selected: the center of Finney County will be used.",
+"Calculando con 45 años de clima…": "Calculating with 45 years of climate…",
+"Puede marcar hasta tres.": "You can check up to three.",
+"Cómo usar esta herramienta": "How to use this tool",
+"Haga clic en un campo del mapa. Para quitar la selección, vuelva a hacer clic sobre él, haga clic en un lugar vacío del mapa o presione Esc.": "Click a field on the map. To clear the selection, click it again, click an empty spot on the map or press Esc.",
+"En": "In",
+"verá lo sembrado cada año y la situación de la zona. Abra cada tema para ver qué significa cada valor.": "you will see what was planted each year and the conditions in the area. Open each topic to see what each value means.",
+"indique lo que le importa y si riega, y compare las opciones con lo que siembra hoy.": "tell us what matters to you and whether you irrigate, and compare the options with what you plant today.",
+"Cambie el fondo del mapa con los botones Satélite, Topográfico o Calles.": "Change the map background with the Satellite, Topographic or Streets buttons.",
+"Glosario": "Glossary",
+"Origen de los datos": "Where the data come from",
+"Lista técnica de indicadores": "Technical list of indicators",
+"Evapotranspiración (ET)": "Evapotranspiration (ET)",
+"Balance de agua": "Water balance",
+"NDVI (índice de verdor)": "NDVI (greenness index)",
+"Riesgo de heladas": "Frost risk",
+"Anomalía de humedad": "Moisture anomaly",
+"Tendencia": "Trend",
+"Incertidumbre": "Uncertainty",
+"Cultivos que fijan nitrógeno": "Nitrogen-fixing crops",
+"Cultivos de cobertura": "Cover crops",
+"Cultivos de raíz profunda": "Deep-rooted crops",
+"Cultivos tolerantes a la sequía": "Drought-tolerant crops",
+"Satélite ": "Satellite ",
+"Modelo NASA POWER": "NASA POWER model",
+"Medición en terreno": "Ground measurement",
+"Estadística USDA": "USDA statistics",
+"Cálculo de esta herramienta": "Calculated by this tool",
+"Campos de cultivo": "Crop fields",
+"Desempeño de los cultivos ": "Crop performance ",
+"Esta herramienta ayuda a ver patrones y posibilidades. Las decisiones finales son del agricultor, con el apoyo de expertos locales (K-State Research and Extension, NRCS).": "This tool helps you see patterns and possibilities. Final decisions belong to the farmer, with support from local experts (K-State Research and Extension, NRCS).",
+"Escenario": "Scenario",
+"Cadena de Markov": "Markov chain",
+"Rendimiento relativo": "Relative yield",
+"Optimización": "Optimization",
+"Método que estima la probabilidad del próximo trimestre usando solo cómo fue el trimestre actual.": "A method that estimates the probability of the next quarter using only what the current quarter was like.",
+"Rendimiento comparado con el promedio histórico del cultivo en Finney: 100 % es un año promedio.": "Yield compared with the crop's historical average in Finney: 100 % is an average year.",
+"Elija una estrategia": "Choose a strategy",
+"Estrategia": "Strategy",
+"Productividad": "Productivity",
+"Equilibrada": "Balanced",
+"Resiliencia": "Resilience",
+"Personalizada": "Custom",
+"Productividad: el mayor rendimiento promedio. Resiliencia: que los años malos sean lo menos malos posible. Equilibrada: un punto medio.": "Productivity: the highest average yield. Resilience: making bad years as mild as possible. Balanced: a middle ground.",
+"Rendimiento esperado:": "Expected yield:",
+"del promedio histórico.": "of the historical average.",
+"Rendimiento esperado de la rotación": "Expected yield of the rotation",
+"En los años malos": "In bad years",
+"Probabilidad de quedar bajo el promedio": "Probability of falling below average",
+"Agua que necesita": "Water needed",
+"Comparación de estrategias": "Comparison of strategies",
+"Rotación": "Rotation",
+"Rendimiento esperado": "Expected yield",
+"Bajo el promedio": "Below average",
+"Distribución de escenarios": "Distribution of scenarios",
+"Escenarios más desfavorables": "Least favorable scenarios",
+"En el promedio o mejor": "At average or better",
+"El clima que usa el modelo": "The climate used by the model",
+"Año": "Year",
+"Probabilidad de cada tipo de trimestre": "Probability of each type of quarter",
+"Si un trimestre es": "If a quarter is",
+"seco": "dry",
+"húmedo": "wet",
+"Seco": "Dry",
+"Normal": "Normal",
+"Húmedo": "Wet",
+"Qué tan seguro es este pronóstico:": "How reliable this forecast is:",
+"Estado de cada trimestre": "Status of each quarter",
+"Una fila por trimestre (ene-mar, abr-jun, jul-sep, oct-dic)": "One row per quarter (Jan-Mar, Apr-Jun, Jul-Sep, Oct-Dec)",
+"Límites de lluvia usados para cada trimestre": "Rainfall thresholds used for each quarter",
+"Trimestre": "Quarter",
+"Seco si llueve menos de": "Dry if rainfall is below",
+"Húmedo si llueve más de": "Wet if rainfall is above",
+"Enero a marzo": "January to March",
+"Abril a junio": "April to June",
+"Julio a septiembre": "July to September",
+"Octubre a diciembre": "October to December",
+"Cada cultivo en los escenarios": "Each crop in the scenarios",
+"Promedio histórico": "Historical average",
+"Cómo se estiman los rendimientos y qué tan bien funciona": "How yields are estimated and how well it works",
+"Método": "Method",
+"Error frente a usar el promedio": "Error compared with using the average",
+"regresión Ridge": "Ridge regression",
+"años con clima parecido (7 vecinos)": "years with similar climate (7 neighbors)",
+"Ajustar el modelo": "Adjust the model",
+"¿Qué le preocupa más?": "What worries you more?",
+"Izquierda: ganar lo máximo en promedio. Derecha: evitar los años malos.": "Left: earn the most on average. Right: avoid bad years.",
+"Máximo de años con maíz": "Maximum years of corn",
+"No sembrar trigo": "Do not plant wheat",
+"No sembrar sorgo": "Do not plant sorghum",
+"No sembrar maíz": "Do not plant corn",
+"Recalcular rotación": "Recalculate rotation",
+"Recalculando…": "Recalculating…",
+"Promedio": "Average",
+"Años malos ": "Bad years ",
+"Sí": "Yes",
+"No": "No",
+"¿Cumple las restricciones?": "Meets the constraints?",
+"Ordenadas por la estrategia equilibrada. \"No cumple\" significa que repite un cultivo dos años seguidos, supera el agua o tiene demasiados años de maíz.": "Sorted by the balanced strategy. \"No\" means it repeats a crop two years in a row, exceeds the water budget or has too many years of corn.",
+"No hay una rotación que cumpla el presupuesto de agua y las restricciones. Aumente el agua o permita más cultivos.": "No rotation meets the water budget and the constraints. Increase the water or allow more crops.",
+"Los porcentajes comparan con el rendimiento promedio histórico (100 %). La diferencia en \"años malos\" se mide respecto de la estrategia de productividad.": "Percentages compare with the historical average yield (100 %). The difference in \"bad years\" is measured against the productivity strategy.",
+"\"Rango habitual\" incluye 8 de cada 10 escenarios. Un rango angosto significa un cultivo más estable.": "\"Usual range\" includes 8 out of 10 scenarios. A narrow range means a more stable crop.",
+"Cambie sus condiciones y el optimizador vuelve a buscar la mejor rotación (aparece como estrategia \"Personalizada\").": "Change your conditions and the optimizer searches again for the best rotation (it appears as the \"Custom\" strategy).",
+"Los rendimientos se relacionan con qué parte del ciclo de cada cultivo cayó en trimestres secos o húmedos. A cada escenario se le suma un error tomado de los años reales, para reflejar lo que el clima no explica (plagas, granizo, manejo).": "Yields are related to how much of each crop's cycle fell in dry or wet quarters. Each scenario adds an error drawn from real years, to reflect what climate does not explain (pests, hail, management).",
+"Pase el cursor sobre una celda para ver el motivo.": "Hover over a cell to see the reason.",
+"Enero": "January",
+"Febrero": "February",
+"Marzo": "March",
+"Abril": "April",
+"Mayo": "May",
+"Junio": "June",
+"Julio": "July",
+"Agosto": "August",
+"Septiembre": "September",
+"Octubre": "October",
+"Noviembre": "November",
+"Diciembre": "December",
+"ene": "Jan",
+"feb": "Feb",
+"mar": "Mar",
+"abr": "Apr",
+"may": "May",
+"jun": "Jun",
+"jul": "Jul",
+"ago": "Aug",
+"sep": "Sep",
+"oct": "Oct",
+"nov": "Nov",
+"dic": "Dec",
+"¿Alcanza la lluvia para los cultivos?": "Is rainfall enough for the crops?",
+"¿Hace demasiado calor para los cultivos?": "Is it too hot for the crops?",
+"¿Hay riesgo de heladas tardías?": "Is there a risk of late frost?",
+"¿Se vuela o se lava el suelo?": "Does the soil blow or wash away?",
+"¿Qué tan sano está el suelo?": "How healthy is the soil?",
+"¿Está bajando el agua de los pozos?": "Is the well water dropping?",
+"¿Cómo les va a los cultivos en esta zona?": "How do crops do in this area?",
+"Sin riego, el suelo tiene que guardar agua entre un cultivo y otro (barbecho o rastrojo). Convienen cultivos que resisten la sequía, como sorgo y trigo, más que maíz o soja.": "Without irrigation, the soil has to store water between crops (fallow or residue). Drought-tolerant crops such as sorghum and wheat fit better than corn or soybeans.",
+"Hay agua para sembrar más seguido, pero los años secos siguen siendo un riesgo.": "There is water to crop more often, but dry years are still a risk.",
+"El maíz pierde rendimiento si florece con ese calor (julio). El sorgo y el girasol lo resisten mejor; el trigo lo evita porque se cosecha en junio.": "Corn loses yield if it flowers in that heat (July). Sorghum and sunflower tolerate it better; wheat avoids it because it is harvested in June.",
+"No siembre maíz ni soja antes de esa fecha. Una helada en abril puede dañar el trigo cuando está espigando.": "Do not plant corn or soybeans before that date. An April frost can damage wheat when it is heading.",
+"Los meses de mayor riesgo son de marzo a mayo. Conviene dejar rastrojo en pie o un cultivo de cobertura en esa época.": "The riskiest months are March to May. It helps to leave standing residue or a cover crop at that time.",
+"Dejar más rastrojo y menos meses de suelo desnudo aumenta la materia orgánica; así el suelo absorbe y guarda mejor el agua.": "Leaving more residue and fewer months of bare soil increases organic matter, so the soil absorbs and holds water better.",
+"Si riega, cada año el agua estará más honda y costará más bombearla. Convienen rotaciones que rindan con poco riego.": "If you irrigate, every year the water will be deeper and cost more to pump. Rotations that yield with little irrigation fit better.",
+"El riego parece sostenible por ahora; revise sus derechos de agua.": "Irrigation seems sustainable for now; check your water rights.",
+"El nivel de los pozos cercanos está bastante estable.": "The level of nearby wells is fairly stable.",
+"Los cultivos con muchos años malos o mucha superficie sin cosechar son los más riesgosos aquí. Diversificar la rotación reparte ese riesgo entre cultivos que sufren en épocas distintas.": "Crops with many bad years or a lot of unharvested acreage are the riskiest here. Diversifying the rotation spreads that risk across crops that suffer at different times.",
+"Fuente: NASA POWER, 1981-2025 (modelo climático con datos de satélite)": "Source: NASA POWER, 1981-2025 (climate model with satellite data)",
+"Fuente: USDA SSURGO (mapa de suelos) y NASA POWER": "Source: USDA SSURGO (soil map) and NASA POWER",
+"Fuente: USDA SSURGO": "Source: USDA SSURGO",
+"Fuente: USDA SSURGO (valores por defecto: no hubo datos de esta zona)": "Source: USDA SSURGO (default values: no data for this area)",
+"Fuente: Mediciones del USGS en pozos y ríos": "Source: USGS well and stream measurements",
+"Parte del agua necesaria que cubre la lluvia": "Share of needed water covered by rain",
+"Lluvia promedio del año": "Average annual rainfall",
+"Agua que pide el ambiente": "Water demanded by the atmosphere",
+"Agua que falta": "Water shortfall",
+"Racha seca más larga (abril a septiembre)": "Longest dry spell (April to September)",
+"Años muy secos": "Very dry years",
+"Días de calor extremo": "Extreme heat days",
+"Días de calor en mayo y junio": "Hot days in May and June",
+"Cambio por década": "Change per decade",
+"Noches muy frías en abril y mayo": "Very cold nights in April and May",
+"Días seguidos sin heladas": "Frost-free days",
+"Fecha de la última helada": "Last frost date",
+"Fecha de la primera helada": "First frost date",
+"Resistencia del suelo al viento": "Soil resistance to wind",
+"Parte de la zona con suelos que se vuelan fácil": "Share of the area with easily blown soils",
+"Arena en la capa de arriba": "Sand in the top layer",
+"Pendiente del terreno": "Slope of the land",
+"Tormentas fuertes": "Heavy storms",
+"Materia orgánica": "Organic matter",
+"Agua que el suelo puede guardar": "Water the soil can hold",
+"Arcilla": "Clay",
+"Aptitud para cultivar sin riego": "Suitability for dryland cropping",
+"Cuánto baja el agua subterránea": "How fast groundwater is dropping",
+"Profundidad del agua": "Depth to water",
+"Pozos donde el agua baja": "Wells where water is dropping",
+"Días con el río seco": "Days with a dry river",
+"Superficie sembrada que no se cosechó": "Planted acreage not harvested",
+"Cambio del rendimiento por década": "Yield change per decade",
+"Rendimiento típico (últimos 10 años con dato)": "Typical yield (last 10 years with data)",
+"Toda el agua que cae en un año (lluvia y nieve), promedio de 1981 a 2025. 1 mm equivale a 1 litro por metro cuadrado.": "All the water that falls in a year (rain and snow), 1981-2025 average. 1 mm equals 1 liter per square meter.",
+"Cantidad de agua que un cultivo bien regado perdería en un año por el sol, el calor y el viento. Los técnicos la llaman evapotranspiración de referencia (ET0).": "The amount of water a well-watered crop would lose in a year to sun, heat and wind. Specialists call it reference evapotranspiration (ET0).",
+"Diferencia entre el agua que pide el ambiente y la lluvia. Es lo que tendría que aportar el suelo o el riego.": "The difference between the water the atmosphere demands and rainfall. It is what the soil or irrigation would have to supply.",
+"Promedio del mayor número de días seguidos sin lluvia útil (menos de 1 mm) durante la temporada.": "Average of the longest run of days without useful rain (less than 1 mm) during the season.",
+"Porcentaje de años en que llovió menos del 70% de lo normal.": "Percentage of years with less than 70% of normal rainfall.",
+"Compara la lluvia del año con el agua que pierde un cultivo sano por el sol, el calor y el viento. 100% significa que la lluvia alcanza justo.": "Compares the year's rainfall with the water a healthy crop loses to sun, heat and wind. 100% means rainfall is just enough.",
+"Días en que la temperatura máxima llega a 35 °C o más. Con ese calor muchas plantas cierran sus poros y dejan de crecer.": "Days when the maximum temperature reaches 35 °C or more. In that heat many plants close their pores and stop growing.",
+"Días con 32 °C o más cuando el trigo está llenando el grano. Más días significan granos más chicos.": "Days at 32 °C or more while wheat is filling its grain. More days mean smaller kernels.",
+"Noches con -2 °C o menos cuando los cultivos ya están creciendo o recién sembrados.": "Nights at -2 °C or colder when crops are already growing or just planted.",
+"Tiempo entre la última helada de primavera y la primera de otoño. Define qué cultivos de verano alcanzan a madurar.": "Time between the last spring frost and the first fall frost. It defines which summer crops can mature.",
+"Fecha promedio de la última noche bajo 0 °C en primavera.": "Average date of the last night below 0 °C in spring.",
+"Fecha promedio de la primera noche bajo 0 °C en otoño.": "Average date of the first night below 0 °C in fall.",
+"Clasificación oficial de los suelos de EE. UU. (grupo de erosión eólica): 1 significa que el viento se lo lleva muy fácil; 8, que casi no se vuela.": "Official US soil classification (wind erodibility group): 1 means wind carries it off very easily; 8 means it hardly blows.",
+"Porcentaje del área con suelos de los grupos 1 a 3.": "Percentage of the area with soils in groups 1 to 3.",
+"Los suelos con mucha arena se vuelan más y guardan menos agua.": "Sandy soils blow more and hold less water.",
+"Cuánto se inclina el terreno: 1% es un metro de bajada cada 100 metros. Con más pendiente, la lluvia arrastra más suelo.": "How steep the land is: 1% is one meter of drop every 100 meters. With more slope, rain carries away more soil.",
+"Días con 25 mm de lluvia o más. Si el suelo está desnudo, esa agua corre y se lleva tierra.": "Days with 25 mm of rain or more. If the soil is bare, that water runs off and carries soil.",
+"Restos de plantas y raíces ya descompuestos en los primeros 30 cm. Mejora la estructura, la entrada de agua y los nutrientes.": "Decomposed plant and root remains in the top 30 cm. It improves structure, water intake and nutrients.",
+"Agua que el primer metro de suelo retiene y que las raíces pueden usar. Sirve de reserva entre lluvias.": "Water held in the first meter of soil that roots can use. It is a reserve between rains.",
+"Partículas muy finas que retienen agua y nutrientes. Mucha arcilla puede hacer el suelo pesado y lento para drenar.": "Very fine particles that hold water and nutrients. A lot of clay can make soil heavy and slow to drain.",
+"Clasificación oficial de aptitud del suelo: 1 y 2 casi sin limitaciones; 3 y 4 con limitaciones (clima, erosión); 5 o más, no apto para cultivo continuo.": "Official land capability class: 1 and 2 have almost no limitations; 3 and 4 have limitations (climate, erosion); 5 or more, not suitable for continuous cropping.",
+"Distancia desde la superficie hasta el agua en la última medición. Más profundidad significa bombeo más caro.": "Distance from the surface to the water at the latest measurement. More depth means more expensive pumping.",
+"Porcentaje de pozos cercanos donde el nivel baja más de 6 cm por año.": "Percentage of nearby wells where the level drops more than 6 cm per year.",
+"Porcentaje de días sin agua en la estación de aforo más cercana. Indica si el agua de río puede ser una alternativa.": "Percentage of days without water at the nearest stream gauge. It shows whether river water could be an alternative.",
+"Parte de lo sembrado que se abandonó o se usó para pastoreo porque no valía la pena cosecharlo (sequía, granizo, heladas).": "Share of planted acreage abandoned or grazed because it was not worth harvesting (drought, hail, frost).",
+"Cuánto subió o bajó el rendimiento cada 10 años. Las mejoras suelen venir de variedades y manejo; las bajas, de más sequía o calor.": "How much yield rose or fell every 10 years. Gains usually come from varieties and management; declines, from more drought or heat.",
+"El cambio está confirmado estadísticamente.": "The change is statistically confirmed.",
+"No está confirmado: puede ser variación entre años.": "It is not confirmed: it may be year-to-year variation.",
+"El cambio está confirmado por la estadística (no es casualidad).": "The change is statistically confirmed (not chance).",
+"Todavía no está confirmado: puede ser variación natural entre años.": "It is not confirmed yet: it may be natural year-to-year variation.",
+"la lluvia cubre menos de la mitad: el secano es difícil": "rain covers less than half: dryland cropping is hard",
+"alcanza en parte: depende de guardar agua en el suelo": "partly enough: depends on storing water in the soil",
+"la lluvia cubre casi todo lo necesario": "rain covers almost everything needed",
+"muy seco para cultivo continuo en secano": "too dry for continuous dryland cropping",
+"semiárido: secano posible con manejo del agua": "semi-arid: dryland possible with water management",
+"suficiente para intensificar la rotación": "enough to intensify the rotation",
+"demanda moderada": "moderate demand",
+"demanda alta": "high demand",
+"demanda muy alta": "very high demand",
+"déficit bajo": "low deficit",
+"déficit importante": "significant deficit",
+"déficit severo: la lluvia cubre menos de la mitad de la demanda": "severe deficit: rain covers less than half of demand",
+"rachas cortas": "short spells",
+"rachas largas ocasionales": "occasional long spells",
+"rachas muy largas": "very long spells",
+"pocos años muy secos": "few very dry years",
+"uno de cada cuatro a diez años es muy seco": "one in four to ten years is very dry",
+"los años muy secos son frecuentes": "very dry years are frequent",
+"pocos días extremos": "few extreme days",
+"frecuentes: evitar floración en julio": "frequent: avoid flowering in July",
+"calor extremo habitual": "extreme heat is common",
+"llenado de grano sin estrés": "grain fill without stress",
+"estrés moderado en llenado": "moderate stress during grain fill",
+"llenado de grano comprometido": "grain fill compromised",
+"sin aumento claro": "no clear increase",
+"aumento moderado": "moderate increase",
+"aumento rápido": "rapid increase",
+"riesgo bajo": "low risk",
+"riesgo ocasional": "occasional risk",
+"riesgo frecuente": "frequent risk",
+"temporada corta": "short season",
+"temporada media": "medium season",
+"temporada larga": "long season",
+"muy susceptible al viento": "very susceptible to wind",
+"susceptible": "susceptible",
+"poco susceptible": "not very susceptible",
+"poca superficie sensible": "little sensitive area",
+"una parte importante es sensible": "a large part is sensitive",
+"la mayoría es sensible": "most of it is sensitive",
+"textura media/fina": "medium/fine texture",
+"franco-arenosa": "sandy loam",
+"arenosa": "sandy",
+"plano": "flat",
+"ondulado": "rolling",
+"pendiente fuerte": "steep slope",
+"pocas tormentas intensas": "few intense storms",
+"tormentas intensas habituales": "intense storms are common",
+"muy frecuentes": "very frequent",
+"baja": "low",
+"media": "medium",
+"alta": "high",
+"media para clima semiárido": "medium for a semi-arid climate",
+"baja: suelo arenoso o somero": "low: sandy or shallow soil",
+"alta: buen almacenamiento": "high: good storage",
+"poca arcilla: suelo liviano": "little clay: light soil",
+"proporción equilibrada": "balanced proportion",
+"mucha arcilla: suelo pesado": "a lot of clay: heavy soil",
+"pocas limitaciones": "few limitations",
+"limitaciones moderadas": "moderate limitations",
+"limitaciones severas": "severe limitations",
+"estable": "stable",
+"descenso moderado": "moderate decline",
+"descenso rápido: el riego es insostenible a largo plazo": "rapid decline: irrigation is unsustainable in the long term",
+"agua cerca de la superficie": "water near the surface",
+"profundidad media": "medium depth",
+"agua profunda": "deep water",
+"la mayoría estables": "most are stable",
+"muchos bajan": "many are dropping",
+"casi todos bajan": "almost all are dropping",
+"casi siempre tiene agua": "almost always has water",
+"se seca con frecuencia": "often runs dry",
+"pasa seco la mayor parte del tiempo": "is dry most of the time",
+"pocos años malos": "few bad years",
+"uno o dos años malos de cada diez": "one or two bad years out of ten",
+"años malos frecuentes": "frequent bad years",
+"casi todo se cosecha": "almost everything is harvested",
+"se pierde una parte en años malos": "part is lost in bad years",
+"pérdidas grandes y frecuentes": "large and frequent losses",
+"el rendimiento baja": "yield is falling",
+"sin cambio claro": "no clear change",
+"el rendimiento sube": "yield is rising",
+"estable ": "stable ",
+"favorable": "favorable",
+"intermedio": "intermediate",
+"desfavorable": "unfavorable",
+"crece poco": "little growth",
+"Lluvia del año": "Annual rainfall",
+"Días de calor extremo (≥ 35 °C)": "Extreme heat days (≥ 35 °C)",
+"Agua que falta para los cultivos": "Water shortfall for crops",
+"Humedad del suelo en verano": "Summer soil moisture",
+"casi igual": "about the same",
+"cambio confirmado": "confirmed change",
+"puede ser variación natural": "may be natural variation",
+"falta agua": "water shortage",
+"heladas probables": "frost likely",
+"viento fuerte: no deje el suelo desnudo": "strong wind: do not leave the soil bare",
+"sin problemas destacados": "no notable problems",
+"sin problema": "no problem",
+"Herramienta de apoyo: los puntajes ordenan opciones con los datos y supuestos mostrados. No reemplazan el juicio del agricultor ni la revisión de un asesor local (extensión K-State, NRCS).": "A support tool: the scores rank options with the data and assumptions shown. They do not replace the farmer's judgment or a review by a local advisor (K-State Extension, NRCS).",
+"Fechas de siembra/cosecha y variedades con el agente de extensión.": "Planting/harvest dates and varieties with the extension agent.",
+"Precios locales (elevador, feedlot) y costos reales del productor.": "Local prices (elevator, feedlot) and the grower's real costs.",
+"Disponibilidad de equipo y mano de obra para los cultivos nuevos.": "Equipment and labor availability for the new crops.",
+"Especies y fecha de terminación de la cobertura (NRCS puede cofinanciar con EQIP).": "Cover crop species and termination date (NRCS can cost-share through EQIP).",
+"El maíz en secano tiene pérdidas grandes en años secos (rendimiento muy variable).": "Dryland corn has large losses in dry years (very variable yield).",
+"La cobertura consume agua: en años secos puede bajar el rendimiento del cultivo siguiente. Terminarla temprano.": "The cover crop uses water: in dry years it can lower the next crop's yield. Terminate it early.",
+"Deja nitrógeno en el suelo (soja, alfalfa o vicia): se compra menos fertilizante para el cultivo que sigue.": "Leaves nitrogen in the soil (soybeans, alfalfa or vetch): less fertilizer is bought for the next crop.",
+"Mantiene el suelo cubierto en primavera, cuando más sopla el viento.": "Keeps the soil covered in spring, when the wind blows hardest.",
+"Tiene cultivos de raíz profunda que usan agua de abajo y abren caminos para que entre la lluvia.": "Has deep-rooted crops that use water from below and open paths for rain to soak in.",
+"Usa cultivos que aguantan bien la sequía y el calor.": "Uses crops that handle drought and heat well.",
+"Cambia de cultivo de un año a otro: corta plagas, malezas y enfermedades.": "Changes crops from one year to the next: breaks pests, weeds and diseases.",
+"Produce forraje: ingreso extra si tiene animales o un feedlot cerca.": "Produces forage: extra income if you have livestock or a feedlot nearby.",
+"No necesita agua del pozo.": "Does not need well water.",
+"Resultados muy parecidos a lo que hace hoy.": "Results very similar to what you do today.",
+"Ninguna rotación cumple las restricciones indicadas.": "No rotation meets the stated constraints.",
+"Evapotranspiración (ET): agua que sale del campo por evaporación del suelo más transpiración de las plantas. La ET de referencia (ET0) es lo que consumiría un pasto bien regado con el clima del día; un cultivo consume ET0 x Kc (coeficiente de cultivo). Si la lluvia más el agua del suelo no cubren ese consumo, el cultivo sufre y rinde menos.": "Evapotranspiration (ET): water that leaves the field through soil evaporation plus plant transpiration. Reference ET (ET0) is what well-watered grass would use under the day's weather; a crop uses ET0 x Kc (crop coefficient). If rain plus soil water do not cover that use, the crop suffers and yields less.",
+"Balance hídrico: lluvia menos ET0. Un déficit grande y persistente indica que en secano conviene barbecho o cultivos tolerantes (sorgo, trigo) y que el riego depende del acuífero.": "Water balance: rainfall minus ET0. A large, persistent deficit means dryland fields benefit from fallow or tolerant crops (sorghum, wheat) and that irrigation depends on the aquifer.",
+"NDVI: índice de verdor calculado con luz roja e infrarroja (Landsat). Suelo desnudo ~0.1-0.2, cultivo en pleno crecimiento 0.6-0.9. Sirve para ver cuándo el campo está desnudo y cuándo el cultivo se estresa.": "NDVI: greenness index calculated from red and infrared light (Landsat). Bare soil ~0.1-0.2, crop in full growth 0.6-0.9. It shows when the field is bare and when the crop is stressed.",
+"Riesgo de heladas: frecuencia de noches bajo 0 °C (o -2 °C) en meses sensibles. Una helada tardía en abril daña el trigo en espigazón; una en mayo puede obligar a resembrar maíz o soja.": "Frost risk: frequency of nights below 0 °C (or -2 °C) in sensitive months. A late April frost damages heading wheat; one in May may force replanting corn or soybeans.",
+"Anomalía de humedad del suelo: cuánto se aleja la humedad de un mes de su promedio histórico, en desviaciones estándar. -1 o menos es un mes claramente más seco de lo normal.": "Soil moisture anomaly: how far a month's moisture is from its historical average, in standard deviations. -1 or less is a clearly drier-than-normal month.",
+"Tendencia: pendiente de Sen (cambio típico por década, robusta a años raros) con prueba de Mann-Kendall. 'Significativa' (p<0.05) quiere decir que es poco probable que el cambio sea azar.": "Trend: Sen's slope (typical change per decade, robust to unusual years) with a Mann-Kendall test. 'Significant' (p<0.05) means the change is unlikely to be chance.",
+"Incertidumbre: cada rotación se simula 300 veces con años de clima distintos del registro 1981-2025, precios y parámetros agronómicos variados y pesos de prioridad perturbados. El rango p10-p90 muestra dónde cae el puntaje 8 de cada 10 veces; 'probabilidad de ser la mejor' es la fracción de simulaciones en que esa rotación quedó primera. Rangos que se solapan = diferencia no concluyente.": "Uncertainty: each rotation is simulated 300 times with different climate years from the 1981-2025 record, varied prices and agronomic parameters, and perturbed priority weights. The p10-p90 range shows where the score falls 8 times out of 10; 'probability of being best' is the share of simulations in which that rotation came first. Overlapping ranges = inconclusive difference.",
+"Leguminosas (soja, alfalfa, vicia) fijan nitrógeno del aire con bacterias en sus raíces; parte queda para el cultivo siguiente y reduce fertilizante.": "Legumes (soybeans, alfalfa, vetch) fix nitrogen from the air with bacteria in their roots; part of it remains for the next crop and reduces fertilizer.",
+"Cultivos de cobertura: protegen el suelo cuando no hay cultivo comercial, frenan la erosión por viento y agua y aportan materia orgánica. En clima seco consumen agua que el cultivo siguiente no tendrá.": "Cover crops: protect the soil when there is no cash crop, curb wind and water erosion and add organic matter. In a dry climate they use water the next crop will not have.",
+"Cultivos de raíz profunda (girasol, alfalfa, sorgo) extraen agua y nutrientes de capas hondas y dejan canales que mejoran la infiltración.": "Deep-rooted crops (sunflower, alfalfa, sorghum) draw water and nutrients from deep layers and leave channels that improve infiltration.",
+"Cultivos tolerantes a sequía y calor (sorgo, trigo, girasol) pierden menos rendimiento por unidad de déficit hídrico (Ky menor) que el maíz.": "Drought- and heat-tolerant crops (sorghum, wheat, sunflower) lose less yield per unit of water deficit (lower Ky) than corn.",
+"Observación satelital: mide desde el espacio una propiedad de la superficie (reflectancia, temperatura, microondas). Cubre todo el campo de forma pareja, pero depende de nubes, de la resolución del píxel y de modelos para convertir la señal en la variable agronómica.": "Satellite observation: measures a surface property from space (reflectance, temperature, microwaves). It covers the whole field evenly, but depends on clouds, pixel resolution and models to turn the signal into the agronomic variable.",
+"Modelo/reanálisis (NASA POWER-MERRA-2): combina satélites, estaciones y un modelo físico en una grilla de ~50 km. Es continuo y largo (1981-hoy) pero suaviza diferencias locales: una tormenta puede no aparecer.": "Model/reanalysis (NASA POWER-MERRA-2): combines satellites, stations and a physical model on a ~50 km grid. It is continuous and long (1981-today) but smooths local differences: a storm may not show up.",
+"Medición en terreno: pozos, estaciones de caudal o encuestas de suelo. Es precisa en el punto medido pero no siempre representa el campo vecino.": "Ground measurement: wells, stream gauges or soil surveys. It is precise at the measured point but does not always represent the neighboring field.",
+"Estadística agrícola (USDA NASS): promedio de rendimientos declarados en el condado; no es su campo.": "Agricultural statistics (USDA NASS): average of yields reported in the county; it is not your field.",
+"Cálculo de esta herramienta a partir de los datos anteriores (fórmulas FAO y supuestos editables).": "Calculated by this tool from the data above (FAO formulas and editable assumptions).",
+"Los satélites (Landsat, SMAP, ECOSTRESS, GPM, GRACE) ven grandes áreas de forma repetida y uniforme, pero miden señales indirectas y con limitaciones: SMAP mide solo los primeros ~5 cm de suelo en píxeles de 9 km; GRACE detecta cambios de agua en celdas de ~300 km; Landsat no ve a través de nubes y pasa cada 8-16 días. Las mediciones de terreno (pozos USGS, aforos, perfiles de suelo SSURGO) son exactas donde se toman, pero son puntuales. Combinarlas mejora la precisión: el satélite aporta el patrón espacial y temporal y el terreno lo calibra. Por eso esta herramienta usa los pozos USGS para el acuífero Ogallala (GRACE es demasiado grueso para un campo) y POWER/IMERG para clima, y avisa cuando una fuente falta.": "Satellites (Landsat, SMAP, ECOSTRESS, GPM, GRACE) see large areas repeatedly and uniformly, but they measure indirect signals with limitations: SMAP only measures the top ~5 cm of soil in 9 km pixels; GRACE detects water changes in ~300 km cells; Landsat cannot see through clouds and passes every 8-16 days. Ground measurements (USGS wells, stream gauges, SSURGO soil profiles) are exact where they are taken but are single points. Combining them improves accuracy: the satellite provides the spatial and temporal pattern and the ground calibrates it. That is why this tool uses USGS wells for the Ogallala aquifer (GRACE is too coarse for a field) and POWER/IMERG for climate, and warns when a source is missing.",
+"USDA NASS QuickStats, Kansas 1981-2026: rendimientos y superficie sembrada y cosechada por condado; estado semanal de los cultivos, humedad del suelo y avance de siembra y cosecha informados por agricultores y técnicos; precios recibidos. Son datos medidos en terreno y encuestas, no estimaciones de esta herramienta.": "USDA NASS QuickStats, Kansas 1981-2026: yields and planted and harvested acreage by county; weekly crop condition, soil moisture and planting/harvest progress reported by farmers and extension staff; prices received. These are ground measurements and surveys, not estimates made by this tool.",
+"USDA NASS \"Crop Sequence Boundaries\": límites de cada campo y el cultivo de cada año entre 2017 y 2024, obtenido de imágenes satelitales. Si el servicio no responde se usan los campos de OpenStreetMap, sin historial. La forma circular sugiere riego por pivote, pero no lo confirma.": "USDA NASS \"Crop Sequence Boundaries\": each field's boundary and its crop for each year 2017-2024, derived from satellite imagery. If the service does not respond, OpenStreetMap fields are used, without history. A circular shape suggests center-pivot irrigation but does not confirm it.",
+"Un futuro posible del clima, armado trimestre a trimestre según cómo se encadenaron los trimestres secos, normales y húmedos entre 1981 y 2025.": "A possible future climate, built quarter by quarter from how dry, normal and wet quarters followed one another between 1981 and 2025.",
+"Rendimiento promedio en el 20 % de los escenarios más desfavorables. Mide qué tan mal le iría a una rotación cuando el clima no acompaña.": "Average yield in the 20 % least favorable scenarios. It measures how badly a rotation would do when the weather does not cooperate.",
+"Búsqueda matemática de la mejor combinación de cultivos para 2027, 2028 y 2029 que respete el agua disponible, no repita el mismo cultivo dos años seguidos y limite los años de maíz.": "Mathematical search for the best combination of crops for 2027, 2028 and 2029 that respects available water, does not repeat a crop two years in a row and limits the years of corn.",
+"Términos de la predicción 2027-2029": "Forecast terms 2027-2029",
+"Años malos (CVaR 20 %)": "Bad years (CVaR 20 %)",
+"Busca el mayor rendimiento promedio, sin mirar especialmente los años malos.": "Seeks the highest average yield, without paying special attention to bad years.",
+"Da el mismo peso al rendimiento promedio y a protegerse de los años malos.": "Gives equal weight to average yield and to protection against bad years.",
+"Prioriza que los años malos sean lo menos malos posible, aunque el promedio baje un poco.": "Prioritizes making bad years as mild as possible, even if the average drops a little.",
+"Incluye maíz, que en los registros de Finney es el cultivo más estable entre años (se suele regar), pero el que más agua pide.": "Includes corn, which in Finney's records is the most stable crop from year to year (it is usually irrigated), but the one that needs the most water.",
+"El sorgo pide menos agua y aguanta la sequía; por eso ayuda a cumplir el presupuesto de agua.": "Sorghum needs less water and tolerates drought; that is why it helps stay within the water budget.",
+"El trigo crece en otoño-invierno-primavera y reparte el riesgo con los cultivos de verano.": "Wheat grows in fall-winter-spring and spreads the risk with summer crops.",
+"La lluvia de un trimestre anticipa muy poco la del siguiente.": "One quarter's rainfall says very little about the next.",
+"Son valores ilustrativos del modelo y deben reemplazarse por datos agronómicos verificados.": "These are illustrative model values and should be replaced with verified agronomic data.",
+"Los costos son supuestos editables; los precios son el promedio recibido en Kansas en las últimas 3 campañas (USDA NASS), no el precio del día.": "Costs are editable assumptions; prices are the average received in Kansas over the last 3 marketing years (USDA NASS), not today's price.",
+"No hay datos de manejo del lote (historial, fertilización, malezas, equipo).": "There is no field management data (history, fertilization, weeds, equipment).",
+"POWER tiene resolución ~50 km: no distingue lomas de bajos dentro del campo.": "POWER has ~50 km resolution: it cannot tell ridges from low spots within the field.",
+"El escenario de clima escala lluvia y temperatura pero no cambia la frecuencia de tormentas ni el viento.": "The climate scenario scales rainfall and temperature but does not change storm frequency or wind.",
+"no disponible": "not available",
+"local": "local",
+"cache": "cache",
+"en vivo": "live",
+"pendiente": "pending",
+"Mediciones del USGS en pozos y ríos": "USGS well and stream measurements",
+"años malos": "bad years",
+"superficie sembrada que no se cosechó": "planted acreage not harvested",
+"con cultivo": "with crop",
+"con rastrojo": "with residue",
+"suelo desnudo": "bare soil",
+"día del año": "day of year",
+"días": "days",
+"días/año": "days/year",
+"eventos/año": "events/year",
+"fracción 0-1": "fraction 0-1",
+"fracción": "fraction",
+"m/año": "m/year",
+"mm/año": "mm/year",
+"mm/día": "mm/day",
+"El campo seleccionado parece tener riego por pivote; se marcó riego moderado. Cámbielo si no corresponde.": "The selected field appears to have center-pivot irrigation; moderate irrigation was selected. Change it if that is not right.",
+"Sin serie GRACE local (data/grace/grace_tws.csv). Se usan los pozos USGS como medición directa del acuífero.": "No local GRACE series (data/grace/grace_tws.csv). USGS wells are used as a direct measurement of the aquifer.",
+"Sin archivo OpenET local (opcional; requiere clave de openetdata.org)": "No local OpenET file (optional; requires an openetdata.org key)",
+"USDA SSURGO, condado completo de Finney (sin consulta espacial)": "USDA SSURGO, all of Finney County (no spatial query)",
+"USGS NWIS niveles de pozos (archivo local Finney)": "USGS NWIS well levels (local Finney file)",
+"USGS niveles de pozos (desde 2000)": "USGS well levels (since 2000)",
+"Sin datos POWER locales para esta zona y modo en vivo desactivado": "No local POWER data for this area and live mode is off",
+"RuntimeError: Sin datos POWER locales para esta zona y modo en vivo desactivado": "RuntimeError: no local POWER data for this area and live mode is off",
+"Por eso el modelo no da un solo pronóstico: simula 300 futuros posibles y elige rotaciones que funcionen bien en la mayoría de ellos.": "That is why the model does not give a single forecast: it simulates 300 possible futures and picks rotations that work well in most of them.",
+"ahorra fertilizante nitrogenado": "saves nitrogen fertilizer",
+"tiene más años con pérdida": "has more years with losses",
+"tiene menos años con pérdida": "has fewer years with losses",
+"deja más rastrojo para la materia orgánica": "leaves more residue for organic matter",
+"deja menos rastrojo para la materia orgánica": "leaves less residue for organic matter",
+"Cuánto subió o bajó el rendimiento cada 10 años.": "How much yield rose or fell every 10 years.",
+"Las mejoras suelen venir de variedades y manejo; las bajas, de más sequía o calor.": "Gains usually come from varieties and management; declines, from more drought or heat.",
+"La segunda opción también es razonable.": "The second option is also reasonable.",
+"Con poca seguridad: varias opciones quedan muy parejas.": "With low confidence: several options are very close.",
+"Decida según lo que más le importa y consulte a su asesor.": "Decide based on what matters most to you and consult your advisor.",
+"Sin serie GRACE local (data/grace/grace_tws.csv).": "No local GRACE series (data/grace/grace_tws.csv).",
+"Se usan los pozos USGS como medición directa del acuífero.": "USGS wells are used as a direct measurement of the aquifer.",
+"Al tocar un campo se busca su historial en el mapa de cultivos del USDA.": "When you tap a field, its history is looked up on the USDA crop map.",
+"No se pudo consultar SDA (modo en vivo desactivado); se usa el promedio del condado ponderado por área.": "SDA could not be queried (live mode is off); the area-weighted county average is used.",
+"Sin serie GRACE local (data/grace/grace_tws.csv)": "No local GRACE series (data/grace/grace_tws.csv)",
+"Lluvia anual": "Annual rainfall",
+"Evapotranspiración de referencia (ET0)": "Reference evapotranspiration (ET0)",
+"Déficit hídrico (ET0 - lluvia)": "Water deficit (ET0 - rainfall)",
+"Evapotranspiración real modelada": "Modeled actual evapotranspiration",
+"Días con máxima ≥ 35 °C": "Days with a maximum ≥ 35 °C",
+"Días ≥ 32 °C en mayo-junio": "Days ≥ 32 °C in May-June",
+"Heladas tardías (≤ -2 °C, abril-mayo)": "Late frosts (≤ -2 °C, April-May)",
+"Período libre de heladas": "Frost-free period",
+"Última helada de primavera": "Last spring frost",
+"Racha seca más larga (abr-sep)": "Longest dry spell (Apr-Sep)",
+"Días de lluvia intensa (≥ 25 mm)": "Heavy rain days (≥ 25 mm)",
+"Lluvia diaria extrema (percentil 95)": "Extreme daily rain (95th percentile)",
+"Humedad en zona de raíces": "Root-zone moisture",
+"Agua útil del suelo (0-100 cm)": "Available soil water (0-100 cm)",
+"Materia orgánica (0-30 cm)": "Organic matter (0-30 cm)",
+"Arena": "Sand",
+"Pendiente media": "Average slope",
+"Erodabilidad del suelo (factor K)": "Soil erodibility (K factor)",
+"Suelos con escurrimiento alto (grupos C/D)": "High-runoff soils (groups C/D)",
+"Grupo de erosión eólica (WEG)": "Wind erodibility group (WEG)",
+"Área muy susceptible al viento (WEG 1-3)": "Area very susceptible to wind (WEG 1-3)",
+"Clase de capacidad de uso (secano)": "Land capability class (dryland)",
+"Descenso del acuífero (pozos USGS)": "Aquifer decline (USGS wells)",
+"Profundidad al agua subterránea": "Depth to groundwater",
+"Días sin caudal en el río": "Days with no river flow",
+"Variabilidad del rendimiento (CV)": "Yield variability (CV)",
+"NDVI (verdor)": "NDVI (greenness)",
+"Temperatura de superficie (Landsat/ECOSTRESS)": "Surface temperature (Landsat/ECOSTRESS)",
+"Humedad superficial (SMAP)": "Surface moisture (SMAP)",
+"Precipitación total del año (POWER PRECTOTCORR).": "Total annual precipitation (POWER PRECTOTCORR).",
+"Demanda de agua de la atmósfera, calculada con temperaturas máx/mín (Hargreaves-Samani).": "Atmospheric water demand, calculated from max/min temperatures (Hargreaves-Samani).",
+"Diferencia entre la demanda y la lluvia del año.": "Difference between demand and the year's rainfall.",
+"Agua que efectivamente se evaporó/transpiró según el modelo terrestre de MERRA-2 (EVLAND).": "Water actually evaporated/transpired according to the MERRA-2 land model (EVLAND).",
+"Cantidad de días muy calurosos.": "Number of very hot days.",
+"Calor durante el llenado de grano del trigo.": "Heat during wheat grain fill.",
+"Noches frías cuando el trigo está encañando/espigando y se siembran cultivos de verano.": "Cold nights when wheat is jointing/heading and summer crops are planted.",
+"Días entre la última helada de primavera y la primera de otoño (0 °C).": "Days between the last spring frost and the first fall frost (0 °C).",
+"Fecha media de la última noche ≤ 0 °C.": "Average date of the last night ≤ 0 °C.",
+"Máximo de días seguidos con menos de 1 mm.": "Maximum consecutive days with less than 1 mm.",
+"Tormentas que generan escurrimiento.": "Storms that produce runoff.",
+"Uno de cada 20 días lluviosos supera este valor.": "One in 20 rainy days exceeds this value.",
+"Fracción de saturación del suelo en la zona de raíces (POWER GWETROOT, modelo). 0 = seco, 1 = saturado.": "Root-zone soil saturation fraction (POWER GWETROOT, model). 0 = dry, 1 = saturated.",
+"Agua que el suelo puede guardar y entregar a las plantas (SSURGO).": "Water the soil can hold and supply to plants (SSURGO).",
+"Carbono orgánico del suelo superficial (SSURGO, valor representativo).": "Topsoil organic carbon (SSURGO, representative value).",
+"Porcentaje de arena del suelo superficial.": "Percentage of sand in the topsoil.",
+"Inclinación del terreno (SSURGO o SRTM).": "Slope of the land (SSURGO or SRTM).",
+"Facilidad con que el agua arrastra el suelo (RUSLE).": "How easily water carries away the soil (RUSLE).",
+"Parte del área con infiltración lenta.": "Share of the area with slow infiltration.",
+"Clasificación NRCS: 1 = muy susceptible al viento, 8 = poco.": "NRCS classification: 1 = very susceptible to wind, 8 = slightly.",
+"Parte de la zona con suelos que vuelan fácilmente.": "Share of the area with soils that blow easily.",
+"Clasificación NRCS: 1-2 sin limitaciones fuertes, 3-4 limitaciones (clima, erosión), 5+ no apto para cultivo continuo.": "NRCS classification: 1-2 no strong limitations, 3-4 limitations (climate, erosion), 5+ not suitable for continuous cropping.",
+"Cuánto baja por año la profundidad al agua en los pozos cercanos (mediciones de invierno, desde 2000). Positivo = el nivel baja.": "How much the depth to water in nearby wells changes per year (winter measurements, since 2000). Positive = the level is dropping.",
+"Profundidad mediana en la última medición de los pozos cercanos.": "Median depth at the latest measurement of nearby wells.",
+"Fracción de días con caudal cero en la estación USGS.": "Share of days with zero flow at the USGS gauge.",
+"Desvío estándar / promedio de los rendimientos del condado año a año.": "Standard deviation / mean of county yields year to year.",
+"Temperatura del suelo/canopeo vista desde el satélite.": "Soil/canopy temperature seen from the satellite.",
+"Agua en los primeros ~5 cm del suelo, píxel de 9 km.": "Water in the top ~5 cm of soil, 9 km pixel.",
+"mm": "mm",
+"pies": "feet",
+"1-8": "1-8",
+"%": "%",
+"°C": "°C",
+"-1 a 1": "-1 to 1",
+"m³/m³": "m³/m³",
+"lluvia_abr_sep_mm": "Rainfall Apr-Sep (mm)",
+"lluvia_max_1dia_mm": "Maximum 1-day rainfall (mm)",
+"lluvia_p95_mm": "Daily rainfall 95th percentile (mm)",
+"lluvia_p99_mm": "Daily rainfall 99th percentile (mm)",
+"primera_helada_doy": "First frost (day of year)",
+"frac_anios_deficit_severo": "Share of very dry years",
+"n_anios": "Number of years",
+"arcilla_pct": "Clay (%)",
+"clase_capacidad_riego": "Land capability class (irrigated)"
+},
+"plantillas": [
+[
+"La humedad del suelo que calcula NASA POWER (con datos satelitales) y la que informan agricultores y técnicos de Kansas cada semana suben y bajan juntas: la coincidencia es @ (correlación # en # meses, #-#). Por eso podemos usar el dato satelital donde no hay observadores, sabiendo que suaviza las diferencias entre campos vecinos.",
+"Soil moisture calculated by NASA POWER (with satellite data) and that reported weekly by Kansas farmers and extension staff rise and fall together: the agreement is {1} (correlation {2} over {3} months, {4}-{5}). That is why the satellite data can be used where there are no observers, knowing it smooths differences between neighboring fields."
+],
+[
+"El modelo simula # futuros posibles del clima de Finney County y estima cuánto rendiría cada cultivo en cada uno. Luego busca la rotación de trigo, sorgo y maíz que mejor cumple la estrategia elegida, sin pasarse del agua disponible. Se calcula para todo el condado (punto NASA #° N, #° O), no para el campo seleccionado.",
+"The model simulates {1} possible futures of Finney County's climate and estimates how much each crop would yield in each one. It then searches for the wheat, sorghum and corn rotation that best fits the chosen strategy without exceeding the available water. It is calculated for the whole county (NASA point {2}° N, {3}° W), not for the selected field."
+],
+[
+"\"Agua que necesita un cultivo\" es el # % de la demanda del ambiente para un cultivo en crecimiento. \"Años con helada\" es el porcentaje de años con al menos una noche bajo # °C en ese mes. De marzo a mayo el viento es más fuerte: no conviene dejar el suelo desnudo.",
+"\"Water a crop needs\" is {1} % of atmospheric demand for a growing crop. \"Years with frost\" is the percentage of years with at least one night below {2} °C that month. From March to May the wind is strongest: avoid leaving the soil bare."
+],
+[
+"Bien = sin problemas destacados. Aten. (atención) = un problema en ese mes (falta de agua, calor durante la floración o helada). Probl. (problema) = falta mucha agua o se juntan dos problemas. Pase el cursor sobre una celda para ver el motivo.",
+"Good = no notable problems. Caution = one problem that month (water shortage, heat during flowering or frost). Problem = severe water shortage or two problems together. Hover over a cell to see the reason."
+],
+[
+"Cada trimestre de # a # se clasificó como seco, normal o húmedo según su lluvia comparada con #-#. Con esa historia el modelo calcula qué tan probable es que a un trimestre le siga otro de cada tipo (cadena de Markov).",
+"Each quarter from {1} to {2} was classified as dry, normal or wet based on its rainfall compared with {3}-{4}. From that history the model calculates how likely each type of quarter is to follow another (Markov chain)."
+],
+[
+"Cada barra cuenta cuántos de los # futuros simulados terminan con ese rendimiento (promedio de los tres años). Una distribución angosta significa resultados más previsibles.",
+"Each bar counts how many of the {1} simulated futures end with that yield (average of the three years). A narrow distribution means more predictable results."
+],
+[
+"Rendimiento promedio en el # % de los escenarios más desfavorables (los técnicos lo llaman CVaR # %). Cuanto más alto, mejor protegida está la rotación frente a años secos.",
+"Average yield in the {1} % least favorable scenarios (specialists call it CVaR {2} %). The higher it is, the better protected the rotation is against dry years."
+],
+[
+"\"Confirmado\" significa que la prueba estadística indica que el cambio muy probablemente no es casualidad. \"Humedad del suelo\" va de # (seco) a # (saturado).",
+"\"Confirmed\" means the statistical test indicates the change is very likely not chance. \"Soil moisture\" goes from {1} (dry) to {2} (saturated)."
+],
+[
+"Puntaje # de # (entre # y # en # de cada # simulaciones); primera en # % de # simulaciones; ganancia entre # y # USD/acre en # de cada # simulaciones; riego # mm/año.",
+"Score {1} of {2} (between {3} and {4} in {5} out of {6} simulations); first in {7} % of {8} simulations; profit between {9} and {10} USD/acre in {11} out of {12} simulations; irrigation {13} mm/year."
+],
+[
+"Parte de los escenarios en que la rotación rinde menos que el promedio histórico. Cerca de # % es normal: la mitad de los años son peores que el promedio.",
+"Share of scenarios in which the rotation yields less than the historical average. Around {1} % is normal: half of all years are worse than average."
+],
+[
+"Ganancia típica: # USD por acre al año (después de semillas, fertilizante, químicos y cosecha; sin contar arriendo). En # de cada # años se pierde dinero.",
+"Typical profit: {1} USD per acre per year (after seed, fertilizer, chemicals and harvesting; not counting rent). Money is lost in {2} out of {3} years."
+],
+[
+"Precios que recibe (USD por unidad). Si lo deja vacío se usa el promedio recibido en Kansas en las últimas # campañas (USDA NASS), que aparece en gris.",
+"Prices you receive (USD per unit). If left empty, the average received in Kansas over the last {1} marketing years (USDA NASS) is used, shown in gray."
+],
+[
+"Puntaje # de # (entre # y # en # de cada # simulaciones); primera en # % de # simulaciones; ganancia entre # y # USD/acre en # de cada # simulaciones.",
+"Score {1} of {2} (between {3} and {4} in {5} out of {6} simulations); first in {7} % of {8} simulations; profit between {9} and {10} USD/acre in {11} out of {12} simulations."
+],
+[
+"Por eso el modelo no da un solo pronóstico: simula # futuros posibles y elige rotaciones que funcionen bien en la mayoría de ellos.",
+"That is why the model does not give a single forecast: it simulates {1} possible futures and picks rotations that work well in most of them."
+],
+[
+"Fuente: @. Método: @; @. Los resultados son simulaciones, no rendimientos comprobados en campos; deben revisarse con un asesor local.",
+"Source: {1}. Method: {2}; {3}. Results are simulations, not yields verified in fields; they should be reviewed with a local advisor."
+],
+[
+"Promedio de # pozos cercanos medidos en invierno desde el año #. Un valor positivo significa que cada año el agua está más honda.",
+"Average of {1} nearby wells measured in winter since {2}. A positive value means the water is deeper every year."
+],
+[
+"al probarlo con los años # a #, la cadena de Markov acertó apenas un # % mejor que usar el promedio histórico de cada trimestre.",
+"when tested on {1} to {2}, the Markov chain did only {3} % better than using each quarter's historical average."
+],
+[
+"Años en que el rendimiento quedó por debajo del #% de lo esperado para ese año (según la tendencia #-#). El peor fue # con # @.",
+"Years when yield fell below {1}% of what was expected that year (based on the {2}-{3} trend). The worst was {4} with {5} {6}."
+],
+[
+"Parte de los suelos se vuela con facilidad; hay # tormentas fuertes por año que pueden arrastrarlo si está desnudo.",
+"Some soils blow away easily; there are {1} heavy storms a year that can wash them away if bare."
+],
+[
+"Con poca seguridad: varias opciones quedan muy parejas. Decida según lo que más le importa y consulte a su asesor.",
+"With low confidence: several options are very close. Decide based on what matters most to you and consult your advisor."
+],
+[
+"El suelo resiste razonablemente el viento; hay # tormentas fuertes por año que pueden arrastrarlo si está desnudo.",
+"The soil resists wind reasonably well; there are {1} heavy storms a year that can wash it away if bare."
+],
+[
+"Clima #-#: lluvia # mm/año vs. demanda ET0 # mm; # días/año ≥# °C; lluvia muy variable (#% de años con <#% de lo normal).",
+"Climate {1}-{2}: rainfall {3} mm/year vs. ET0 demand {4} mm; {5} days/year ≥{6} °C; highly variable rainfall ({7}% of years with <{8}% of normal)."
+],
+[
+"Promedio de los tres años en los # escenarios. # % es el rendimiento promedio histórico de cada cultivo en Finney.",
+"Average of the three years over the {1} scenarios. {2} % is each crop's historical average yield in Finney."
+],
+[
+"# % más error con regresión; por eso se usan años con clima parecido (probado con # años no usados para entrenar)",
+"{1} % more error with regression; that is why years with similar climate are used (tested on {2} years not used for training)"
+],
+[
+"Frente a la estrategia de productividad, en los peores escenarios rinde # % menos y en promedio # % menos.",
+"Compared with the productivity strategy, it yields {1} % less in the worst scenarios and {2} % less on average."
+],
+[
+"Frente a la estrategia de productividad, en los peores escenarios rinde # % más y en promedio # % menos.",
+"Compared with the productivity strategy, it yields {1} % more in the worst scenarios and {2} % less on average."
+],
+[
+"Frente a la estrategia de productividad, en los peores escenarios rinde # % menos y en promedio # % más.",
+"Compared with the productivity strategy, it yields {1} % less in the worst scenarios and {2} % more on average."
+],
+[
+"La última helada de primavera llega en promedio el @ y hay # noches muy frías por año en abril y mayo.",
+"The last spring frost arrives on average on {1}, and there are {2} very cold nights a year in April and May."
+],
+[
+"Frente a la estrategia de productividad, en los peores escenarios rinde # % más y en promedio # % más.",
+"Compared with the productivity strategy, it yields {1} % more in the worst scenarios and {2} % more on average."
+],
+[
+"Con seguridad media: sale primera en # de cada # escenarios. La segunda opción también es razonable.",
+"With medium confidence: it comes first in {1} out of {2} scenarios. The second option is also reasonable."
+],
+[
+"En una temporada normal, cerca del #% de los campos de Kansas está en condición buena o excelente.",
+"In a normal season, about {1}% of Kansas fields are in good or excellent condition."
+],
+[
+"La soja en secano en el SO de Kansas rinde poco (NASS ~# bu/acre): validar con ensayos locales.",
+"Dryland soybeans in SW Kansas yield little (NASS ~{1} bu/acre): validate with local trials."
+],
+[
+"Con bastante seguridad: en # de cada # escenarios de clima y precios, esta opción sale primera.",
+"With fairly high confidence: this option comes first in {1} out of {2} climate and price scenarios."
+],
+[
+"Deja el suelo desnudo o con poco residuo ~# meses por ciclo; riesgo de voladura en primavera.",
+"Leaves the soil bare or with little residue ~{1} months per cycle; risk of blowing in spring."
+],
+[
+"No se pudo conectar con el servidor (@). Verifique que esté corriendo python -m rotacion.api.",
+"Could not connect to the server ({1}). Check that python -m rotacion.api is running."
+],
+[
+"Basada en datos de # a #. Abra cada tema para ver qué significa cada valor y cómo compararlo.",
+"Based on data from {1} to {2}. Open each topic to see what each value means and how to compare it."
+],
+[
+"Suelo: agua útil # mm en 1 m, MO #%, arena #% (valores por defecto: no hubo datos de suelo).",
+"Soil: available water {1} mm in 1 m, OM {2}%, sand {3}% (default values: no soil data)."
+],
+[
+"No se encontró el historial de este campo (@). Indique su rotación en Comparar rotaciones.",
+"This field's history was not found ({1}). Enter your rotation in Compare rotations."
+],
+[
+"La proporción de campos en buen estado baja unos # puntos por década (cambio confirmado).",
+"The share of fields in good condition falls about {1} points per decade (confirmed change)."
+],
+[
+"La proporción de campos en buen estado sube unos # puntos por década (cambio confirmado).",
+"The share of fields in good condition rises about {1} points per decade (confirmed change)."
+],
+[
+"Usa ~# mm/año de riego del acuífero; revisar derechos de agua y el descenso de los pozos.",
+"Uses ~{1} mm/year of aquifer irrigation; check water rights and well decline."
+],
+[
+"No se pudieron cargar los campos (@). Puede hacer clic en el mapa para analizar un punto.",
+"Fields could not be loaded ({1}). You can click the map to analyze a point."
+],
+[
+". Desde ahí, en #-# el modelo espera trimestres secos con una probabilidad cercana al # %.",
+". From there, for {1}-{2} the model expects dry quarters with a probability of about {3} %."
+],
+[
+"Finney County, Kansas · clima NASA #-#, suelos USDA, agua subterránea USGS y campos USDA",
+"Finney County, Kansas · NASA climate {1}-{2}, USDA soils, USGS groundwater and USDA fields"
+],
+[
+"Cada # mm más de lluvia @ suma cerca de # puntos de campos en buen estado (relación @).",
+"Each {1} mm more rain {2} adds about {3} points of fields in good condition ({4} relationship)."
+],
+[
+"Tomado de lo sembrado en el campo seleccionado entre # y # (USDA). Puede modificarlo.",
+"Taken from what was planted in the selected field between {1} and {2} (USDA). You can change it."
+],
+[
+"Erosión estimada: #% de la de un suelo siempre desnudo; aporte de residuo # t/ha/año.",
+"Estimated erosion: {1}% of an always-bare soil; residue input {2} t/ha/year."
+],
+[
+"Suma del agua de los tres cultivos frente al presupuesto de # mm para los tres años.",
+"Total water for the three crops compared with the {1} mm budget for the three years."
+],
+[
+"La lluvia cubre cerca del #% del agua que necesita un cultivo en pleno crecimiento.",
+"Rain covers about {1}% of the water a fully growing crop needs."
+],
+[
+"En @ no se cosecha en promedio el #% del @ sembrado (en #, el #%). Dato real USDA NASS.",
+"In {1}, on average {2}% of planted {3} is not harvested ({5}% in {4}). Actual USDA NASS data."
+],
+[
+"En @ no se cosecha en promedio el #% del @ sembrado (en # el #%). Dato real USDA NASS.",
+"In {1}, on average {2}% of planted {3} is not harvested ({5}% in {4}). Actual USDA NASS data."
+],
+[
+"Tiene #% de materia orgánica y puede guardar unos # mm de agua en el primer metro.",
+"It has {1}% organic matter and can hold about {2} mm of water in the first meter."
+],
+[
+"Quedó sin cultivo # de # años; en esos años el suelo queda más expuesto al viento.",
+"It had no crop in {1} of {2} years; in those years the soil is more exposed to wind."
+],
+[
+"@: rendimiento simulado # @ (#% del potencial), margen directo # USD/acre, riego # mm.",
+"{1}: simulated yield {2} {3} ({4}% of potential), direct margin {5} USD/acre, irrigation {6} mm."
+],
+[
+"@: no se cosecha en promedio el #% del @ sembrado (en #, el #%). Dato real USDA NASS.",
+"{1}: on average {2}% of planted {3} is not harvested ({5}% in {4}). Actual USDA NASS data."
+],
+[
+"Cuántos días de calor extremo se suman cada # años según la tendencia desde #. @",
+"How many extreme heat days are added every {1} years according to the trend since {2}. {3}"
+],
+[
+"Tomado de lo sembrado en el campo seleccionado entre # y #. Puede modificarlo.",
+"Taken from what was planted in the selected field between {1} and {2}. You can change it."
+],
+[
+"La cobertura protege el suelo en primavera, cuando el viento erosiona más. @",
+"The cover crop protects the soil in spring, when wind erodes the most. {1}"
+],
+[
+"Con # días más sobre # °C @, el rendimiento baja cerca de #% (relación @).",
+"With {1} more days above {2} °C {3}, yield falls about {4}% ({5} relationship)."
+],
+[
+"Con # días más sobre # °C @, el rendimiento sube cerca de #% (relación @).",
+"With {1} more days above {2} °C {3}, yield rises about {4}% ({5} relationship)."
+],
+[
+"@: rendimiento simulado # @ (#% del potencial), margen directo # USD/acre.",
+"{1}: simulated yield {2} {3} ({4}% of potential), direct margin {5} USD/acre."
+],
+[
+"Hay unos # días al año con más de # °C (eran # antes de # y ahora son #).",
+"There are about {1} days a year above {2} °C ({3} before {4}, now {5})."
+],
+[
+"En @, # de cada # años el @ rindió mucho menos de lo normal (USDA NASS).",
+"In {1}, {2} out of {3} years {4} yielded much less than normal (USDA NASS)."
+],
+[
+"Con # mm más de lluvia @, el rendimiento sube cerca de #% (relación @).",
+"With {1} mm more rain {2}, yield rises about {3}% ({4} relationship)."
+],
+[
+"Menos meses con el suelo desnudo que hoy (# en vez de # por ciclo).",
+"Fewer months of bare soil than today ({1} instead of {2} per cycle)."
+],
+[
+"Sí: el agua subterránea baja unos # m por año en # pozos cercanos.",
+"Yes: groundwater is dropping about {1} m per year in {2} nearby wells."
+],
+[
+"Incluye leguminosa: aporta ~# kg N/ha/año al cultivo siguiente. @",
+"Includes a legume: supplies ~{1} kg N/ha/year to the next crop. {2}"
+],
+[
+"Lo más fuerte de esta rotación, según sus prioridades, es @ y @.",
+"This rotation's strongest points, given your priorities, are {1} and {2}."
+],
+[
+"Promedio del condado entre #-#, sumando campos con y sin riego.",
+"County average for {1}-{2}, combining irrigated and dryland fields."
+],
+[
+"El momento más difícil suele ser alrededor del @ (promedio #%).",
+"The hardest time is usually around {1} (average {2}%)."
+],
+[
+"Cada # días más sobre # °C @ resta cerca de # puntos (relación @).",
+"Each {1} more days above {2} °C {3} subtracts about {4} points ({5} relationship)."
+],
+[
+"En el #% de los años simulados el margen directo es negativo.",
+"In {1}% of simulated years the direct margin is negative."
+],
+[
+"Su rotación actual es la que mejor encaja con lo que eligió",
+"Your current rotation is the one that best fits your choices"
+],
+[
+"Promedio de los primeros # años comparado con los últimos #.",
+"Average of the first {1} years compared with the last {2}."
+],
+[
+"# % menos error (probado con # años no usados para entrenar)",
+"{1} % less error (tested on {2} years not used for training)"
+],
+[
+"Cambio de # por década; estadísticamente confirmado (p < #).",
+"Change of {1} per decade; statistically confirmed (p < {2})."
+],
+[
+"Con seguridad media: sale primera en # de cada # escenarios.",
+"With medium confidence: it comes first in {1} out of {2} scenarios."
+],
+[
+"NASA POWER (data/power_kansas) y USDA NASS (data/nass_ks)",
+"NASA POWER (data/power_kansas) and USDA NASS (data/nass_ks)"
+],
+[
+"Haga clic en un campo para ver su información (# campos).",
+"Click a field to see its information ({1} fields)."
+],
+[
+", el siguiente también es húmedo en el # % de los casos.",
+", the next one is also wet in {1} % of cases."
+],
+[
+"Está viendo un escenario: lluvia # %, temperatura # °C.",
+"You are viewing a scenario: rainfall {1} %, temperature {2} °C."
+],
+[
+", el siguiente también es seco en el # % de los casos.",
+", the next one is also dry in {1} % of cases."
+],
+[
+"USDA NASS, rendimientos y superficies del condado (@)",
+"USDA NASS, county yields and acreage ({1})"
+],
+[
+"suelo más seco que lo normal en los últimos # años",
+"soil drier than normal in the last {1} years"
+],
+[
+"No alcanza el ingreso mínimo pedido (# USD/acre).",
+"Does not reach the requested minimum income ({1} USD/acre)."
+],
+[
+"El último trimestre con datos (#, trimestre #) fue",
+"The last quarter with data ({1}, quarter {2}) was"
+],
+[
+"Peso a los años malos: #%; peso al promedio: #%.",
+"Weight on bad years: {1}%; weight on the average: {2}%."
+],
+[
+"datos_unidos_finney.csv (archivo del notebook)",
+"datos_unidos_finney.csv (notebook file)"
+],
+[
+"# de cada # años rinde mucho menos de lo normal",
+"{1} out of {2} years yield much less than normal"
+],
+[
+"en promedio no se cosecha el #% de lo sembrado",
+"on average {1}% of planted acreage is not harvested"
+],
+[
+"Se sembró @ casi todos los años (monocultivo).",
+"{1} was planted almost every year (monoculture)."
+],
+[
+", el siguiente es seco en el # % de los casos.",
+", the next one is dry in {1} % of cases."
+],
+[
+"Cambio de # por década; no confirmado (p = #).",
+"Change of {1} per decade; not confirmed (p = {2})."
+],
+[
+"Resultados en los # escenarios (estrategia @)",
+"Results in the {1} scenarios ({2} strategy)"
+],
+[
+"Opción que mejor encaja con lo que eligió: @",
+"Option that best fits your choices: {1}"
+],
+[
+"Suelo: agua útil # mm en 1 m, MO #%, arena #%.",
+"Soil: available water {1} mm in 1 m, OM {2}%, sand {3}%."
+],
+[
+"el rendimiento sube cerca de #% por década",
+"yield rises about {1}% per decade"
+],
+[
+"el rendimiento baja cerca de #% por década",
+"yield falls about {1}% per decade"
+],
+[
+"protege mejor el suelo (#% menos erosión)",
+"protects the soil better ({1}% less erosion)"
+],
+[
+"En # de cada # escenarios: entre # % y # %.",
+"In {1} out of {2} scenarios: between {3} % and {4} %."
+],
+[
+"En @ el rendimiento es bastante estable.",
+"In {1} yield is fairly stable."
+],
+[
+"Markov trimestral (seco/normal/húmedo)",
+"Quarterly Markov (dry/normal/wet)"
+],
+[
+"Hay unos # días al año con más de # °C.",
+"There are about {1} days a year above {2} °C."
+],
+[
+"protege peor el suelo (#% más erosión)",
+"protects the soil worse ({1}% more erosion)"
+],
+[
+"Todas las combinaciones posibles (#)",
+"All possible combinations ({1})"
+],
+[
+"No se pudo calcular la predicción: @",
+"Could not calculate the forecast: {1}"
+],
+[
+"No se pudo consultar el historial: @",
+"Could not query the history: {1}"
+],
+[
+"Rotación recomendada: estrategia @",
+"Recommended rotation: {1} strategy"
+],
+[
+"CVaR #% con restricción hídrica (@)",
+"CVaR {1}% with a water constraint ({2})"
+],
+[
+"Campo · # acres · probable pivote",
+"Field · {1} acres · probable pivot"
+],
+[
+"Comparado con lo que hace hoy, @.",
+"Compared with what you do today, it {1}."
+],
+[
+"pierde unos # USD por acre al año",
+"loses about {1} USD per acre per year"
+],
+[
+"@ en # · # acres · probable pivote",
+"{1} in {2} · {3} acres · probable pivot"
+],
+[
+"Agua disponible para los # años",
+"Water available for the {1} years"
+],
+[
+"Se repite un ciclo de # años: @.",
+"A {1}-year cycle repeats: {2}."
+],
+[
+"Frente a la actual mejora en @.",
+"Compared with the current one it improves in {1}."
+],
+[
+"gana unos # USD por acre al año",
+"earns about {1} USD more per acre per year"
+],
+[
+"usa # mm menos de riego por año",
+"uses {1} mm less irrigation per year"
+],
+[
+"Historia de los trimestres, #-#",
+"Quarter history, {1}-{2}"
+],
+[
+"Centro # # · celda NASA POWER # #",
+"Center {1} {2} · NASA POWER cell {3} {4}"
+],
+[
+"No se pudo analizar la zona: @",
+"Could not analyze the area: {1}"
+],
+[
+"# días ≥# °C en etapa sensible",
+"{1} days ≥{2} °C at a sensitive stage"
+],
+[
+"# % de lo esperado (año malo)",
+"{1} % of expected (bad year)"
+],
+[
+"Cargando polígonos de suelo…",
+"Loading soil polygons…"
+],
+[
+"usa # mm más de riego por año",
+"uses {1} mm more irrigation per year"
+],
+[
+"Campo seleccionado: # acres.",
+"Field selected: {1} acres."
+],
+[
+"No es posible para usted: @",
+"Not possible for you: {1}"
+],
+[
+"Seguridad del resultado: @",
+"Confidence in the result: {1}"
+],
+[
+"sin mercado cercano para @",
+"no nearby market for {1}"
+],
+[
+"# mm (# % del presupuesto)",
+"{1} mm ({2} % of the budget)"
+],
+[
+"El peor año fue #, con #%.",
+"The worst year was {1}, with {2}%."
+],
+[
+"helada en #% de los años",
+"frost in {1}% of years"
+],
+[
+"# días de calor extremo",
+"{1} extreme heat days"
+],
+[
+"Es lo que hace hoy: @.",
+"This is what you do today: {1}."
+],
+[
+"de julio a septiembre",
+"from July to September"
+],
+[
+"déficit hídrico ~# mm",
+"water deficit ~{1} mm"
+],
+[
+"año bueno (mejor # %)",
+"good year (best {1} %)"
+],
+[
+"Años sin cultivo (#-#)",
+"Years without a crop ({1}-{2})"
+],
+[
+"Cultivo sembrado en #",
+"Crop planted in {1}"
+],
+[
+"sin maquinaria para @",
+"no equipment for {1}"
+],
+[
+"Peores temporadas: @.",
+"Worst seasons: {1}."
+],
+[
+"año malo (peor # %)",
+"bad year (worst {1} %)"
+],
+[
+"Rotación actual — @",
+"Current rotation — {1}"
+],
+[
+"# %-# %: # escenarios",
+"{1} %-{2} %: {3} scenarios"
+],
+[
+"# en escala de # a #",
+"{1} on a {2} to {3} scale"
+],
+[
+"promedio de # años",
+"{1}-year average"
+],
+[
+"Predicción para #-#",
+"Forecast for {1}-{2}"
+],
+[
+"Sin riego: # @ (#-#).",
+"Dryland: {1} {2} ({3}-{4})."
+],
+[
+"Con riego: # @ (#-#).",
+"Irrigated: {1} {2} ({3}-{4})."
+],
+[
+"de junio a agosto",
+"from June to August"
+],
+[
+"en julio y agosto",
+"in July and August"
+],
+[
+"en escala de # a #",
+"on a {1} to {2} scale"
+],
+[
+"#%-#%: # escenarios",
+"{1}%-{2}%: {3} scenarios"
+],
+[
+"de mayo a agosto",
+"from May to August"
+],
+[
+"de abril a julio",
+"from April to July"
+],
+[
+"de abril a junio",
+"from April to June"
+],
+[
+"en junio y julio",
+"in June and July"
+],
+[
+"# % del promedio",
+"{1} % of average"
+],
+[
+"# % menos lluvia",
+"{1} % less rain"
+],
+[
+"Abundante (# mm)",
+"Plenty ({1} mm)"
+],
+[
+"Campo de # acres",
+"Field of {1} acres"
+],
+[
+"de marzo a mayo",
+"from March to May"
+],
+[
+"de mayo a julio",
+"from May to July"
+],
+[
+"en mayo y junio",
+"in May and June"
+],
+[
+"# % de los años",
+"{1} % of years"
+],
+[
+"# % en promedio",
+"{1} % on average"
+],
+[
+"Moderada (# mm)",
+"Moderate ({1} mm)"
+],
+[
+"Campo · # acres",
+"Field · {1} acres"
+],
+[
+"# de cada # años",
+"{1} out of {2} years"
+],
+[
+"el condado de @",
+"{1} County"
+],
+[
+"# días por año",
+"{1} days per year"
+],
+[
+"# días después",
+"{1} days later"
+],
+[
+"@ en # · # acres",
+"{1} in {2} · {3} acres"
+],
+[
+"Restricción: @",
+"Constraint: {1}"
+],
+[
+"En su zona: @.",
+"In your area: {1}."
+],
+[
+"# eventos/año",
+"{1} events/year"
+],
+[
+"# día del año",
+"day {1} of the year"
+],
+[
+"Predicción #-#",
+"{1}-{2} forecast"
+],
+[
+"el distrito @",
+"the {1} district"
+],
+[
+"En su zona: @",
+"In your area: {1}"
+],
+[
+"# días antes",
+"{1} days earlier"
+],
+[
+"Hace #-# años",
+"{1}-{2} years ago"
+],
+[
+"No sembrar @",
+"Do not plant {1}"
+],
+[
+"Pierde en @.",
+"It falls short in {1}."
+],
+[
+"# m por año",
+"{1} m per year"
+],
+[
+"# bu / acre",
+"{1} bu / acre"
+],
+[
+"Poca (# mm)",
+"Little ({1} mm)"
+],
+[
+"Esperado #-#",
+"Expected {1}-{2}"
+],
+[
+"# T#: @ (# mm)",
+"{1} Q{2}: {3} ({4} mm)"
+],
+[
+"# días/año",
+"{1} days/year"
+],
+[
+"# ton/acre",
+"{1} ton/acre"
+],
+[
+"menos de #",
+"less than {1}"
+],
+[
+"# fracción",
+"{1} fraction"
+],
+[
+"aumentó #%",
+"rose {1}%"
+],
+[
+"Agua: # mm",
+"Water: {1} mm"
+],
+[
+"en agosto",
+"in August"
+],
+[
+"# por año",
+"{1} per year"
+],
+[
+"# bu/acre",
+"{1} bu/acre"
+],
+[
+"# lb/acre",
+"{1} lb/acre"
+],
+[
+"Fuente: @",
+"Source: {1}"
+],
+[
+"Suelos: @",
+"Soils: {1}"
+],
+[
+"en julio",
+"in July"
+],
+[
+"en junio",
+"in June"
+],
+[
+"en abril",
+"in April"
+],
+[
+"@: en @, @.",
+"{1}: in {2}, {3}."
+],
+[
+"# mm/año",
+"{1} mm/year"
+],
+[
+"# mm/día",
+"{1} mm/day"
+],
+[
+"# % a # %",
+"{1} % to {2} %"
+],
+[
+"# °C más",
+"{1} °C warmer"
+],
+[
+"Clima #-#",
+"Climate {1}-{2}"
+],
+[
+"Normal #",
+"Normal {1}"
+],
+[
+"Húmedo #",
+"Wet {1}"
+],
+[
+"Quitar @",
+"Remove {1}"
+],
+[
+"@ (USD/@)",
+"{1} (USD/{2})"
+],
+[
+"@ (con #)",
+"{1} (with {2})"
+],
+[
+"en mayo",
+"in May"
+],
+[
+"# o más",
+"{1} or more"
+],
+[
+"bajó #%",
+"fell {1}%"
+],
+[
+"Año #: @",
+"Year {1}: {2}"
+],
+[
+"En @, @.",
+"In {1}, {2}."
+],
+[
+"# días",
+"{1} days"
+],
+[
+"# años",
+"{1} years"
+],
+[
+"Seco #",
+"Dry {1}"
+],
+[
+"# año",
+"{1} year"
+],
+[
+"# USD",
+"{1} USD"
+],
+[
+"# mm",
+"{1} mm"
+],
+[
+"# a #",
+"{1} to {2}"
+],
+[
+"(#-#)",
+"({1}-{2})"
+],
+[
+"@ — @",
+"{1} — {2}"
+],
+[
+"@ → @",
+"{1} → {2}"
+],
+[
+"@ (#)",
+"{1} ({2})"
+],
+[
+"@ (@)",
+"{1} ({2})"
+],
+[
+"@ y @",
+"{1} and {2}"
+],
+[
+"@ # %",
+"{1} {2} %"
+],
+[
+"# m",
+"{1} m"
+],
+[
+"@: @",
+"{1}: {2}"
+],
+[
+"@, @",
+"{1}, {2}"
+],
+[
+"(@)",
+"({1})"
+],
+[
+"@; @",
+"{1}; {2}"
+],
+[
+"# @",
+"{1} {2}"
+],
+[
+"@ #",
+"{1} {2}"
+]
+],
+"frases": [
+[
+"Sin serie GRACE local (data/grace/grace_tws.csv). Se usan los pozos USGS como medición directa del acuífero.",
+"No local GRACE series (data/grace/grace_tws.csv). USGS wells are used as a direct measurement of the aquifer."
+],
+[
+"No se pudo consultar SDA (modo en vivo desactivado); se usa el promedio del condado ponderado por área.",
+"SDA could not be queried (live mode is off); the area-weighted county average is used."
+],
+[
+"Rendimientos NASS solo locales para Finney; para otro condado defina NASS_API_KEY",
+"NASS yields are local only for Finney; for another county set NASS_API_KEY"
+],
+[
+"RuntimeError: Sin datos POWER locales para esta zona y modo en vivo desactivado",
+"RuntimeError: no local POWER data for this area and live mode is off"
+],
+[
+"Al tocar un campo se busca su historial en el mapa de cultivos del USDA.",
+"When you tap a field, its history is looked up on the USDA crop map."
+],
+[
+"Sin archivo OpenET local (opcional; requiere clave de openetdata.org)",
+"No local OpenET file (optional; requires an openetdata.org key)"
+],
+[
+"OpenStreetMap (sin historial; el servicio del USDA no respondió)",
+"OpenStreetMap (no history; the USDA service did not respond)"
+],
+[
+"USDA SSURGO, condado completo de Finney (sin consulta espacial)",
+"USDA SSURGO, all of Finney County (no spatial query)"
+],
+[
+"cultivo de cobertura (mezcla avena-vicia en primavera)",
+"cover crop (spring oat-vetch mix)"
+],
+[
+"La zona no está en un condado de Kansas con datos",
+"The area is not in a Kansas county with data"
+],
+[
+"USGS NWIS niveles de pozos (archivo local Finney)",
+"USGS NWIS well levels (local Finney file)"
+],
+[
+"USDA NASS, rendimientos y superficies del condado",
+"USDA NASS, county yields and acreage"
+],
+[
+"No hay pozos con mediciones en el radio indicado",
+"No wells with measurements within the radius"
+],
+[
+"deja menos rastrojo para la materia orgánica",
+"leaves less residue for organic matter"
+],
+[
+"suelo más seco que lo normal en los últimos ",
+"soil drier than normal in the last "
+],
+[
+"USDA NASS Crop Sequence Boundaries 2017-2024",
+"USDA NASS Crop Sequence Boundaries 2017-2024"
+],
+[
+"deja más rastrojo para la materia orgánica",
+"leaves more residue for organic matter"
+],
+[
+"viento fuerte: no deje el suelo desnudo",
+"strong wind: do not leave the soil bare"
+],
+[
+"Falta rasterio para leer el DEM SRTM",
+"rasterio is missing to read the SRTM DEM"
+],
+[
+"corte de ciclos de plagas y malezas",
+"breaking pest and weed cycles"
+],
+[
+"NASA POWER (MERRA-2), archivo local",
+"NASA POWER (MERRA-2), local file"
+],
+[
+"control de erosión (agua y viento)",
+"erosion control (water and wind)"
+],
+[
+"Sin estaciones de caudal cercanas",
+"No nearby stream gauges"
+],
+[
+"ahorra fertilizante nitrogenado",
+"saves nitrogen fertilizer"
+],
+[
+"USDA NASS QuickStats, condado ",
+"USDA NASS QuickStats, county "
+],
+[
+"tiene menos años con pérdida",
+"has fewer years with losses"
+],
+[
+"tolerancia a calor y heladas",
+"heat and frost tolerance"
+],
+[
+"alfalfa (año de producción)",
+"alfalfa (production year)"
+],
+[
+" mm menos de riego por año",
+" mm less irrigation per year"
+],
+[
+"tiene más años con pérdida",
+"has more years with losses"
+],
+[
+"aporte de materia orgánica",
+"organic matter supply"
+],
+[
+"protege mejor el suelo (",
+"protects the soil better ("
+],
+[
+" mm más de riego por año",
+" mm more irrigation per year"
+],
+[
+"modo en vivo desactivado",
+"live mode is off"
+],
+[
+"Sin suelo para esta zona",
+"No soil data for this area"
+],
+[
+"protege peor el suelo (",
+"protects the soil worse ("
+],
+[
+"USGS NWIS caudal diario",
+"USGS NWIS daily streamflow"
+],
+[
+" días de calor extremo",
+" extreme heat days"
+],
+[
+"barbecho (sin cultivo)",
+"fallow (no crop)"
+],
+[
+"uso eficiente del agua",
+"efficient water use"
+],
+[
+"de julio a septiembre",
+"from July to September"
+],
+[
+" USD por acre al año",
+" USD per acre per year"
+],
+[
+"triticale forrajero",
+"forage triticale"
+],
+[
+"aporte de nitrógeno",
+"nitrogen supply"
+],
+[
+" en etapa sensible",
+" at a sensitive stage"
+],
+[
+"déficit hídrico ~",
+"water deficit ~"
+],
+[
+"heladas probables",
+"frost likely"
+],
+[
+"de junio a agosto",
+"from June to August"
+],
+[
+"en julio y agosto",
+"in July and August"
+],
+[
+"trigo de invierno",
+"winter wheat"
+],
+[
+"ingreso / mercado",
+"income / market"
+],
+[
+"% menos erosión)",
+"% less erosion)"
+],
+[
+"de mayo a agosto",
+"from May to August"
+],
+[
+"de abril a julio",
+"from April to July"
+],
+[
+"de marzo a mayo",
+"from March to May"
+],
+[
+"en mayo y junio",
+"in May and June"
+],
+[
+"sorgo granífero",
+"grain sorghum"
+],
+[
+"valor forrajero",
+"forage value"
+],
+[
+"% más erosión)",
+"% more erosion)"
+],
+[
+"el condado de ",
+""
+],
+[
+"% de los años",
+"% of years"
+],
+[
+"no disponible",
+"not available"
+],
+[
+"pierde unos ",
+"loses about "
+],
+[
+"Restricción",
+"Constraint"
+],
+[
+"USGS caudal",
+"USGS streamflow"
+],
+[
+"gana unos ",
+"earns about "
+],
+[
+"helada en ",
+"frost in "
+],
+[
+"falta agua",
+"water shortage"
+],
+[
+"USGS pozos",
+"USGS wells"
+],
+[
+"en agosto",
+"in August"
+],
+[
+"barbecho",
+"fallow"
+],
+[
+" días ≥",
+" days ≥"
+],
+[
+"girasol",
+"sunflower"
+],
+[
+" County",
+" County"
+],
+[
+"en vivo",
+"live"
+],
+[
+"prueba",
+"test"
+],
+[
+"sorgo",
+"sorghum"
+],
+[
+"trigo",
+"wheat"
+],
+[
+"maíz",
+"corn"
+],
+[
+"soja",
+"soybeans"
+]
+],
+"meses": {
+"ene": "Jan",
+"feb": "Feb",
+"mar": "Mar",
+"abr": "Apr",
+"may": "May",
+"jun": "Jun",
+"jul": "Jul",
+"ago": "Aug",
+"sep": "Sep",
+"oct": "Oct",
+"nov": "Nov",
+"dic": "Dec"
+}
+}

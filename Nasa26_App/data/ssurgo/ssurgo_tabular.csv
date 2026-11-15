@@ -1,0 +1,636 @@
+mukey,musym,muname,muacres,cokey,compname,comppct_r,slope_r,hydgrp,drainagecl,irrcapcl,nirrcapcl,weg,wei,hzdept_r,hzdepb_r,awc_r,om_r,claytotal_r,sandtotal_r,kffact
+1152302,1122,"Bridgeport loam, channeled",3731,28077792,Roxbury,15,1.0,B,Well drained,5,5,4L,86.0,54,78,0.22,1.0,25.0,11.0,0.49
+1152302,1122,"Bridgeport loam, channeled",3731,28077792,Roxbury,15,1.0,B,Well drained,5,5,4L,86.0,78,200,0.2,0.5,21.0,13.0,0.49
+1152302,1122,"Bridgeport loam, channeled",3731,28077792,Roxbury,15,1.0,B,Well drained,5,5,4L,86.0,0,54,0.22,3.0,23.0,9.0,0.37
+1152302,1122,"Bridgeport loam, channeled",3731,28077793,Bridgeport,85,1.0,B,Well drained,5,5,6,48.0,71,200,0.17,0.5,21.0,35.0,0.49
+1152302,1122,"Bridgeport loam, channeled",3731,28077793,Bridgeport,85,1.0,B,Well drained,5,5,6,48.0,33,71,0.17,0.6,25.0,31.0,0.49
+1152302,1122,"Bridgeport loam, channeled",3731,28077793,Bridgeport,85,1.0,B,Well drained,5,5,6,48.0,0,33,0.17,2.0,22.0,37.0,0.43
+1152303,1125,"Bridgeport silt loam, occasionally flooded",6292,28077814,Caruso,3,1.0,B/D,Poorly drained,,5,6,48.0,30,200,0.21,0.8,24.0,35.0,0.37
+1152303,1125,"Bridgeport silt loam, occasionally flooded",6292,28077814,Caruso,3,1.0,B/D,Poorly drained,,5,6,48.0,0,30,0.19,2.5,23.0,35.0,0.28
+1152303,1125,"Bridgeport silt loam, occasionally flooded",6292,28077815,Bridgeport,97,1.0,B,Well drained,2,2,6,48.0,40,55,0.22,0.7,20.0,18.0,0.49
+1152303,1125,"Bridgeport silt loam, occasionally flooded",6292,28077815,Bridgeport,97,1.0,B,Well drained,2,2,6,48.0,55,200,0.22,0.6,19.0,16.0,0.49
+1152303,1125,"Bridgeport silt loam, occasionally flooded",6292,28077815,Bridgeport,97,1.0,B,Well drained,2,2,6,48.0,0,30,0.2,2.0,21.0,21.0,0.43
+1152303,1125,"Bridgeport silt loam, occasionally flooded",6292,28077815,Bridgeport,97,1.0,B,Well drained,2,2,6,48.0,30,40,0.21,0.9,23.0,21.0,0.43
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077808,Lincoln,5,1.0,A,Somewhat excessively drained,3,3,3,86.0,0,25,0.09,0.5,10.0,65.0,0.24
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077808,Lincoln,5,1.0,A,Somewhat excessively drained,3,3,3,86.0,25,200,0.05,0.2,6.0,92.0,0.05
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077809,Lesho,5,1.0,C,Somewhat poorly drained,4,4,4L,86.0,63,200,0.05,0.1,4.0,94.0,0.02
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077809,Lesho,5,1.0,C,Somewhat poorly drained,4,4,4L,86.0,30,63,0.17,0.5,28.0,35.0,0.37
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077809,Lesho,5,1.0,C,Somewhat poorly drained,4,4,4L,86.0,0,30,0.17,2.0,31.0,35.0,0.24
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077810,Sweetwater,5,1.0,C/D,Poorly drained,5,5,6,48.0,13,28,0.16,1.0,24.0,40.0,0.28
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077810,Sweetwater,5,1.0,C/D,Poorly drained,5,5,6,48.0,0,13,0.17,1.5,28.0,35.0,0.32
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077810,Sweetwater,5,1.0,C/D,Poorly drained,5,5,6,48.0,28,66,0.16,0.8,24.0,40.0,0.32
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077810,Sweetwater,5,1.0,C/D,Poorly drained,5,5,6,48.0,66,200,0.09,0.3,8.0,90.0,0.02
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077811,Las Animas,85,1.0,B,Somewhat poorly drained,4,6,2,134.0,76,200,0.07,0.25,3.0,96.0,0.02
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077811,Las Animas,85,1.0,B,Somewhat poorly drained,4,6,2,134.0,0,20,0.09,0.75,10.0,83.0,0.15
+1152309,1184,"Las Animas loamy sand, occasionally flooded",92,28077811,Las Animas,85,1.0,B,Somewhat poorly drained,4,6,2,134.0,20,76,0.15,0.5,10.0,67.0,0.43
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077782,Las Animas,89,1.0,B,Somewhat poorly drained,3,3,3,86.0,23,80,0.15,0.5,10.0,67.0,0.43
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077782,Las Animas,89,1.0,B,Somewhat poorly drained,3,3,3,86.0,0,23,0.08,1.0,11.0,67.0,0.2
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077782,Las Animas,89,1.0,B,Somewhat poorly drained,3,3,3,86.0,80,200,0.07,0.25,3.0,96.0,0.02
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077783,Lincoln,3,1.0,A,Somewhat excessively drained,3,3,2,134.0,25,200,0.07,0.2,7.0,91.0,0.05
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077783,Lincoln,3,1.0,A,Somewhat excessively drained,3,3,2,134.0,0,25,0.09,0.5,10.0,83.0,0.1
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077784,Las,3,1.0,C,Somewhat poorly drained,2,4,6,48.0,79,200,0.03,0.1,1.0,97.0,0.02
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077784,Las,3,1.0,C,Somewhat poorly drained,2,4,6,48.0,0,20,0.18,0.75,31.0,30.0,0.32
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077784,Las,3,1.0,C,Somewhat poorly drained,2,4,6,48.0,20,79,0.16,0.3,28.0,30.0,0.43
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077785,Lesho,3,1.0,C,Somewhat poorly drained,3,3,4L,86.0,0,35,0.18,2.0,31.0,35.0,0.32
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077785,Lesho,3,1.0,C,Somewhat poorly drained,3,3,4L,86.0,81,200,0.06,0.1,4.0,94.0,0.02
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077785,Lesho,3,1.0,C,Somewhat poorly drained,3,3,4L,86.0,35,81,0.18,0.5,28.0,35.0,0.37
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077786,Aquolls,1,1.0,B/D,Poorly drained,3,3,4L,86.0,16,54,0.22,2.0,23.0,9.0,0.43
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077786,Aquolls,1,1.0,B/D,Poorly drained,3,3,4L,86.0,0,16,0.22,3.0,23.0,9.0,0.37
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077786,Aquolls,1,1.0,B/D,Poorly drained,3,3,4L,86.0,54,78,0.22,1.0,25.0,11.0,0.49
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077786,Aquolls,1,1.0,B/D,Poorly drained,3,3,4L,86.0,78,200,0.2,0.5,21.0,13.0,0.49
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077787,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,38,200,0.09,0.3,8.0,90.0,0.02
+1152310,1185,"Las Animas sandy loam, occasionally flooded",1938,28077787,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,0,38,0.19,1.5,28.0,35.0,0.32
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077650,Las Animas,65,1.0,B,Somewhat poorly drained,3,4,2,134.0,0,36,0.11,0.75,7.0,83.8,0.1
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077650,Las Animas,65,1.0,B,Somewhat poorly drained,3,4,2,134.0,76,152,0.06,0.25,2.5,96.8,0.1
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077650,Las Animas,65,1.0,B,Somewhat poorly drained,3,4,2,134.0,36,76,0.13,0.5,4.0,87.0,0.49
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077651,Lincoln,33,1.0,A,Somewhat excessively drained,,6,2,134.0,0,25,0.08,0.75,10.0,85.7,0.05
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077651,Lincoln,33,1.0,A,Somewhat excessively drained,,6,2,134.0,25,122,0.13,0.2,10.0,90.0,0.1
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077652,Las,1,1.0,C,Somewhat poorly drained,2,3,6,48.0,127,152,0.03,0.1,3.0,90.6,0.1
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077652,Las,1,1.0,C,Somewhat poorly drained,2,3,6,48.0,0,20,0.18,0.75,31.0,35.4,0.32
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077652,Las,1,1.0,C,Somewhat poorly drained,2,3,6,48.0,20,127,0.16,0.3,18.5,60.0,0.28
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077653,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,38,91,0.09,0.3,8.0,89.5,0.05
+1152312,1188,"Las Animas-Lincoln loamy sands, occasionally flooded",4216,28077653,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,0,38,0.19,1.5,27.5,35.2,0.32
+1152314,1213,"Las clay loam, moderately deep, occasionally flooded",4590,28077656,Las,99,1.0,C,Somewhat poorly drained,2,4,6,48.0,20,79,0.16,0.3,27.5,35.2,0.37
+1152314,1213,"Las clay loam, moderately deep, occasionally flooded",4590,28077656,Las,99,1.0,C,Somewhat poorly drained,2,4,6,48.0,0,20,0.18,0.75,31.0,35.4,0.28
+1152314,1213,"Las clay loam, moderately deep, occasionally flooded",4590,28077656,Las,99,1.0,C,Somewhat poorly drained,2,4,6,48.0,79,152,0.03,0.1,3.0,90.6,0.1
+1152314,1213,"Las clay loam, moderately deep, occasionally flooded",4590,28077657,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,0,38,0.19,1.5,27.5,35.2,0.32
+1152314,1213,"Las clay loam, moderately deep, occasionally flooded",4590,28077657,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,38,91,0.09,0.3,8.0,89.5,0.05
+1152313,1214,"Las clay loam, deep, occasionally flooded",5441,28077654,Las,99,1.0,C,Somewhat poorly drained,2,4,6,48.0,20,79,0.16,0.3,27.5,35.2,0.37
+1152313,1214,"Las clay loam, deep, occasionally flooded",5441,28077654,Las,99,1.0,C,Somewhat poorly drained,2,4,6,48.0,0,20,0.18,0.75,31.0,35.4,0.28
+1152313,1214,"Las clay loam, deep, occasionally flooded",5441,28077654,Las,99,1.0,C,Somewhat poorly drained,2,4,6,48.0,79,152,0.03,0.1,3.0,90.6,0.1
+1152313,1214,"Las clay loam, deep, occasionally flooded",5441,28077655,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,38,91,0.09,0.3,8.0,89.5,0.05
+1152313,1214,"Las clay loam, deep, occasionally flooded",5441,28077655,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,0,38,0.19,1.5,27.5,35.2,0.32
+1152315,1234,"Las-Bayard sandy loams, occasionally flooded",2161,28077658,Las,60,1.0,C,Somewhat poorly drained,2,4,3,86.0,20,102,0.16,0.3,18.5,60.0,0.28
+1152315,1234,"Las-Bayard sandy loams, occasionally flooded",2161,28077658,Las,60,1.0,C,Somewhat poorly drained,2,4,3,86.0,102,152,0.03,0.1,3.0,95.0,0.05
+1152315,1234,"Las-Bayard sandy loams, occasionally flooded",2161,28077658,Las,60,1.0,C,Somewhat poorly drained,2,4,3,86.0,0,20,0.17,0.75,12.5,67.3,0.24
+1152315,1234,"Las-Bayard sandy loams, occasionally flooded",2161,28077659,Bayard,40,1.0,A,Well drained,2,3,3,86.0,0,15,0.14,1.5,14.0,66.8,0.15
+1152315,1234,"Las-Bayard sandy loams, occasionally flooded",2161,28077659,Bayard,40,1.0,A,Well drained,2,3,3,86.0,15,152,0.17,0.5,14.0,66.1,0.28
+1152316,1235,"Las-Las Animas complex, occasionally flooded",4387,28077660,Las,55,1.0,C,Somewhat poorly drained,2,3,6,48.0,79,152,0.03,0.1,3.0,90.6,0.1
+1152316,1235,"Las-Las Animas complex, occasionally flooded",4387,28077660,Las,55,1.0,C,Somewhat poorly drained,2,3,6,48.0,0,20,0.21,0.75,21.0,41.6,0.37
+1152316,1235,"Las-Las Animas complex, occasionally flooded",4387,28077660,Las,55,1.0,C,Somewhat poorly drained,2,3,6,48.0,20,79,0.16,0.3,27.5,35.2,0.37
+1152316,1235,"Las-Las Animas complex, occasionally flooded",4387,28077661,Las Animas,44,1.0,B,Somewhat poorly drained,3,4,3,86.0,76,152,0.06,0.25,2.5,96.8,0.1
+1152316,1235,"Las-Las Animas complex, occasionally flooded",4387,28077661,Las Animas,44,1.0,B,Somewhat poorly drained,3,4,3,86.0,0,36,0.17,0.75,13.0,66.9,0.2
+1152316,1235,"Las-Las Animas complex, occasionally flooded",4387,28077661,Las Animas,44,1.0,B,Somewhat poorly drained,3,4,3,86.0,36,76,0.14,0.5,13.0,63.5,0.43
+1152316,1235,"Las-Las Animas complex, occasionally flooded",4387,28077662,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,38,91,0.09,0.3,8.0,89.5,0.05
+1152316,1235,"Las-Las Animas complex, occasionally flooded",4387,28077662,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,0,38,0.19,1.5,27.5,35.2,0.32
+1152349,1258,"Sweetwater clay loam, occasionally flooded",1678,28077687,Sweetwater,100,1.0,C/D,Poorly drained,,5,6,48.0,0,38,0.19,1.5,27.5,35.2,0.28
+1152349,1258,"Sweetwater clay loam, occasionally flooded",1678,28077687,Sweetwater,100,1.0,C/D,Poorly drained,,5,6,48.0,38,91,0.09,0.3,8.0,89.5,0.05
+1152299,1327,"Bayard fine sandy loam, 0 to 3 percent slopes",868,28077730,Bridgeport,5,1.0,B,Well drained,1,2,6,48.0,0,28,0.2,2.0,30.0,27.0,0.32
+1152299,1327,"Bayard fine sandy loam, 0 to 3 percent slopes",868,28077730,Bridgeport,5,1.0,B,Well drained,1,2,6,48.0,28,200,0.22,0.75,24.0,33.0,0.49
+1152299,1327,"Bayard fine sandy loam, 0 to 3 percent slopes",868,28077731,Bayard,95,2.0,A,Well drained,2,4,3,86.0,56,200,0.11,0.3,13.0,70.0,0.32
+1152299,1327,"Bayard fine sandy loam, 0 to 3 percent slopes",868,28077731,Bayard,95,2.0,A,Well drained,2,4,3,86.0,25,56,0.11,0.75,14.0,72.0,0.24
+1152299,1327,"Bayard fine sandy loam, 0 to 3 percent slopes",868,28077731,Bayard,95,2.0,A,Well drained,2,4,3,86.0,0,25,0.12,2.0,15.0,65.0,0.17
+1152301,1342,"Bridgeport clay loam, rarely flooded",6212,28077804,Las,8,1.0,C,Somewhat poorly drained,2,3,4L,86.0,30,100,0.16,0.3,28.0,35.0,0.37
+1152301,1342,"Bridgeport clay loam, rarely flooded",6212,28077804,Las,8,1.0,C,Somewhat poorly drained,2,3,4L,86.0,7,30,0.18,0.75,31.0,35.0,0.24
+1152301,1342,"Bridgeport clay loam, rarely flooded",6212,28077804,Las,8,1.0,C,Somewhat poorly drained,2,3,4L,86.0,100,175,0.03,0.1,3.0,91.0,0.02
+1152301,1342,"Bridgeport clay loam, rarely flooded",6212,28077804,Las,8,1.0,C,Somewhat poorly drained,2,3,4L,86.0,0,7,0.18,0.5,29.0,35.0,0.32
+1152301,1342,"Bridgeport clay loam, rarely flooded",6212,28077805,Bridgeport,92,1.0,B,Well drained,1,2,4,86.0,8,33,0.17,2.0,32.0,10.0,0.32
+1152301,1342,"Bridgeport clay loam, rarely flooded",6212,28077805,Bridgeport,92,1.0,B,Well drained,1,2,4,86.0,33,64,0.17,0.8,30.0,15.0,0.43
+1152301,1342,"Bridgeport clay loam, rarely flooded",6212,28077805,Bridgeport,92,1.0,B,Well drained,1,2,4,86.0,0,8,0.17,1.5,37.0,35.0,0.28
+1152301,1342,"Bridgeport clay loam, rarely flooded",6212,28077805,Bridgeport,92,1.0,B,Well drained,1,2,4,86.0,64,200,0.17,0.5,24.0,35.0,0.49
+1453777,1343,"Bridgeport clay loam, saline, rarely flooded",117,28077806,Las,8,1.0,C,Somewhat poorly drained,2,3,4L,86.0,30,100,0.16,0.3,28.0,35.0,0.37
+1453777,1343,"Bridgeport clay loam, saline, rarely flooded",117,28077806,Las,8,1.0,C,Somewhat poorly drained,2,3,4L,86.0,7,30,0.18,0.75,31.0,35.0,0.24
+1453777,1343,"Bridgeport clay loam, saline, rarely flooded",117,28077806,Las,8,1.0,C,Somewhat poorly drained,2,3,4L,86.0,0,7,0.18,0.5,29.0,35.0,0.32
+1453777,1343,"Bridgeport clay loam, saline, rarely flooded",117,28077806,Las,8,1.0,C,Somewhat poorly drained,2,3,4L,86.0,100,175,0.03,0.1,3.0,91.0,0.02
+1453777,1343,"Bridgeport clay loam, saline, rarely flooded",117,28077807,Bridgeport,92,1.0,B,Well drained,2,3,4,86.0,8,33,0.17,0.8,32.0,30.0,0.32
+1453777,1343,"Bridgeport clay loam, saline, rarely flooded",117,28077807,Bridgeport,92,1.0,B,Well drained,2,3,4,86.0,33,64,0.17,0.5,30.0,30.0,0.37
+1453777,1343,"Bridgeport clay loam, saline, rarely flooded",117,28077807,Bridgeport,92,1.0,B,Well drained,2,3,4,86.0,0,8,0.17,0.7,37.0,35.0,0.28
+1453777,1343,"Bridgeport clay loam, saline, rarely flooded",117,28077807,Bridgeport,92,1.0,B,Well drained,2,3,4,86.0,64,200,0.17,0.5,28.0,35.0,0.43
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077665,Beeler,15,0.0,C,Well drained,1,2,6,48.0,142,200,0.16,0.7,24.0,21.0,0.49
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077665,Beeler,15,0.0,C,Well drained,1,2,6,48.0,20,61,0.14,0.9,31.0,17.0,0.43
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077665,Beeler,15,0.0,C,Well drained,1,2,6,48.0,0,20,0.14,2.0,22.0,20.0,0.49
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077665,Beeler,15,0.0,C,Well drained,1,2,6,48.0,61,142,0.16,0.5,22.0,12.0,0.49
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077666,Nebel,80,0.0,C,Moderately well drained,3,4,5,56.0,20,46,0.16,1.0,34.0,25.0,0.32
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077666,Nebel,80,0.0,C,Moderately well drained,3,4,5,56.0,120,133,0.15,0.3,36.0,25.0,0.37
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077666,Nebel,80,0.0,C,Moderately well drained,3,4,5,56.0,133,200,0.16,0.1,54.0,8.0,0.24
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077666,Nebel,80,0.0,C,Moderately well drained,3,4,5,56.0,0,20,0.16,1.8,18.0,28.0,0.43
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077666,Nebel,80,0.0,C,Moderately well drained,3,4,5,56.0,46,120,0.15,0.4,38.0,19.0,0.37
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077667,Goshen,5,1.0,C,Well drained,1,2,6,48.0,152,200,0.2,0.5,21.0,11.0,0.49
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077667,Goshen,5,1.0,C,Well drained,1,2,6,48.0,89,152,0.17,0.5,22.0,11.0,0.49
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077667,Goshen,5,1.0,C,Well drained,1,2,6,48.0,0,43,0.23,1.5,20.0,11.0,0.49
+2509171,1360,"Nebel silt loam, 0 to 1 percent slopes",3154,28077667,Goshen,5,1.0,C,Well drained,1,2,6,48.0,43,89,0.2,1.0,30.0,7.0,0.43
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077668,Beeler,80,0.0,C,Well drained,1,2,6,48.0,0,20,0.14,2.0,22.0,19.0,0.49
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077668,Beeler,80,0.0,C,Well drained,1,2,6,48.0,20,61,0.14,0.9,31.0,16.0,0.43
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077668,Beeler,80,0.0,C,Well drained,1,2,6,48.0,61,142,0.16,0.5,22.0,12.0,0.49
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077668,Beeler,80,0.0,C,Well drained,1,2,6,48.0,142,200,0.16,0.7,24.0,21.0,0.49
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077669,Ulysses,10,0.0,C,Well drained,2,3,5,56.0,78,200,0.22,0.3,22.0,10.0,0.49
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077669,Ulysses,10,0.0,C,Well drained,2,3,5,56.0,25,78,0.2,0.9,28.0,7.0,0.49
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077669,Ulysses,10,0.0,C,Well drained,2,3,5,56.0,0,25,0.21,1.5,19.0,12.0,0.49
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077670,Keith,8,0.0,B,Well drained,1,2,6,48.0,163,200,0.15,0.5,15.0,20.0,0.55
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077670,Keith,8,0.0,B,Well drained,1,2,6,48.0,23,86,0.17,0.6,24.0,18.0,0.49
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077670,Keith,8,0.0,B,Well drained,1,2,6,48.0,86,163,0.16,0.6,19.0,21.0,0.49
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077670,Keith,8,0.0,B,Well drained,1,2,6,48.0,5,23,0.13,1.5,26.0,17.0,0.43
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077670,Keith,8,0.0,B,Well drained,1,2,6,48.0,0,5,0.14,1.5,21.0,19.0,0.43
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077671,Nebel,2,0.0,C,Moderately well drained,3,4,5,56.0,0,20,0.16,1.8,18.0,28.0,0.43
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077671,Nebel,2,0.0,C,Moderately well drained,3,4,5,56.0,20,46,0.16,1.0,34.0,25.0,0.32
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077671,Nebel,2,0.0,C,Moderately well drained,3,4,5,56.0,133,200,0.16,0.1,54.0,8.0,0.24
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077671,Nebel,2,0.0,C,Moderately well drained,3,4,5,56.0,120,133,0.15,0.3,36.0,25.0,0.37
+2509172,1375,"Beeler silt loam, 0 to 1 percent slopes",34581,28077671,Nebel,2,0.0,C,Moderately well drained,3,4,5,56.0,46,120,0.15,0.4,38.0,19.0,0.37
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077672,Keith,10,2.0,B,Well drained,1,2,6,48.0,23,86,0.17,0.6,24.0,18.0,0.49
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077672,Keith,10,2.0,B,Well drained,1,2,6,48.0,86,163,0.16,0.6,19.0,21.0,0.49
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077672,Keith,10,2.0,B,Well drained,1,2,6,48.0,0,5,0.14,1.5,21.0,19.0,0.43
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077672,Keith,10,2.0,B,Well drained,1,2,6,48.0,5,23,0.13,1.5,26.0,17.0,0.43
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077672,Keith,10,2.0,B,Well drained,1,2,6,48.0,163,200,0.15,0.5,15.0,20.0,0.55
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077673,Beeler,46,2.0,C,Well drained,1,2,6,48.0,61,142,0.16,0.5,22.0,12.0,0.49
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077673,Beeler,46,2.0,C,Well drained,1,2,6,48.0,142,200,0.16,0.7,24.0,21.0,0.49
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077673,Beeler,46,2.0,C,Well drained,1,2,6,48.0,20,61,0.14,0.9,31.0,17.0,0.43
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077673,Beeler,46,2.0,C,Well drained,1,2,6,48.0,0,20,0.14,2.0,22.0,19.0,0.49
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077674,Ulysses,44,2.0,C,Well drained,2,3,5,56.0,78,200,0.22,0.3,22.0,10.0,0.49
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077674,Ulysses,44,2.0,C,Well drained,2,3,5,56.0,0,25,0.21,1.5,19.0,12.0,0.49
+2509173,1377,"Beeler and Ulysses silt loams, 1 to 3 percent slopes",2647,28077674,Ulysses,44,2.0,C,Well drained,2,3,5,56.0,25,78,0.2,0.9,28.0,7.0,0.49
+1152319,1661,"Limon clay, 1 to 3 percent slopes",415,28077681,Limon,100,2.0,C,Well drained,4,4,4,86.0,0,5,0.12,0.75,50.0,22.1,0.2
+1152319,1661,"Limon clay, 1 to 3 percent slopes",415,28077681,Limon,100,2.0,C,Well drained,4,4,4,86.0,5,152,0.14,0.5,47.5,23.3,0.24
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077798,Ness,55,0.0,D,Poorly drained,6,6,6,48.0,89,200,0.21,0.4,33.0,11.0,0.43
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077798,Ness,55,0.0,D,Poorly drained,6,6,6,48.0,0,7,0.21,3.6,34.0,6.0,0.32
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077798,Ness,55,0.0,D,Poorly drained,6,6,6,48.0,18,89,0.16,1.2,44.0,5.0,0.37
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077798,Ness,55,0.0,D,Poorly drained,6,6,6,48.0,7,18,0.19,2.48,37.0,6.0,0.37
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077799,Pleasant,35,2.0,C,Moderately well drained,3,3,6,48.0,0,7,0.2,3.6,28.0,8.0,0.32
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077799,Pleasant,35,2.0,C,Moderately well drained,3,3,6,48.0,64,109,0.19,0.8,37.0,5.0,0.37
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077799,Pleasant,35,2.0,C,Moderately well drained,3,3,6,48.0,21,64,0.17,1.2,41.0,5.0,0.37
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077799,Pleasant,35,2.0,C,Moderately well drained,3,3,6,48.0,7,21,0.24,2.5,32.0,7.0,0.43
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077799,Pleasant,35,2.0,C,Moderately well drained,3,3,6,48.0,109,200,0.21,0.5,26.0,11.0,0.49
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077800,Lodgepole,10,1.0,C/D,Poorly drained,6,6,6,48.0,114,200,0.22,0.5,24.0,11.0,0.49
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077800,Lodgepole,10,1.0,C/D,Poorly drained,6,6,6,48.0,10,28,0.24,2.5,28.0,7.0,0.43
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077800,Lodgepole,10,1.0,C/D,Poorly drained,6,6,6,48.0,67,114,0.19,0.8,37.0,5.0,0.37
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077800,Lodgepole,10,1.0,C/D,Poorly drained,6,6,6,48.0,28,67,0.17,1.2,41.0,5.0,0.37
+1152321,1665,"Ness-Pleasant complex, 0 to 3 percent slopes",1014,28077800,Lodgepole,10,1.0,C/D,Poorly drained,6,6,6,48.0,0,10,0.24,3.6,24.0,8.0,0.37
+1152322,1667,"Manter fine sandy loam, 0 to 1 percent slopes",2963,28077744,Manter,99,1.0,A,Well drained,2,3,3,86.0,82,200,0.13,0.3,7.0,65.0,0.32
+1152322,1667,"Manter fine sandy loam, 0 to 1 percent slopes",2963,28077744,Manter,99,1.0,A,Well drained,2,3,3,86.0,0,26,0.12,0.85,11.0,71.0,0.17
+1152322,1667,"Manter fine sandy loam, 0 to 1 percent slopes",2963,28077744,Manter,99,1.0,A,Well drained,2,3,3,86.0,58,82,0.13,0.4,15.0,60.0,0.32
+1152322,1667,"Manter fine sandy loam, 0 to 1 percent slopes",2963,28077744,Manter,99,1.0,A,Well drained,2,3,3,86.0,26,58,0.12,0.6,17.0,59.0,0.24
+1152322,1667,"Manter fine sandy loam, 0 to 1 percent slopes",2963,28077745,Ness,1,0.0,D,Poorly drained,6,6,6,48.0,89,200,0.21,0.4,33.0,11.0,0.43
+1152322,1667,"Manter fine sandy loam, 0 to 1 percent slopes",2963,28077745,Ness,1,0.0,D,Poorly drained,6,6,6,48.0,0,7,0.21,3.6,34.0,6.0,0.32
+1152322,1667,"Manter fine sandy loam, 0 to 1 percent slopes",2963,28077745,Ness,1,0.0,D,Poorly drained,6,6,6,48.0,18,89,0.16,1.2,44.0,5.0,0.37
+1152322,1667,"Manter fine sandy loam, 0 to 1 percent slopes",2963,28077745,Ness,1,0.0,D,Poorly drained,6,6,6,48.0,7,18,0.19,2.48,37.0,6.0,0.37
+1152323,1668,"Manter fine sandy loam, 1 to 3 percent slopes",19987,28077756,Dillwyn,1,0.0,A/D,Somewhat poorly drained,4,4,2,134.0,0,20,0.08,0.6,7.0,83.0,0.24
+1152323,1668,"Manter fine sandy loam, 1 to 3 percent slopes",19987,28077756,Dillwyn,1,0.0,A/D,Somewhat poorly drained,4,4,2,134.0,71,200,0.07,0.1,2.0,95.0,0.02
+1152323,1668,"Manter fine sandy loam, 1 to 3 percent slopes",19987,28077756,Dillwyn,1,0.0,A/D,Somewhat poorly drained,4,4,2,134.0,20,71,0.07,0.2,3.0,96.0,0.02
+1152323,1668,"Manter fine sandy loam, 1 to 3 percent slopes",19987,28077757,Manter,99,2.0,A,Well drained,2,3,3,86.0,0,26,0.13,1.8,11.0,70.0,0.17
+1152323,1668,"Manter fine sandy loam, 1 to 3 percent slopes",19987,28077757,Manter,99,2.0,A,Well drained,2,3,3,86.0,102,200,0.15,0.3,12.0,65.0,0.28
+1152323,1668,"Manter fine sandy loam, 1 to 3 percent slopes",19987,28077757,Manter,99,2.0,A,Well drained,2,3,3,86.0,26,61,0.13,0.8,17.0,53.0,0.28
+1152323,1668,"Manter fine sandy loam, 1 to 3 percent slopes",19987,28077757,Manter,99,2.0,A,Well drained,2,3,3,86.0,61,102,0.13,0.7,19.0,55.0,0.28
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077832,Keith,10,2.0,B,Well drained,1,2,6,48.0,61,163,0.21,0.6,23.0,14.0,0.49
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077832,Keith,10,2.0,B,Well drained,1,2,6,48.0,18,35,0.21,1.5,22.0,14.0,0.43
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077832,Keith,10,2.0,B,Well drained,1,2,6,48.0,0,18,0.21,1.5,22.0,14.0,0.43
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077832,Keith,10,2.0,B,Well drained,1,2,6,48.0,46,61,0.21,0.9,28.0,13.0,0.43
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077832,Keith,10,2.0,B,Well drained,1,2,6,48.0,35,46,0.22,1.5,26.0,15.0,0.43
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077832,Keith,10,2.0,B,Well drained,1,2,6,48.0,163,200,0.21,0.2,16.0,32.0,0.55
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077833,Ulysses,10,2.0,B,Well drained,2,3,5,56.0,0,18,0.23,1.8,19.0,12.0,0.43
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077833,Ulysses,10,2.0,B,Well drained,2,3,5,56.0,18,36,0.2,1.2,29.0,7.0,0.43
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077833,Ulysses,10,2.0,B,Well drained,2,3,5,56.0,36,200,0.2,0.5,23.0,10.0,0.49
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077834,Manter,50,2.0,A,Well drained,3,4,3,86.0,114,200,0.12,0.3,6.0,54.0,0.43
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077834,Manter,50,2.0,A,Well drained,3,4,3,86.0,30,46,0.12,0.6,17.0,59.0,0.28
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077834,Manter,50,2.0,A,Well drained,3,4,3,86.0,18,30,0.12,1.1,13.0,64.0,0.28
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077834,Manter,50,2.0,A,Well drained,3,4,3,86.0,0,18,0.12,1.1,11.0,71.0,0.17
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077834,Manter,50,2.0,A,Well drained,3,4,3,86.0,46,114,0.13,0.4,13.0,60.0,0.32
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077835,Otero,30,2.0,A,Well drained,3,4,3,86.0,18,41,0.13,0.5,15.0,65.0,0.32
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077835,Otero,30,2.0,A,Well drained,3,4,3,86.0,41,200,0.12,0.5,12.0,65.0,0.28
+1152324,1672,"Manter-Otero fine sandy loams, 1 to 3 percent slopes",2053,28077835,Otero,30,2.0,A,Well drained,3,4,3,86.0,0,18,0.12,1.25,15.0,65.0,0.24
+1152325,1692,"Midway clay, 7 to 30 percent slopes",1761,28077794,Midway,99,15.0,D,Well drained,6,7,4,86.0,13,25,,0.1,,,
+1152325,1692,"Midway clay, 7 to 30 percent slopes",1761,28077794,Midway,99,15.0,D,Well drained,6,7,4,86.0,0,13,0.12,0.75,50.0,22.1,0.2
+1152325,1692,"Midway clay, 7 to 30 percent slopes",1761,28077795,Aquolls,1,,,Somewhat poorly drained,,,8,0.0,0,152,,,,,
+1152328,1705,"Otero fine sandy loam, 3 to 7 percent slopes",355,28077682,Otero,100,6.0,A,Somewhat excessively drained,3,4,3,86.0,0,38,0.17,0.75,15.0,65.4,0.2
+1152328,1705,"Otero fine sandy loam, 3 to 7 percent slopes",355,28077682,Otero,100,6.0,A,Somewhat excessively drained,3,4,3,86.0,38,152,0.13,0.3,11.5,65.3,0.28
+1152329,1706,"Otero fine sandy loam, 7 to 15 percent slopes",1336,28077683,Otero,100,10.0,A,Well drained,6,6,3,86.0,0,13,0.17,0.75,15.0,65.4,0.2
+1152329,1706,"Otero fine sandy loam, 7 to 15 percent slopes",1336,28077683,Otero,100,10.0,A,Well drained,6,6,3,86.0,13,152,0.14,0.3,11.5,62.5,0.32
+1152330,1707,"Otero soils, 3 to 20 percent slopes",31,28077684,Otero,100,12.0,A,Somewhat excessively drained,6,6,2,134.0,0,46,0.11,0.75,7.5,85.9,0.17
+1152330,1707,"Otero soils, 3 to 20 percent slopes",31,28077684,Otero,100,12.0,A,Somewhat excessively drained,6,6,2,134.0,46,163,0.13,0.3,11.5,65.3,0.28
+1152331,1712,"Otero-Schamber complex, 5 to 20 percent slopes",1312,28077685,Otero,51,10.0,A,Well drained,6,6,3,86.0,13,152,0.14,0.3,11.5,62.5,0.32
+1152331,1712,"Otero-Schamber complex, 5 to 20 percent slopes",1312,28077685,Otero,51,10.0,A,Well drained,6,6,3,86.0,0,13,0.14,0.75,15.0,65.9,0.15
+1152331,1712,"Otero-Schamber complex, 5 to 20 percent slopes",1312,28077686,Schamber,49,10.0,A,Somewhat excessively drained,,6,5,56.0,15,152,0.05,0.2,6.0,92.1,0.1
+1152331,1712,"Otero-Schamber complex, 5 to 20 percent slopes",1312,28077686,Schamber,49,10.0,A,Somewhat excessively drained,,6,5,56.0,0,15,0.05,0.75,18.0,64.0,0.1
+2768074,1713,"Otero-Ulysses complex, 0 to 5 percent slopes",16928,28077698,Otero,60,3.0,A,Well drained,4,6,3,86.0,13,200,0.13,0.3,12.0,63.0,0.32
+2768074,1713,"Otero-Ulysses complex, 0 to 5 percent slopes",16928,28077698,Otero,60,3.0,A,Well drained,4,6,3,86.0,0,13,0.11,0.8,15.0,65.0,0.2
+2768074,1713,"Otero-Ulysses complex, 0 to 5 percent slopes",16928,28077699,Ulysses,40,3.0,C,Well drained,2,2,5,56.0,19,43,0.21,0.7,28.0,7.0,0.49
+2768074,1713,"Otero-Ulysses complex, 0 to 5 percent slopes",16928,28077699,Ulysses,40,3.0,C,Well drained,2,2,5,56.0,43,200,0.21,0.3,23.0,10.0,0.49
+2768074,1713,"Otero-Ulysses complex, 0 to 5 percent slopes",16928,28077699,Ulysses,40,3.0,C,Well drained,2,2,5,56.0,0,19,0.15,1.5,19.0,38.0,0.49
+2768075,1754,"Richfield and Ulysses complexes, bench leveled",8836,28077700,Richfield,51,1.0,C,Well drained,1,2,5,56.0,130,200,0.2,0.4,28.0,19.0,0.49
+2768075,1754,"Richfield and Ulysses complexes, bench leveled",8836,28077700,Richfield,51,1.0,C,Well drained,1,2,5,56.0,0,13,0.23,2.0,17.0,29.0,0.43
+2768075,1754,"Richfield and Ulysses complexes, bench leveled",8836,28077700,Richfield,51,1.0,C,Well drained,1,2,5,56.0,43,130,0.2,0.6,28.0,19.0,0.43
+2768075,1754,"Richfield and Ulysses complexes, bench leveled",8836,28077700,Richfield,51,1.0,C,Well drained,1,2,5,56.0,13,43,0.16,1.4,39.0,7.0,0.32
+2768075,1754,"Richfield and Ulysses complexes, bench leveled",8836,28077701,Ulysses,49,1.0,B,Well drained,1,2,5,56.0,15,30,0.2,1.2,26.0,7.0,0.43
+2768075,1754,"Richfield and Ulysses complexes, bench leveled",8836,28077701,Ulysses,49,1.0,B,Well drained,1,2,5,56.0,0,15,0.23,1.5,18.0,12.0,0.43
+2768075,1754,"Richfield and Ulysses complexes, bench leveled",8836,28077701,Ulysses,49,1.0,B,Well drained,1,2,5,56.0,30,60,0.2,0.7,24.0,7.0,0.49
+2768075,1754,"Richfield and Ulysses complexes, bench leveled",8836,28077701,Ulysses,49,1.0,B,Well drained,1,2,5,56.0,60,200,0.2,0.3,22.0,10.0,0.49
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077705,Richfield,93,0.0,C,Well drained,1,3,5,56.0,0,16,0.21,1.7,18.0,29.0,0.43
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077705,Richfield,93,0.0,C,Well drained,1,3,5,56.0,42,64,0.21,0.8,33.0,18.0,0.43
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077705,Richfield,93,0.0,C,Well drained,1,3,5,56.0,64,200,0.22,0.5,26.0,22.0,0.43
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077705,Richfield,93,0.0,C,Well drained,1,3,5,56.0,16,42,0.19,1.5,39.0,9.0,0.32
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077706,Ulysses,5,0.0,C,Well drained,1,2,6,48.0,20,35,0.21,1.2,29.0,16.0,0.43
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077706,Ulysses,5,0.0,C,Well drained,1,2,6,48.0,70,200,0.22,0.5,26.0,22.0,0.49
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077706,Ulysses,5,0.0,C,Well drained,1,2,6,48.0,35,70,0.21,0.8,29.0,16.0,0.49
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077706,Ulysses,5,0.0,C,Well drained,1,2,6,48.0,0,20,0.22,1.8,26.0,20.0,0.43
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077707,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,0,7,0.21,3.6,34.0,6.0,0.32
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077707,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,89,200,0.21,0.4,33.0,11.0,0.43
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077707,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,7,18,0.19,2.48,37.0,6.0,0.37
+1152338,1761,"Richfield silt loam, 0 to 1 percent slopes",182289,28077707,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,18,89,0.16,1.2,44.0,5.0,0.37
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077708,Richfield,90,2.0,C,Well drained,2,2,5,56.0,0,10,0.23,1.5,17.0,29.0,0.43
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077708,Richfield,90,2.0,C,Well drained,2,2,5,56.0,38,71,0.16,0.8,39.0,8.0,0.32
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077708,Richfield,90,2.0,C,Well drained,2,2,5,56.0,10,38,0.16,1.2,39.0,8.0,0.32
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077708,Richfield,90,2.0,C,Well drained,2,2,5,56.0,71,200,0.18,0.3,26.0,24.0,0.43
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077709,Ulysses,9,2.0,B,Well drained,2,3,6,48.0,25,76,0.24,0.8,26.0,17.0,0.49
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077709,Ulysses,9,2.0,B,Well drained,2,3,6,48.0,76,200,0.22,0.5,24.0,19.0,0.49
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077709,Ulysses,9,2.0,B,Well drained,2,3,6,48.0,0,25,0.2,1.8,23.0,25.0,0.43
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077710,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,10,79,0.14,1.4,46.0,3.0,0.32
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077710,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,79,94,0.19,0.5,38.0,4.0,0.37
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077710,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,94,200,0.19,0.3,33.0,4.0,0.43
+1152339,1762,"Richfield silt loam, 1 to 3 percent slopes",46228,28077710,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,0,10,0.16,3.8,42.0,6.0,0.28
+1152341,1766,"Richfield soils, silted, 0 to 1 percent slopes",9140,28077723,Richfield,100,1.0,C,Well drained,1,2,6,48.0,0,23,0.18,1.5,30.0,12.0,0.37
+1152341,1766,"Richfield soils, silted, 0 to 1 percent slopes",9140,28077723,Richfield,100,1.0,C,Well drained,1,2,6,48.0,23,86,0.16,0.8,39.0,7.0,0.37
+1152341,1766,"Richfield soils, silted, 0 to 1 percent slopes",9140,28077723,Richfield,100,1.0,C,Well drained,1,2,6,48.0,86,200,0.19,0.3,26.0,24.0,0.43
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077714,Richfield,70,1.0,C,Well drained,1,2,5,56.0,91,200,0.22,0.3,26.0,24.0,0.43
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077714,Richfield,70,1.0,C,Well drained,1,2,5,56.0,15,46,0.19,1.3,39.0,8.0,0.32
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077714,Richfield,70,1.0,C,Well drained,1,2,5,56.0,0,15,0.21,1.5,17.0,29.0,0.43
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077714,Richfield,70,1.0,C,Well drained,1,2,5,56.0,46,91,0.21,0.5,30.0,18.0,0.43
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077715,Spearville,29,1.0,C,Well drained,2,2,6,48.0,18,41,0.15,1.3,46.0,6.0,0.32
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077715,Spearville,29,1.0,C,Well drained,2,2,6,48.0,61,200,0.22,0.25,26.0,18.0,0.43
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077715,Spearville,29,1.0,C,Well drained,2,2,6,48.0,0,18,0.21,1.5,28.0,20.0,0.43
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077715,Spearville,29,1.0,C,Well drained,2,2,6,48.0,41,61,0.2,0.3,35.0,7.0,0.37
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077716,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,79,94,0.19,0.5,38.0,4.0,0.37
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077716,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,0,10,0.16,3.8,42.0,6.0,0.28
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077716,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,94,200,0.21,0.3,33.0,4.0,0.43
+1152342,1768,"Richfield-Spearville complex, 0 to 1 percent slopes",31055,28077716,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,10,79,0.14,1.4,46.0,3.0,0.32
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077746,Satanta,94,1.0,C,Well drained,1,2,5,56.0,61,122,0.2,0.8,18.0,48.0,0.37
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077746,Satanta,94,1.0,C,Well drained,1,2,5,56.0,0,25,0.2,2.0,18.0,43.0,0.32
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077746,Satanta,94,1.0,C,Well drained,1,2,5,56.0,25,61,0.18,0.8,28.0,35.0,0.32
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077746,Satanta,94,1.0,C,Well drained,1,2,5,56.0,122,200,0.21,0.5,19.0,27.0,0.49
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077747,Keith,4,0.0,C,Well drained,1,2,5,56.0,24,34,0.21,0.75,28.0,15.0,0.49
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077747,Keith,4,0.0,C,Well drained,1,2,5,56.0,34,67,0.22,0.5,24.0,20.0,0.49
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077747,Keith,4,0.0,C,Well drained,1,2,5,56.0,15,24,0.16,2.0,18.0,40.0,0.49
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077747,Keith,4,0.0,C,Well drained,1,2,5,56.0,0,15,0.16,2.0,18.0,40.0,0.43
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077747,Keith,4,0.0,C,Well drained,1,2,5,56.0,67,76,0.21,0.25,20.0,22.0,0.55
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077747,Keith,4,0.0,C,Well drained,1,2,5,56.0,76,200,0.15,0.25,14.0,55.0,0.55
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077748,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,0,7,0.21,3.6,34.0,6.0,0.32
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077748,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,7,18,0.19,2.48,37.0,6.0,0.37
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077748,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,89,200,0.21,0.4,33.0,11.0,0.43
+1152346,1810,"Satanta loam, 0 to 1 percent slopes",26714,28077748,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,18,89,0.16,1.2,44.0,5.0,0.37
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077724,Ulysses,65,1.0,C,Well drained,2,3,6,48.0,0,23,0.18,1.5,30.0,12.0,0.37
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077724,Ulysses,65,1.0,C,Well drained,2,3,6,48.0,69,200,0.19,0.3,22.0,10.0,0.49
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077724,Ulysses,65,1.0,C,Well drained,2,3,6,48.0,23,69,0.18,0.7,26.0,9.0,0.49
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077725,Richfield,34,0.0,C,Well drained,2,3,6,48.0,71,200,0.19,0.3,26.0,24.0,0.43
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077725,Richfield,34,0.0,C,Well drained,2,3,6,48.0,23,71,0.16,0.8,39.0,7.0,0.37
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077725,Richfield,34,0.0,C,Well drained,2,3,6,48.0,0,23,0.18,1.5,30.0,12.0,0.37
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077726,Ness,1,0.0,D,Poorly drained,6,6,6,48.0,7,18,0.19,2.48,37.0,6.0,0.37
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077726,Ness,1,0.0,D,Poorly drained,6,6,6,48.0,0,7,0.21,3.6,34.0,6.0,0.32
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077726,Ness,1,0.0,D,Poorly drained,6,6,6,48.0,18,89,0.16,1.2,44.0,5.0,0.37
+1453776,1847,"Ulysses and Richfield soils, silted, 0 to 1 percent slopes",2385,28077726,Ness,1,0.0,D,Poorly drained,6,6,6,48.0,89,200,0.21,0.4,33.0,11.0,0.43
+2733385,1854,"Ulysses loam, 1 to 3 percent slopes",4994,28077696,Ulysses,99,2.0,B,Well drained,2,3,5,56.0,41,200,0.21,0.3,23.0,33.0,0.49
+2733385,1854,"Ulysses loam, 1 to 3 percent slopes",4994,28077696,Ulysses,99,2.0,B,Well drained,2,3,5,56.0,19,41,0.21,0.7,26.0,32.0,0.43
+2733385,1854,"Ulysses loam, 1 to 3 percent slopes",4994,28077696,Ulysses,99,2.0,B,Well drained,2,3,5,56.0,0,19,0.21,1.5,18.0,38.0,0.43
+2733385,1854,"Ulysses loam, 1 to 3 percent slopes",4994,28077697,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,79,94,0.19,0.5,38.0,4.0,0.37
+2733385,1854,"Ulysses loam, 1 to 3 percent slopes",4994,28077697,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,10,79,0.14,1.4,46.0,3.0,0.32
+2733385,1854,"Ulysses loam, 1 to 3 percent slopes",4994,28077697,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,94,200,0.19,0.3,33.0,4.0,0.43
+2733385,1854,"Ulysses loam, 1 to 3 percent slopes",4994,28077697,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,0,10,0.16,3.8,42.0,6.0,0.28
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077836,Beeler,5,0.0,C,Well drained,1,2,6,48.0,61,142,0.16,0.5,22.0,12.0,0.49
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077836,Beeler,5,0.0,C,Well drained,1,2,6,48.0,142,200,0.16,0.7,24.0,21.0,0.49
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077836,Beeler,5,0.0,C,Well drained,1,2,6,48.0,20,61,0.14,0.9,31.0,16.0,0.43
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077836,Beeler,5,0.0,C,Well drained,1,2,6,48.0,0,8,0.14,1.5,20.0,21.0,0.49
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077836,Beeler,5,0.0,C,Well drained,1,2,6,48.0,8,20,0.14,2.0,22.0,19.0,0.43
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077837,Ulysses,90,1.0,B,Well drained,2,3,5,56.0,17,26,0.19,1.2,26.0,9.0,0.43
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077837,Ulysses,90,1.0,B,Well drained,2,3,5,56.0,0,17,0.19,1.2,15.0,43.0,0.49
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077837,Ulysses,90,1.0,B,Well drained,2,3,5,56.0,26,200,0.2,0.5,22.0,10.0,0.49
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077838,Atchison,5,1.0,B,Well drained,2,3,4L,86.0,132,200,0.23,0.25,25.0,39.0,0.37
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077838,Atchison,5,1.0,B,Well drained,2,3,4L,86.0,0,5,0.21,0.75,25.0,42.0,0.28
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077838,Atchison,5,1.0,B,Well drained,2,3,4L,86.0,13,43,0.16,0.5,30.0,39.0,0.28
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077838,Atchison,5,1.0,B,Well drained,2,3,4L,86.0,5,13,0.22,0.75,23.0,41.0,0.32
+2509174,1855,"Ulysses loam, saline, 0 to 1 percent slopes",744,28077838,Atchison,5,1.0,B,Well drained,2,3,4L,86.0,43,132,0.16,0.5,28.0,39.0,0.32
+2668829,1856,"Ulysses silt loam, 0 to 1 percent slopes",45930,28077691,Ulysses,99,0.0,C,Well drained,1,2,6,48.0,35,70,0.21,0.8,29.0,16.0,0.49
+2668829,1856,"Ulysses silt loam, 0 to 1 percent slopes",45930,28077691,Ulysses,99,0.0,C,Well drained,1,2,6,48.0,70,200,0.22,0.5,26.0,22.0,0.49
+2668829,1856,"Ulysses silt loam, 0 to 1 percent slopes",45930,28077691,Ulysses,99,0.0,C,Well drained,1,2,6,48.0,0,20,0.22,1.8,26.0,20.0,0.43
+2668829,1856,"Ulysses silt loam, 0 to 1 percent slopes",45930,28077691,Ulysses,99,0.0,C,Well drained,1,2,6,48.0,20,35,0.21,1.2,29.0,16.0,0.43
+2668829,1856,"Ulysses silt loam, 0 to 1 percent slopes",45930,28077692,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,10,79,0.14,1.4,46.0,3.0,0.32
+2668829,1856,"Ulysses silt loam, 0 to 1 percent slopes",45930,28077692,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,79,94,0.19,0.5,38.0,4.0,0.37
+2668829,1856,"Ulysses silt loam, 0 to 1 percent slopes",45930,28077692,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,94,200,0.19,0.3,33.0,4.0,0.43
+2668829,1856,"Ulysses silt loam, 0 to 1 percent slopes",45930,28077692,Ness,1,0.0,D,Poorly drained,6,6,4,86.0,0,10,0.16,3.8,42.0,6.0,0.28
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077675,Ulysses,90,2.0,B,Well drained,2,3,6,48.0,25,76,0.24,0.8,26.0,17.0,0.49
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077675,Ulysses,90,2.0,B,Well drained,2,3,6,48.0,76,200,0.22,0.5,24.0,19.0,0.49
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077675,Ulysses,90,2.0,B,Well drained,2,3,6,48.0,0,25,0.2,1.8,23.0,25.0,0.43
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077676,Colby,5,2.0,B,Well drained,2,3,4L,86.0,0,14,0.2,0.8,23.0,24.0,0.43
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077676,Colby,5,2.0,B,Well drained,2,3,4L,86.0,14,200,0.22,0.4,23.0,20.0,0.49
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077677,Keith,3,2.0,C,Well drained,1,2,6,48.0,38,60,0.22,0.7,26.0,14.0,0.49
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077677,Keith,3,2.0,C,Well drained,1,2,6,48.0,60,200,0.2,0.5,21.0,20.0,0.49
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077677,Keith,3,2.0,C,Well drained,1,2,6,48.0,13,38,0.21,1.3,28.0,18.0,0.43
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077677,Keith,3,2.0,C,Well drained,1,2,6,48.0,0,13,0.2,1.5,23.0,17.0,0.43
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077678,Kuma,2,1.0,C,Well drained,1,3,5,56.0,12,23,0.22,1.8,24.0,12.0,0.49
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077678,Kuma,2,1.0,C,Well drained,1,3,5,56.0,112,200,0.2,0.5,18.0,15.0,0.55
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077678,Kuma,2,1.0,C,Well drained,1,3,5,56.0,86,112,0.2,1.0,22.0,15.0,0.49
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077678,Kuma,2,1.0,C,Well drained,1,3,5,56.0,23,86,0.21,1.8,32.0,11.0,0.37
+2668639,1857,"Ulysses silt loam, 1 to 3 percent slopes",42846,28077678,Kuma,2,1.0,C,Well drained,1,3,5,56.0,0,12,0.21,3.0,18.0,15.0,0.43
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077732,Buffalo Park,75,4.0,B,Well drained,4,4,4L,86.0,47,200,0.17,0.3,26.0,11.0,0.49
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077732,Buffalo Park,75,4.0,B,Well drained,4,4,4L,86.0,13,47,0.18,0.8,23.0,11.0,0.49
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077732,Buffalo Park,75,4.0,B,Well drained,4,4,4L,86.0,0,13,0.2,1.4,22.0,16.0,0.43
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077733,Ulysses,23,4.0,B,Well drained,3,3,6,48.0,0,19,0.17,1.9,25.0,20.0,0.43
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077733,Ulysses,23,4.0,B,Well drained,3,3,6,48.0,19,38,0.12,1.2,26.0,17.0,0.43
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077733,Ulysses,23,4.0,B,Well drained,3,3,6,48.0,104,200,0.09,0.4,24.0,17.0,0.49
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077733,Ulysses,23,4.0,B,Well drained,3,3,6,48.0,38,104,0.14,0.6,26.0,13.0,0.49
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077734,Duroc,2,3.0,B,Well drained,3,3,6,48.0,120,200,0.22,0.6,23.0,20.0,0.49
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077734,Duroc,2,3.0,B,Well drained,3,3,6,48.0,65,120,0.22,0.85,24.0,20.0,0.49
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077734,Duroc,2,3.0,B,Well drained,3,3,6,48.0,18,65,0.21,1.4,26.0,22.0,0.43
+2668735,1960,"Buffalo Park silt loam, 3 to 6 percent slopes",22961,28077734,Duroc,2,3.0,B,Well drained,3,3,6,48.0,0,18,0.22,2.0,23.0,25.0,0.37
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077752,Buffalo Park,55,2.0,B,Well drained,2,4,4L,86.0,15,34,0.2,0.7,26.0,15.0,0.49
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077752,Buffalo Park,55,2.0,B,Well drained,2,4,4L,86.0,34,75,0.21,0.3,23.0,13.0,0.49
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077752,Buffalo Park,55,2.0,B,Well drained,2,4,4L,86.0,75,200,0.21,0.3,23.0,13.0,0.49
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077752,Buffalo Park,55,2.0,B,Well drained,2,4,4L,86.0,0,15,0.19,0.9,24.0,16.0,0.43
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077753,Duroc,5,2.0,B,Well drained,3,3,6,48.0,65,120,0.22,0.9,24.0,20.0,0.49
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077753,Duroc,5,2.0,B,Well drained,3,3,6,48.0,18,65,0.21,1.4,26.0,22.0,0.43
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077753,Duroc,5,2.0,B,Well drained,3,3,6,48.0,120,200,0.22,0.6,23.0,20.0,0.49
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077753,Duroc,5,2.0,B,Well drained,3,3,6,48.0,0,18,0.22,2.0,23.0,25.0,0.37
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077754,Atchison,10,2.0,C,Well drained,2,3,4L,86.0,16,34,0.21,0.75,26.0,45.0,0.24
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077754,Atchison,10,2.0,C,Well drained,2,3,4L,86.0,69,200,0.13,0.75,18.0,60.0,0.24
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077754,Atchison,10,2.0,C,Well drained,2,3,4L,86.0,34,69,0.19,0.75,30.0,38.0,0.28
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077754,Atchison,10,2.0,C,Well drained,2,3,4L,86.0,0,16,0.2,0.75,24.0,45.0,0.32
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077755,Ulysses,30,2.0,C,Well drained,2,3,6,48.0,19,44,0.18,1.5,30.0,8.0,0.43
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077755,Ulysses,30,2.0,C,Well drained,2,3,6,48.0,44,110,0.2,0.3,23.0,10.0,0.49
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077755,Ulysses,30,2.0,C,Well drained,2,3,6,48.0,0,19,0.18,1.8,24.0,12.0,0.43
+2668892,1967,"Buffalo Park-Ulysses silt loams, 1 to 3 percent slopes, eroded",9824,28077755,Ulysses,30,2.0,C,Well drained,2,3,6,48.0,110,200,0.2,0.3,23.0,10.0,0.49
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077749,Duroc,3,2.0,B,Well drained,3,3,6,48.0,0,18,0.22,2.0,23.0,25.0,0.37
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077749,Duroc,3,2.0,B,Well drained,3,3,6,48.0,65,120,0.22,0.9,24.0,20.0,0.49
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077749,Duroc,3,2.0,B,Well drained,3,3,6,48.0,120,200,0.22,0.6,23.0,20.0,0.49
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077749,Duroc,3,2.0,B,Well drained,3,3,6,48.0,18,65,0.21,1.4,26.0,22.0,0.43
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077750,Buffalo Park,65,4.0,B,Well drained,4,4,4L,86.0,0,17,0.19,1.2,23.0,21.0,0.43
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077750,Buffalo Park,65,4.0,B,Well drained,4,4,4L,86.0,39,150,0.2,0.3,22.0,20.0,0.49
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077750,Buffalo Park,65,4.0,B,Well drained,4,4,4L,86.0,17,39,0.2,0.5,22.0,20.0,0.49
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077750,Buffalo Park,65,4.0,B,Well drained,4,4,4L,86.0,150,200,0.21,0.3,21.0,20.0,0.49
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077751,Ulysses,32,4.0,B,Well drained,4,4,6,48.0,23,41,0.18,0.9,24.0,14.0,0.49
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077751,Ulysses,32,4.0,B,Well drained,4,4,6,48.0,91,200,0.19,0.3,21.0,20.0,0.49
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077751,Ulysses,32,4.0,B,Well drained,4,4,6,48.0,41,91,0.19,0.5,21.0,13.0,0.49
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077751,Ulysses,32,4.0,B,Well drained,4,4,6,48.0,0,13,0.19,2.0,20.0,14.0,0.37
+2733386,1968,"Buffalo Park-Ulysses silt loams, 3 to 6 percent slopes, eroded",8106,28077751,Ulysses,32,4.0,B,Well drained,4,4,6,48.0,13,23,0.18,1.5,23.0,15.0,0.37
+1152363,1981,"Valent fine sand, eroded, 5 to 30 percent slopes",1173,28077758,Valent,85,20.0,A,Excessively drained,6,7,1,250.0,10,203,0.07,0.0,5.0,94.0,0.02
+1152363,1981,"Valent fine sand, eroded, 5 to 30 percent slopes",1173,28077758,Valent,85,20.0,A,Excessively drained,6,7,1,250.0,0,10,0.07,0.5,4.0,89.0,0.05
+1152363,1981,"Valent fine sand, eroded, 5 to 30 percent slopes",1173,28077759,Vona,10,3.0,A,Well drained,4,4,2,134.0,91,203,0.08,0.3,7.0,83.5,0.24
+1152363,1981,"Valent fine sand, eroded, 5 to 30 percent slopes",1173,28077759,Vona,10,3.0,A,Well drained,4,4,2,134.0,25,61,0.12,0.5,13.0,70.0,0.2
+1152363,1981,"Valent fine sand, eroded, 5 to 30 percent slopes",1173,28077759,Vona,10,3.0,A,Well drained,4,4,2,134.0,61,91,0.12,0.5,11.0,66.0,0.28
+1152363,1981,"Valent fine sand, eroded, 5 to 30 percent slopes",1173,28077759,Vona,10,3.0,A,Well drained,4,4,2,134.0,0,25,0.09,0.75,6.0,78.0,0.28
+1152363,1981,"Valent fine sand, eroded, 5 to 30 percent slopes",1173,28077760,Valent,5,20.0,A,Excessively drained,6,7,1,250.0,0,203,0.07,0.2,4.0,94.0,0.02
+1152362,1982,"Valent fine sand, 5 to 20 percent slopes",66924,28077727,Vona,10,3.0,A,Well drained,4,4,2,134.0,61,91,0.12,0.5,11.0,66.0,0.28
+1152362,1982,"Valent fine sand, 5 to 20 percent slopes",66924,28077727,Vona,10,3.0,A,Well drained,4,4,2,134.0,0,25,0.09,0.75,6.0,78.0,0.28
+1152362,1982,"Valent fine sand, 5 to 20 percent slopes",66924,28077727,Vona,10,3.0,A,Well drained,4,4,2,134.0,91,203,0.11,0.3,7.0,83.5,0.24
+1152362,1982,"Valent fine sand, 5 to 20 percent slopes",66924,28077727,Vona,10,3.0,A,Well drained,4,4,2,134.0,25,61,0.12,0.5,13.0,70.0,0.2
+1152362,1982,"Valent fine sand, 5 to 20 percent slopes",66924,28077728,Valent,5,7.0,A,Excessively drained,6,7,1,250.0,0,203,0.07,0.2,4.0,94.0,0.02
+1152362,1982,"Valent fine sand, 5 to 20 percent slopes",66924,28077729,Valent,85,13.0,A,Excessively drained,6,7,1,250.0,10,203,0.07,0.2,4.0,94.0,0.02
+1152362,1982,"Valent fine sand, 5 to 20 percent slopes",66924,28077729,Valent,85,13.0,A,Excessively drained,6,7,1,250.0,0,10,0.07,0.75,3.0,95.4,0.02
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077735,Dillwyn,1,0.0,A/D,Somewhat poorly drained,4,4,2,134.0,20,71,0.07,0.2,3.0,96.3,0.02
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077735,Dillwyn,1,0.0,A/D,Somewhat poorly drained,4,4,2,134.0,71,203,0.07,0.1,2.0,95.0,0.02
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077735,Dillwyn,1,0.0,A/D,Somewhat poorly drained,4,4,2,134.0,0,20,0.08,0.6,7.0,83.5,0.2
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077736,Vona,9,4.0,A,Well drained,4,4,2,134.0,20,66,0.12,0.5,13.0,70.0,0.2
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077736,Vona,9,4.0,A,Well drained,4,4,2,134.0,91,203,0.11,0.3,7.0,83.5,0.15
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077736,Vona,9,4.0,A,Well drained,4,4,2,134.0,0,20,0.09,0.75,6.0,78.0,0.24
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077736,Vona,9,4.0,A,Well drained,4,4,2,134.0,66,91,0.12,0.5,11.0,66.0,0.28
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077737,Valent,90,10.0,A,Excessively drained,6,7,2,134.0,30,203,0.07,0.2,5.0,94.0,0.02
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077737,Valent,90,10.0,A,Excessively drained,6,7,2,134.0,15,30,0.08,0.5,6.5,86.8,0.15
+1152364,1984,"Valent loamy fine sand, 5 to 20 percent slopes",1055,28077737,Valent,90,10.0,A,Excessively drained,6,7,2,134.0,0,15,0.08,0.75,6.5,86.8,0.17
+1152365,1985,"Valent-Valent, eroded complex, 5 to 30 percent slopes",13778,28077738,Vona,10,3.0,A,Well drained,4,4,2,134.0,25,61,0.12,0.5,13.0,70.0,0.2
+1152365,1985,"Valent-Valent, eroded complex, 5 to 30 percent slopes",13778,28077738,Vona,10,3.0,A,Well drained,4,4,2,134.0,61,91,0.12,0.5,11.0,66.0,0.28
+1152365,1985,"Valent-Valent, eroded complex, 5 to 30 percent slopes",13778,28077738,Vona,10,3.0,A,Well drained,4,4,2,134.0,0,25,0.09,0.75,6.0,78.0,0.28
+1152365,1985,"Valent-Valent, eroded complex, 5 to 30 percent slopes",13778,28077738,Vona,10,3.0,A,Well drained,4,4,2,134.0,91,203,0.11,0.3,7.0,83.5,0.24
+1152365,1985,"Valent-Valent, eroded complex, 5 to 30 percent slopes",13778,28077739,Valent,30,20.0,A,Excessively drained,6,7,1,250.0,0,203,0.07,0.2,4.0,94.0,0.02
+1152365,1985,"Valent-Valent, eroded complex, 5 to 30 percent slopes",13778,28077740,Valent,60,20.0,A,Excessively drained,6,7,1,250.0,10,203,0.07,0.2,4.0,94.0,0.02
+1152365,1985,"Valent-Valent, eroded complex, 5 to 30 percent slopes",13778,28077740,Valent,60,20.0,A,Excessively drained,6,7,1,250.0,0,10,0.07,0.75,3.0,95.4,0.02
+1152366,1986,"Valent-Vona loamy fine sands, 3 to 15 percent slopes",62579,28077741,Dillwyn,1,0.0,A/D,Somewhat poorly drained,4,4,2,134.0,20,71,0.07,0.2,3.0,96.3,0.02
+1152366,1986,"Valent-Vona loamy fine sands, 3 to 15 percent slopes",62579,28077741,Dillwyn,1,0.0,A/D,Somewhat poorly drained,4,4,2,134.0,71,203,0.07,0.1,2.0,95.0,0.02
+1152366,1986,"Valent-Vona loamy fine sands, 3 to 15 percent slopes",62579,28077741,Dillwyn,1,0.0,A/D,Somewhat poorly drained,4,4,2,134.0,0,20,0.08,0.6,7.0,83.5,0.2
+1152366,1986,"Valent-Vona loamy fine sands, 3 to 15 percent slopes",62579,28077742,Vona,34,5.0,A,Well drained,4,4,2,134.0,91,203,0.08,0.3,7.0,83.5,0.24
+1152366,1986,"Valent-Vona loamy fine sands, 3 to 15 percent slopes",62579,28077742,Vona,34,5.0,A,Well drained,4,4,2,134.0,25,61,0.12,0.5,13.0,70.0,0.2
+1152366,1986,"Valent-Vona loamy fine sands, 3 to 15 percent slopes",62579,28077742,Vona,34,5.0,A,Well drained,4,4,2,134.0,0,25,0.09,0.75,6.0,78.0,0.28
+1152366,1986,"Valent-Vona loamy fine sands, 3 to 15 percent slopes",62579,28077742,Vona,34,5.0,A,Well drained,4,4,2,134.0,61,91,0.12,0.5,11.0,66.0,0.28
+1152366,1986,"Valent-Vona loamy fine sands, 3 to 15 percent slopes",62579,28077743,Valent,65,10.0,A,Excessively drained,6,6,2,134.0,0,10,0.08,0.75,6.5,86.8,0.17
+1152366,1986,"Valent-Vona loamy fine sands, 3 to 15 percent slopes",62579,28077743,Valent,65,10.0,A,Excessively drained,6,6,2,134.0,10,203,0.07,0.2,5.0,94.0,0.1
+1152367,1987,"Vona loamy fine sand, 0 to 5 percent slopes",11323,28077688,Vona,99,3.0,A,Somewhat excessively drained,4,4,2,134.0,0,20,0.11,0.75,5.5,78.2,0.28
+1152367,1987,"Vona loamy fine sand, 0 to 5 percent slopes",11323,28077688,Vona,99,3.0,A,Somewhat excessively drained,4,4,2,134.0,20,56,0.15,0.5,13.0,66.9,0.28
+1152367,1987,"Vona loamy fine sand, 0 to 5 percent slopes",11323,28077688,Vona,99,3.0,A,Somewhat excessively drained,4,4,2,134.0,56,152,0.11,0.5,9.0,67.4,0.24
+1152367,1987,"Vona loamy fine sand, 0 to 5 percent slopes",11323,28077689,Aquolls,1,,D,Poorly drained,,,4,86.0,0,152,,,,,
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077818,Lesho,85,1.0,C,Somewhat poorly drained,3,3,4L,86.0,81,200,0.06,0.1,4.0,94.0,0.02
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077818,Lesho,85,1.0,C,Somewhat poorly drained,3,3,4L,86.0,0,35,0.18,2.0,31.0,35.0,0.32
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077818,Lesho,85,1.0,C,Somewhat poorly drained,3,3,4L,86.0,35,81,0.18,0.5,28.0,35.0,0.37
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077819,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,0,38,0.19,1.5,28.0,35.0,0.32
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077819,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,38,200,0.09,0.3,8.0,90.0,0.02
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077820,Canadian,4,1.0,A,Well drained,2,2,3,86.0,81,200,0.15,0.1,8.0,65.0,0.37
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077820,Canadian,4,1.0,A,Well drained,2,2,3,86.0,41,81,0.15,0.6,12.0,66.0,0.28
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077820,Canadian,4,1.0,A,Well drained,2,2,3,86.0,0,41,0.14,2.0,10.0,63.0,0.28
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077821,Lincoln,2,1.0,A,Somewhat excessively drained,,3,2,134.0,25,200,0.07,0.2,7.0,91.0,0.05
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077821,Lincoln,2,1.0,A,Somewhat excessively drained,,3,2,134.0,0,25,0.09,0.5,10.0,83.0,0.1
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077822,Platte,4,1.0,C,Somewhat poorly drained,,7,3,86.0,36,200,0.03,0.1,1.0,98.0,0.02
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077822,Platte,4,1.0,C,Somewhat poorly drained,,7,3,86.0,0,18,0.16,1.5,10.0,67.0,0.28
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077822,Platte,4,1.0,C,Somewhat poorly drained,,7,3,86.0,18,36,0.15,0.1,6.0,66.0,0.37
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077823,Aquolls,1,0.0,D,Poorly drained,3,3,6,48.0,132,200,0.19,0.3,31.0,6.0,0.49
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077823,Aquolls,1,0.0,D,Poorly drained,3,3,6,48.0,116,132,0.17,0.5,38.0,6.0,0.37
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077823,Aquolls,1,0.0,D,Poorly drained,3,3,6,48.0,0,30,0.21,3.0,33.0,7.0,0.43
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077823,Aquolls,1,0.0,D,Poorly drained,3,3,6,48.0,30,116,0.14,1.0,44.0,4.0,0.37
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077824,Zenda,1,1.0,C,Somewhat poorly drained,2,2,6,48.0,35,200,0.18,0.5,28.0,44.0,0.24
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077824,Zenda,1,1.0,C,Somewhat poorly drained,2,2,6,48.0,0,35,0.19,2.0,28.0,42.0,0.28
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077825,Dale,2,0.0,B,Well drained,1,1,6,48.0,53,102,0.18,1.5,25.0,10.0,0.43
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077825,Dale,2,0.0,B,Well drained,1,1,6,48.0,102,200,0.18,0.9,26.0,11.0,0.43
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077825,Dale,2,0.0,B,Well drained,1,1,6,48.0,0,18,0.18,2.0,21.0,13.0,0.43
+1152318,2152,"Lesho clay loam, occasionally flooded",71,28077825,Dale,2,0.0,B,Well drained,1,1,6,48.0,18,53,0.18,2.0,22.0,11.0,0.43
+1454362,2310,"Bridgeport silt loam, rarely flooded",398,28077717,New Cambria,5,1.0,C,Moderately well drained,2,2,4,86.0,18,35,0.19,3.0,38.0,8.0,0.28
+1454362,2310,"Bridgeport silt loam, rarely flooded",398,28077717,New Cambria,5,1.0,C,Moderately well drained,2,2,4,86.0,0,18,0.2,3.0,36.0,8.0,0.32
+1454362,2310,"Bridgeport silt loam, rarely flooded",398,28077717,New Cambria,5,1.0,C,Moderately well drained,2,2,4,86.0,93,200,0.2,0.7,35.0,7.0,0.37
+1454362,2310,"Bridgeport silt loam, rarely flooded",398,28077717,New Cambria,5,1.0,C,Moderately well drained,2,2,4,86.0,78,93,0.19,0.9,38.0,5.0,0.37
+1454362,2310,"Bridgeport silt loam, rarely flooded",398,28077717,New Cambria,5,1.0,C,Moderately well drained,2,2,4,86.0,35,78,0.16,2.0,42.0,5.0,0.32
+1454362,2310,"Bridgeport silt loam, rarely flooded",398,28077718,Bridgeport,95,1.0,B,Well drained,1,2,4L,86.0,0,16,0.22,3.0,21.0,10.0,0.37
+1454362,2310,"Bridgeport silt loam, rarely flooded",398,28077718,Bridgeport,95,1.0,B,Well drained,1,2,4L,86.0,16,33,0.22,2.0,21.0,10.0,0.43
+1454362,2310,"Bridgeport silt loam, rarely flooded",398,28077718,Bridgeport,95,1.0,B,Well drained,1,2,4L,86.0,33,71,0.22,0.8,25.0,11.0,0.49
+1454362,2310,"Bridgeport silt loam, rarely flooded",398,28077718,Bridgeport,95,1.0,B,Well drained,1,2,4L,86.0,71,200,0.2,0.5,21.0,13.0,0.49
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077771,Munjor,5,1.0,A,Well drained,2,3,3,86.0,86,200,0.04,0.5,3.0,89.0,0.17
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077771,Munjor,5,1.0,A,Well drained,2,3,3,86.0,38,86,0.14,0.5,8.0,70.0,0.32
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077771,Munjor,5,1.0,A,Well drained,2,3,3,86.0,0,16,0.11,1.0,12.0,63.0,0.24
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077771,Munjor,5,1.0,A,Well drained,2,3,3,86.0,16,38,0.12,0.8,10.0,65.0,0.28
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077772,Roxbury,79,1.0,B,Well drained,1,2,4L,86.0,20,56,0.22,1.75,25.0,12.0,0.43
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077772,Roxbury,79,1.0,B,Well drained,1,2,4L,86.0,56,85,0.21,2.0,28.0,12.0,0.43
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077772,Roxbury,79,1.0,B,Well drained,1,2,4L,86.0,85,143,0.22,0.6,25.0,13.0,0.49
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077772,Roxbury,79,1.0,B,Well drained,1,2,4L,86.0,143,200,0.22,1.5,23.0,15.0,0.49
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077772,Roxbury,79,1.0,B,Well drained,1,2,4L,86.0,0,20,0.22,2.5,23.0,13.0,0.37
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077773,Hord,10,1.0,B,Well drained,2,2,6,48.0,0,18,0.21,2.5,28.0,10.0,0.37
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077773,Hord,10,1.0,B,Well drained,2,2,6,48.0,18,51,0.21,1.75,30.0,10.0,0.37
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077773,Hord,10,1.0,B,Well drained,2,2,6,48.0,51,74,0.22,1.0,26.0,9.0,0.43
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077773,Hord,10,1.0,B,Well drained,2,2,6,48.0,93,200,0.21,0.3,19.0,11.0,0.55
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077773,Hord,10,1.0,B,Well drained,2,2,6,48.0,74,93,0.21,1.5,22.0,9.0,0.49
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077774,Bridgeport,5,1.0,B,Well drained,1,2,4L,86.0,33,71,0.22,0.6,23.0,12.0,0.49
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077774,Bridgeport,5,1.0,B,Well drained,1,2,4L,86.0,71,122,0.22,1.0,25.0,13.0,0.49
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077774,Bridgeport,5,1.0,B,Well drained,1,2,4L,86.0,122,200,0.2,1.5,23.0,15.0,0.49
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077774,Bridgeport,5,1.0,B,Well drained,1,2,4L,86.0,0,33,0.22,2.5,21.0,13.0,0.37
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077775,Aquolls,1,0.0,B/D,Poorly drained,,3,6,48.0,0,54,0.22,3.0,23.0,9.0,0.37
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077775,Aquolls,1,0.0,B/D,Poorly drained,,3,6,48.0,54,78,0.22,1.0,25.0,11.0,0.49
+2496174,2375,"Roxbury silt loam, rarely flooded",4876,28077775,Aquolls,1,0.0,B/D,Poorly drained,,3,6,48.0,78,200,0.2,0.5,21.0,13.0,0.49
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077761,Campus,60,8.0,C,Well drained,,6,4L,86.0,79,104,,,,,
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077761,Campus,60,8.0,C,Well drained,,6,4L,86.0,18,41,0.14,1.0,29.0,35.0,0.32
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077761,Campus,60,8.0,C,Well drained,,6,4L,86.0,0,18,0.14,2.0,26.0,30.0,0.28
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077761,Campus,60,8.0,C,Well drained,,6,4L,86.0,41,79,0.17,0.7,26.0,43.0,0.37
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077762,Canlon,30,13.0,D,Somewhat excessively drained,,6,4L,86.0,18,33,0.2,0.5,14.0,50.0,0.43
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077762,Canlon,30,13.0,D,Somewhat excessively drained,,6,4L,86.0,33,58,,,,,
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077762,Canlon,30,13.0,D,Somewhat excessively drained,,6,4L,86.0,0,18,0.17,0.9,16.0,47.0,0.37
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077763,Rock outcrop,1,15.0,,,,8,,,0,25,,,,,
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077764,Penden,5,6.0,B,Well drained,,5,4L,86.0,0,18,0.17,2.0,29.0,33.0,0.2
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077764,Penden,5,6.0,B,Well drained,,5,4L,86.0,63,200,0.17,0.3,28.0,34.0,0.32
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077764,Penden,5,6.0,B,Well drained,,5,4L,86.0,43,63,0.17,0.6,31.0,33.0,0.28
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077764,Penden,5,6.0,B,Well drained,,5,4L,86.0,18,43,0.17,1.7,29.0,33.0,0.24
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077765,Humbarger,4,1.0,B,Well drained,2,2,4L,86.0,15,56,0.2,2.0,24.0,42.0,0.28
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077765,Humbarger,4,1.0,B,Well drained,2,2,4L,86.0,0,15,0.2,2.0,22.0,42.0,0.28
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077765,Humbarger,4,1.0,B,Well drained,2,2,4L,86.0,56,83,0.18,2.0,28.0,38.0,0.28
+1152304,2562,"Campus-Canlon complex, 3 to 30 percent slopes",1040,28077765,Humbarger,4,1.0,B,Well drained,2,2,4L,86.0,83,200,0.19,0.4,24.0,41.0,0.32
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077766,Campus,35,8.0,C,Well drained,,6,4L,86.0,18,48,0.14,1.0,29.0,35.0,0.32
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077766,Campus,35,8.0,C,Well drained,,6,4L,86.0,76,101,,,,,
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077766,Campus,35,8.0,C,Well drained,,6,4L,86.0,48,76,0.17,0.7,26.0,43.0,0.37
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077766,Campus,35,8.0,C,Well drained,,6,4L,86.0,0,18,0.14,2.0,26.0,30.0,0.28
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077767,Penden,20,9.0,B,Well drained,6,6,4L,86.0,23,38,0.2,1.7,23.0,36.0,0.28
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077767,Penden,20,9.0,B,Well drained,6,6,4L,86.0,38,86,0.19,0.6,31.0,33.0,0.28
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077767,Penden,20,9.0,B,Well drained,6,6,4L,86.0,86,200,0.21,0.3,28.0,34.0,0.32
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077767,Penden,20,9.0,B,Well drained,6,6,4L,86.0,0,23,0.2,2.0,20.0,39.0,0.32
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077768,Uly,3,8.0,B,Well drained,4,4,6,48.0,15,28,0.2,2.0,24.0,12.0,0.37
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077768,Uly,3,8.0,B,Well drained,4,4,6,48.0,41,200,0.22,0.5,18.0,14.0,0.55
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077768,Uly,3,8.0,B,Well drained,4,4,6,48.0,0,15,0.2,2.0,22.0,14.0,0.43
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077768,Uly,3,8.0,B,Well drained,4,4,6,48.0,28,41,0.22,0.7,24.0,13.0,0.49
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077769,Minnequa,2,2.0,C,Well drained,4,6,4L,86.0,78,103,,,,,
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077769,Minnequa,2,2.0,C,Well drained,4,6,4L,86.0,20,78,0.15,0.3,24.0,35.0,0.49
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077769,Minnequa,2,2.0,C,Well drained,4,6,4L,86.0,0,10,0.15,0.8,24.0,20.0,0.43
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077769,Minnequa,2,2.0,C,Well drained,4,6,4L,86.0,10,20,0.15,0.3,26.0,15.0,0.49
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077770,Canlon,40,21.0,D,Somewhat excessively drained,6,6,4L,86.0,13,25,0.2,0.5,14.0,50.0,0.43
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077770,Canlon,40,21.0,D,Somewhat excessively drained,6,6,4L,86.0,25,50,,,,,
+1152305,2570,"Canlon-Campus complex, 1 to 40 percent slopes",35,28077770,Canlon,40,21.0,D,Somewhat excessively drained,6,6,4L,86.0,0,13,0.17,0.9,16.0,47.0,0.37
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077829,Harney,97,1.0,C,Well drained,1,2,6,48.0,29,39,0.19,1.35,37.0,4.0,0.37
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077829,Harney,97,1.0,C,Well drained,1,2,6,48.0,39,70,0.16,0.7,39.0,4.0,0.37
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077829,Harney,97,1.0,C,Well drained,1,2,6,48.0,17,29,0.22,1.75,28.0,5.0,0.43
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077829,Harney,97,1.0,C,Well drained,1,2,6,48.0,0,17,0.22,2.3,24.0,8.0,0.37
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077829,Harney,97,1.0,C,Well drained,1,2,6,48.0,70,91,0.2,0.6,32.0,5.0,0.43
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077829,Harney,97,1.0,C,Well drained,1,2,6,48.0,91,200,0.2,0.4,24.0,6.0,0.49
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077830,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,0,7,0.21,3.6,34.0,6.0,0.32
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077830,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,89,200,0.21,0.4,33.0,11.0,0.43
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077830,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,18,89,0.16,1.2,44.0,5.0,0.37
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077830,Ness,2,0.0,D,Poorly drained,6,6,6,48.0,7,18,0.19,2.48,37.0,6.0,0.37
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077831,Aquolls,1,1.0,B/D,Poorly drained,3,3,4L,86.0,16,54,0.22,2.0,23.0,9.0,0.43
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077831,Aquolls,1,1.0,B/D,Poorly drained,3,3,4L,86.0,0,16,0.22,3.0,23.0,9.0,0.37
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077831,Aquolls,1,1.0,B/D,Poorly drained,3,3,4L,86.0,78,200,0.2,0.5,21.0,13.0,0.49
+2605915,2612,"Harney silt loam, 0 to 1 percent slopes",8697,28077831,Aquolls,1,1.0,B/D,Poorly drained,3,3,4L,86.0,54,78,0.22,1.0,25.0,11.0,0.49
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077801,Ness,80,0.0,D,Poorly drained,6,6,6,48.0,7,18,0.19,2.48,37.0,6.0,0.37
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077801,Ness,80,0.0,D,Poorly drained,6,6,6,48.0,18,89,0.16,1.2,44.0,5.0,0.37
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077801,Ness,80,0.0,D,Poorly drained,6,6,6,48.0,0,7,0.21,3.6,34.0,6.0,0.32
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077801,Ness,80,0.0,D,Poorly drained,6,6,6,48.0,89,200,0.21,0.4,33.0,11.0,0.43
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077802,Pleasant,8,1.0,C,Moderately well drained,3,3,6,48.0,109,200,0.21,0.5,26.0,11.0,0.49
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077802,Pleasant,8,1.0,C,Moderately well drained,3,3,6,48.0,7,21,0.24,2.5,32.0,7.0,0.43
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077802,Pleasant,8,1.0,C,Moderately well drained,3,3,6,48.0,21,64,0.17,1.2,41.0,5.0,0.37
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077802,Pleasant,8,1.0,C,Moderately well drained,3,3,6,48.0,64,109,0.19,0.8,37.0,5.0,0.37
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077802,Pleasant,8,1.0,C,Moderately well drained,3,3,6,48.0,0,7,0.24,3.6,24.0,8.0,0.37
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077803,Lodgepole,12,1.0,C/D,Poorly drained,6,6,6,48.0,28,67,0.17,1.2,41.0,5.0,0.37
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077803,Lodgepole,12,1.0,C/D,Poorly drained,6,6,6,48.0,67,114,0.19,0.8,37.0,5.0,0.37
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077803,Lodgepole,12,1.0,C/D,Poorly drained,6,6,6,48.0,0,10,0.24,3.6,24.0,8.0,0.37
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077803,Lodgepole,12,1.0,C/D,Poorly drained,6,6,6,48.0,10,28,0.24,2.5,28.0,7.0,0.43
+1152327,2714,"Ness silty clay loam, 0 to 1 percent slopes, occasionally ponded",10643,28077803,Lodgepole,12,1.0,C/D,Poorly drained,6,6,6,48.0,114,200,0.17,0.5,30.0,11.0,0.49
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077719,Penden,85,11.0,B,Well drained,6,6,4L,86.0,36,81,0.17,0.6,31.0,33.0,0.28
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077719,Penden,85,11.0,B,Well drained,6,6,4L,86.0,23,36,0.17,1.7,29.0,33.0,0.24
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077719,Penden,85,11.0,B,Well drained,6,6,4L,86.0,0,23,0.17,2.0,29.0,33.0,0.24
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077719,Penden,85,11.0,B,Well drained,6,6,4L,86.0,81,200,0.17,0.3,28.0,34.0,0.32
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077720,Humbarger,5,2.0,B,Well drained,,5,4L,86.0,83,200,0.17,0.4,24.0,41.0,0.32
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077720,Humbarger,5,2.0,B,Well drained,,5,4L,86.0,68,83,0.17,2.0,26.0,38.0,0.28
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077720,Humbarger,5,2.0,B,Well drained,,5,4L,86.0,0,68,0.17,2.0,21.0,42.0,0.28
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077721,Canlon,5,11.0,D,Somewhat excessively drained,6,6,4L,86.0,36,61,,,,,
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077721,Canlon,5,11.0,D,Somewhat excessively drained,6,6,4L,86.0,22,36,0.14,0.5,14.0,50.0,0.43
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077721,Canlon,5,11.0,D,Somewhat excessively drained,6,6,4L,86.0,0,22,0.15,0.9,16.0,47.0,0.37
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077722,Uly,5,11.0,B,Well drained,6,6,6,48.0,31,54,0.22,0.7,24.0,13.0,0.49
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077722,Uly,5,11.0,B,Well drained,6,6,6,48.0,18,31,0.22,2.0,26.0,12.0,0.37
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077722,Uly,5,11.0,B,Well drained,6,6,6,48.0,0,18,0.22,2.0,22.0,14.0,0.43
+1152333,2750,"Penden clay loam, 7 to 15 percent slopes",3571,28077722,Uly,5,11.0,B,Well drained,6,6,6,48.0,54,200,0.22,0.5,18.0,14.0,0.55
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077776,Uly,10,4.0,B,Well drained,3,3,6,48.0,47,200,0.22,0.5,23.0,14.0,0.49
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077776,Uly,10,4.0,B,Well drained,3,3,6,48.0,26,47,0.22,0.7,24.0,13.0,0.49
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077776,Uly,10,4.0,B,Well drained,3,3,6,48.0,15,26,0.22,2.0,22.0,14.0,0.43
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077776,Uly,10,4.0,B,Well drained,3,3,6,48.0,0,15,0.22,2.0,22.0,14.0,0.37
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077777,Penden,56,8.0,B,Well drained,6,6,4L,86.0,81,200,0.17,0.3,28.0,34.0,0.32
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077777,Penden,56,8.0,B,Well drained,6,6,4L,86.0,0,23,0.17,2.0,29.0,33.0,0.24
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077777,Penden,56,8.0,B,Well drained,6,6,4L,86.0,23,36,0.17,1.7,29.0,33.0,0.24
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077777,Penden,56,8.0,B,Well drained,6,6,4L,86.0,36,81,0.17,0.6,31.0,33.0,0.28
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077778,Campus,8,10.0,C,Well drained,6,6,4L,86.0,79,104,,,,,
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077778,Campus,8,10.0,C,Well drained,6,6,4L,86.0,41,79,0.17,0.7,26.0,43.0,0.37
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077778,Campus,8,10.0,C,Well drained,6,6,4L,86.0,18,41,0.14,1.0,28.0,35.0,0.32
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077778,Campus,8,10.0,C,Well drained,6,6,4L,86.0,0,18,0.15,2.0,21.0,30.0,0.32
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077779,Coly,5,4.0,B,Well drained,3,3,4L,86.0,10,30,0.22,0.5,24.0,13.0,0.43
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077779,Coly,5,4.0,B,Well drained,3,3,4L,86.0,0,10,0.22,1.0,22.0,14.0,0.43
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077779,Coly,5,4.0,B,Well drained,3,3,4L,86.0,30,200,0.22,0.5,23.0,14.0,0.49
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077780,Aquolls,1,0.0,B/D,Poorly drained,,3,6,48.0,78,200,0.2,0.5,21.0,13.0,0.49
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077780,Aquolls,1,0.0,B/D,Poorly drained,,3,6,48.0,54,78,0.22,1.0,25.0,11.0,0.49
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077780,Aquolls,1,0.0,B/D,Poorly drained,,3,6,48.0,0,54,0.22,3.0,23.0,9.0,0.37
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077781,Roxbury,20,1.0,B,Well drained,,5,4L,86.0,28,56,0.22,1.75,25.0,12.0,0.43
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077781,Roxbury,20,1.0,B,Well drained,,5,4L,86.0,0,28,0.22,3.5,23.0,13.0,0.37
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077781,Roxbury,20,1.0,B,Well drained,,5,4L,86.0,56,85,0.21,2.0,28.0,12.0,0.43
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077781,Roxbury,20,1.0,B,Well drained,,5,4L,86.0,85,143,0.22,0.6,25.0,13.0,0.49
+1152334,2765,"Penden-Roxbury complex, 0 to 15 percent slopes",38106,28077781,Roxbury,20,1.0,B,Well drained,,5,4L,86.0,143,200,0.22,1.5,23.0,15.0,0.49
+1152335,2794,"Penrose-Rock land complex, 10 to 20 percent slopes",1474,28077663,Penrose,70,15.0,D,Somewhat excessively drained,,7,5,56.0,30,200,,0.0,,,
+1152335,2794,"Penrose-Rock land complex, 10 to 20 percent slopes",1474,28077663,Penrose,70,15.0,D,Somewhat excessively drained,,7,5,56.0,0,15,0.15,0.75,21.0,41.6,0.43
+1152335,2794,"Penrose-Rock land complex, 10 to 20 percent slopes",1474,28077663,Penrose,70,15.0,D,Somewhat excessively drained,,7,5,56.0,15,30,0.2,1.0,22.5,39.8,0.43
+1152347,2800,"Spearville complex, 1 to 3 percent slopes, eroded",2372,28077816,Penden,25,2.0,B,Well drained,2,3,4L,86.0,96,200,0.17,0.3,28.0,34.0,0.32
+1152347,2800,"Spearville complex, 1 to 3 percent slopes, eroded",2372,28077816,Penden,25,2.0,B,Well drained,2,3,4L,86.0,41,96,0.17,0.6,31.0,33.0,0.28
+1152347,2800,"Spearville complex, 1 to 3 percent slopes, eroded",2372,28077816,Penden,25,2.0,B,Well drained,2,3,4L,86.0,0,18,0.17,2.0,29.0,33.0,0.24
+1152347,2800,"Spearville complex, 1 to 3 percent slopes, eroded",2372,28077816,Penden,25,2.0,B,Well drained,2,3,4L,86.0,18,41,0.17,1.7,29.0,33.0,0.24
+1152347,2800,"Spearville complex, 1 to 3 percent slopes, eroded",2372,28077817,Spearville,75,2.0,C,Well drained,2,2,6,48.0,66,200,0.21,0.5,26.0,6.0,0.49
+1152347,2800,"Spearville complex, 1 to 3 percent slopes, eroded",2372,28077817,Spearville,75,2.0,C,Well drained,2,2,6,48.0,53,66,0.21,0.5,32.0,6.0,0.43
+1152347,2800,"Spearville complex, 1 to 3 percent slopes, eroded",2372,28077817,Spearville,75,2.0,C,Well drained,2,2,6,48.0,42,53,0.14,0.8,42.0,5.0,0.37
+1152347,2800,"Spearville complex, 1 to 3 percent slopes, eroded",2372,28077817,Spearville,75,2.0,C,Well drained,2,2,6,48.0,0,18,0.21,2.0,32.0,9.0,0.37
+1152347,2800,"Spearville complex, 1 to 3 percent slopes, eroded",2372,28077817,Spearville,75,2.0,C,Well drained,2,2,6,48.0,18,42,0.14,1.0,46.0,6.0,0.32
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077711,Spearville,85,0.0,C,Well drained,2,2,6,48.0,18,35,0.14,1.0,46.0,6.0,0.32
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077711,Spearville,85,0.0,C,Well drained,2,2,6,48.0,35,52,0.14,0.8,42.0,5.0,0.37
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077711,Spearville,85,0.0,C,Well drained,2,2,6,48.0,0,18,0.21,2.0,32.0,9.0,0.37
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077711,Spearville,85,0.0,C,Well drained,2,2,6,48.0,52,78,0.21,0.5,32.0,6.0,0.43
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077711,Spearville,85,0.0,C,Well drained,2,2,6,48.0,78,200,0.21,0.5,26.0,6.0,0.49
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077712,Harney,12,1.0,C,Well drained,2,2,6,48.0,65,85,0.2,0.5,30.0,6.0,0.43
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077712,Harney,12,1.0,C,Well drained,2,2,6,48.0,26,40,0.19,1.0,35.0,5.0,0.43
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077712,Harney,12,1.0,C,Well drained,2,2,6,48.0,40,65,0.16,0.8,39.0,5.0,0.37
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077712,Harney,12,1.0,C,Well drained,2,2,6,48.0,85,200,0.2,0.5,25.0,6.0,0.49
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077712,Harney,12,1.0,C,Well drained,2,2,6,48.0,0,15,0.23,2.0,24.0,9.0,0.43
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077712,Harney,12,1.0,C,Well drained,2,2,6,48.0,15,26,0.23,2.0,26.0,7.0,0.43
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077713,Ness,3,0.0,D,Poorly drained,6,6,4,86.0,15,84,0.12,1.0,47.0,4.0,0.32
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077713,Ness,3,0.0,D,Poorly drained,6,6,4,86.0,84,200,0.2,0.3,32.0,5.0,0.43
+1152348,2801,"Spearville silty clay loam, 0 to 1 percent slopes",24672,28077713,Ness,3,0.0,D,Poorly drained,6,6,4,86.0,0,15,0.13,2.0,42.0,5.0,0.37
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077812,Uly,90,1.0,B,Well drained,1,2,6,48.0,20,35,0.22,2.0,26.0,12.0,0.37
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077812,Uly,90,1.0,B,Well drained,1,2,6,48.0,54,200,0.22,0.5,18.0,14.0,0.55
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077812,Uly,90,1.0,B,Well drained,1,2,6,48.0,35,54,0.22,0.7,24.0,13.0,0.49
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077812,Uly,90,1.0,B,Well drained,1,2,6,48.0,0,20,0.22,2.0,22.0,14.0,0.43
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077813,Harney,10,1.0,C,Well drained,1,2,6,48.0,90,200,0.2,0.5,25.0,6.0,0.49
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077813,Harney,10,1.0,C,Well drained,1,2,6,48.0,0,15,0.23,2.0,24.0,9.0,0.43
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077813,Harney,10,1.0,C,Well drained,1,2,6,48.0,15,23,0.23,2.0,26.0,7.0,0.43
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077813,Harney,10,1.0,C,Well drained,1,2,6,48.0,23,31,0.19,1.0,35.0,5.0,0.43
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077813,Harney,10,1.0,C,Well drained,1,2,6,48.0,64,90,0.2,0.5,30.0,6.0,0.43
+2745858,2814,"Uly silt loam, 0 to 1 percent slopes",3222,28077813,Harney,10,1.0,C,Well drained,1,2,6,48.0,31,64,0.16,0.8,39.0,5.0,0.37
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077826,Coly,5,2.0,B,Well drained,2,2,6,48.0,32,200,0.22,0.5,18.0,14.0,0.55
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077826,Coly,5,2.0,B,Well drained,2,2,6,48.0,0,15,0.22,2.0,22.0,14.0,0.43
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077826,Coly,5,2.0,B,Well drained,2,2,6,48.0,15,32,0.22,0.7,24.0,13.0,0.43
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077827,Uly,90,2.0,B,Well drained,2,2,6,48.0,20,35,0.22,2.0,26.0,12.0,0.37
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077827,Uly,90,2.0,B,Well drained,2,2,6,48.0,54,200,0.22,0.5,18.0,14.0,0.55
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077827,Uly,90,2.0,B,Well drained,2,2,6,48.0,0,20,0.22,2.0,22.0,14.0,0.43
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077827,Uly,90,2.0,B,Well drained,2,2,6,48.0,35,54,0.22,0.7,24.0,13.0,0.49
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077828,Harney,5,2.0,C,Well drained,2,2,6,48.0,90,200,0.2,0.5,25.0,6.0,0.49
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077828,Harney,5,2.0,C,Well drained,2,2,6,48.0,64,90,0.2,0.5,30.0,6.0,0.43
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077828,Harney,5,2.0,C,Well drained,2,2,6,48.0,23,31,0.19,1.0,35.0,5.0,0.43
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077828,Harney,5,2.0,C,Well drained,2,2,6,48.0,0,15,0.23,2.0,24.0,9.0,0.43
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077828,Harney,5,2.0,C,Well drained,2,2,6,48.0,15,23,0.23,2.0,26.0,7.0,0.43
+2745859,2815,"Uly silt loam, 1 to 3 percent slopes",334,28077828,Harney,5,2.0,C,Well drained,2,2,6,48.0,31,64,0.16,0.8,39.0,5.0,0.37
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077693,Penden,5,5.0,B,Well drained,3,3,5,56.0,18,31,0.17,2.5,19.0,39.0,0.32
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077693,Penden,5,5.0,B,Well drained,3,3,5,56.0,0,18,0.17,2.5,19.0,39.0,0.32
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077693,Penden,5,5.0,B,Well drained,3,3,5,56.0,31,84,0.17,0.6,29.0,32.0,0.32
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077693,Penden,5,5.0,B,Well drained,3,3,5,56.0,84,200,0.17,0.3,23.0,34.0,0.37
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077694,Uly,90,5.0,B,Well drained,3,3,6,48.0,18,31,0.22,2.0,26.0,12.0,0.37
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077694,Uly,90,5.0,B,Well drained,3,3,6,48.0,31,54,0.22,0.7,24.0,13.0,0.49
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077694,Uly,90,5.0,B,Well drained,3,3,6,48.0,0,18,0.22,2.0,22.0,14.0,0.43
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077694,Uly,90,5.0,B,Well drained,3,3,6,48.0,54,200,0.22,0.5,18.0,14.0,0.55
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077695,Harney,5,5.0,C,Well drained,3,3,6,48.0,15,23,0.23,2.0,26.0,7.0,0.43
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077695,Harney,5,5.0,C,Well drained,3,3,6,48.0,0,15,0.23,2.0,24.0,9.0,0.43
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077695,Harney,5,5.0,C,Well drained,3,3,6,48.0,23,31,0.19,1.0,35.0,5.0,0.43
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077695,Harney,5,5.0,C,Well drained,3,3,6,48.0,64,90,0.2,0.5,30.0,6.0,0.43
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077695,Harney,5,5.0,C,Well drained,3,3,6,48.0,31,64,0.16,0.8,39.0,5.0,0.37
+2669019,2817,"Uly silt loam, 3 to 6 percent slopes",731,28077695,Harney,5,5.0,C,Well drained,3,3,6,48.0,90,200,0.2,0.5,25.0,6.0,0.49
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077702,Coly,30,5.0,B,Well drained,4,4,4L,86.0,0,15,0.22,2.0,22.0,14.0,0.43
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077702,Coly,30,5.0,B,Well drained,4,4,4L,86.0,32,200,0.22,0.5,18.0,14.0,0.55
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077702,Coly,30,5.0,B,Well drained,4,4,4L,86.0,15,32,0.22,0.7,24.0,13.0,0.43
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077703,Penden,10,5.0,B,Well drained,4,4,5,56.0,15,31,0.17,2.5,19.0,39.0,0.32
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077703,Penden,10,5.0,B,Well drained,4,4,5,56.0,31,84,0.17,0.6,29.0,32.0,0.32
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077703,Penden,10,5.0,B,Well drained,4,4,5,56.0,0,15,0.17,2.5,19.0,39.0,0.32
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077703,Penden,10,5.0,B,Well drained,4,4,5,56.0,84,200,0.17,0.3,23.0,34.0,0.37
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077704,Uly,60,5.0,B,Well drained,4,4,6,48.0,15,31,0.22,2.0,26.0,12.0,0.37
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077704,Uly,60,5.0,B,Well drained,4,4,6,48.0,0,15,0.22,2.0,22.0,14.0,0.43
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077704,Uly,60,5.0,B,Well drained,4,4,6,48.0,54,200,0.22,0.5,18.0,14.0,0.55
+2768383,2822,"Uly-Coly silt loams, 3 to 6 percent slopes, eroded",59,28077704,Uly,60,5.0,B,Well drained,4,4,6,48.0,31,54,0.22,0.7,24.0,13.0,0.49
+1152320,6061,"Lincoln soils, occasionally flooded",1639,28077789,Lincoln,99,1.0,A,Somewhat excessively drained,,7,1,250.0,25,122,0.13,0.2,10.0,90.0,0.1
+1152320,6061,"Lincoln soils, occasionally flooded",1639,28077789,Lincoln,99,1.0,A,Somewhat excessively drained,,7,1,250.0,0,25,0.08,0.75,2.5,96.8,0.02
+1152320,6061,"Lincoln soils, occasionally flooded",1639,28077790,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,0,38,0.19,1.5,27.5,35.2,0.32
+1152320,6061,"Lincoln soils, occasionally flooded",1639,28077790,Sweetwater,1,1.0,C/D,Poorly drained,,5,6,48.0,38,91,0.09,0.3,8.0,89.5,0.05
+1152307,9982,"Fluvents, frequently flooded",1377,28077679,Aquolls,1,,A/D,Poorly drained,,,8,0.0,0,152,,,,,
+1152307,9982,"Fluvents, frequently flooded",1377,28077680,Fluvents,99,18.0,B,Well drained,,6,5,56.0,0,15,0.23,0.75,18.5,27.1,0.43
+1152307,9982,"Fluvents, frequently flooded",1377,28077680,Fluvents,99,18.0,B,Well drained,,6,5,56.0,15,152,0.2,1.0,22.5,24.8,0.43

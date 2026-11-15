@@ -1,0 +1,65 @@
+{
+  "proyecto": "FieldShift Resilience Engine",
+  "ubicacion": "Finney County, Kansas",
+  "horizonte": [
+    2027,
+    2028,
+    2029
+  ],
+  "escenarios_simulados": 300,
+  "metodo_climatico": "Markov trimestral (seco/normal/húmedo)",
+  "metodo_optimizacion": "CVaR 20% con restricción hídrica (HiGHS (scipy))",
+  "presupuesto_agua_mm": 1600,
+  "demanda_agua_por_cultivo_mm": {
+    "trigo": 450,
+    "sorgo": 350,
+    "maiz": 650
+  },
+  "agua_es_ilustrativa": true,
+  "rotaciones": {
+    "Productividad": {
+      "2027": "sorgo",
+      "2028": "trigo",
+      "2029": "sorgo"
+    },
+    "Equilibrada": {
+      "2027": "maiz",
+      "2028": "trigo",
+      "2029": "sorgo"
+    },
+    "Resiliencia": {
+      "2027": "maiz",
+      "2028": "sorgo",
+      "2029": "trigo"
+    }
+  },
+  "resultados": [
+    {
+      "Estrategia": "Productividad",
+      "Rotacion": "sorgo → trigo → sorgo",
+      "Promedio": 1.004,
+      "CVaR_20": 0.812,
+      "Prob_bajo_promedio": 0.51,
+      "Agua_total_mm": 1150.0,
+      "Uso_agua_%": 71.9
+    },
+    {
+      "Estrategia": "Equilibrada",
+      "Rotacion": "maiz → trigo → sorgo",
+      "Promedio": 1.001,
+      "CVaR_20": 0.825,
+      "Prob_bajo_promedio": 0.507,
+      "Agua_total_mm": 1450.0,
+      "Uso_agua_%": 90.6
+    },
+    {
+      "Estrategia": "Resiliencia",
+      "Rotacion": "maiz → sorgo → trigo",
+      "Promedio": 0.993,
+      "CVaR_20": 0.826,
+      "Prob_bajo_promedio": 0.517,
+      "Agua_total_mm": 1450.0,
+      "Uso_agua_%": 90.6
+    }
+  ]
+}

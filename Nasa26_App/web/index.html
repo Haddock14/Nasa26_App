@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explorador de rotaciones de cultivos · Finney County</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+/* Sistema visual: escala de espacios 4/8/12/16/24 px, tipografía del sistema, contraste AA, sin animaciones. */
+:root{
+  --fondo:#f4f5f2;--superficie:#ffffff;--texto:#1f2421;--texto-2:#555c56;--borde:#d7dbd4;--borde-2:#e8ebe6;
+  --primario:#2f5d2a;--primario-claro:#eaf1e7;--foco:#1d63c9;
+  --bien:#2e7d32;--bien-fondo:#e6f2e6;--atencion:#8a5a00;--atencion-fondo:#fdf1d6;--problema:#b3261e;--problema-fondo:#fbe4e1;
+  --cultivo:#5f9a4a;--rastrojo:#c9b779;--desnudo:#b0563a;
+  font-size:16px}
+*{box-sizing:border-box}
+*,*::before,*::after{transition:none!important;animation:none!important}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--fondo);color:var(--texto);line-height:1.5}
+button,select,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--foco);outline-offset:2px}
+h1,h2,h3,h4{line-height:1.25}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;background:var(--superficie);border-bottom:1px solid var(--borde)}
+header h1{font-size:1.15rem;margin:0}header p{margin:0;color:var(--texto-2);font-size:.85rem}
+#app{display:grid;grid-template-columns:minmax(360px,47%) 1fr;height:calc(100vh - 62px)}
+/* mapa */
+#mapa-col{position:relative;border-right:1px solid var(--borde)}#mapa{position:absolute;inset:0;background:#e3e6df}
+.panel-mapa{position:absolute;z-index:500;background:var(--superficie);border:1px solid var(--borde);border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+#fondo{top:12px;left:56px;display:flex;padding:4px}
+.seg{display:inline-flex;border:1px solid var(--borde);border-radius:6px;overflow:hidden;background:var(--superficie)}
+.seg button{border:0;border-right:1px solid var(--borde);background:var(--superficie);padding:6px 12px;cursor:pointer;font-size:.88rem}
+.seg button:last-child{border-right:0}.seg button[aria-pressed="true"]{background:var(--primario);color:#fff}
+#fondo.seg{border:0}
+#idioma button{min-width:44px;font-weight:600}
+#capas{top:12px;right:12px;width:260px;padding:12px;font-size:.88rem;max-height:calc(100% - 100px);overflow:auto}
+#capas label.t{font-weight:600;display:block;margin-bottom:4px}#capas select{width:100%;padding:4px;margin-bottom:8px;border:1px solid var(--borde);border-radius:4px;background:#fff}
+.ley{display:flex;align-items:center;gap:8px;margin:3px 0;font-size:.85rem}.ley i{width:14px;height:14px;border-radius:2px;border:1px solid rgba(0,0,0,.25);flex:none}
+.barra{height:10px;border-radius:2px;margin:4px 0}.esc{display:flex;justify-content:space-between;color:var(--texto-2);font-size:.78rem}
+#estado-mapa{left:12px;bottom:12px;max-width:min(520px,calc(100% - 24px));padding:10px 14px;font-size:.9rem;display:flex;gap:12px;align-items:center}
+/* panel */
+#panel{overflow:auto;background:var(--superficie)}
+[role=tablist]{display:flex;gap:0;border-bottom:1px solid var(--borde);position:sticky;top:0;background:var(--superficie);z-index:5;padding:0 12px}
+[role=tab]{border:0;background:none;padding:12px 16px;cursor:pointer;color:var(--texto-2);border-bottom:3px solid transparent;font-size:.95rem}
+[role=tab][aria-selected="true"]{color:var(--texto);border-bottom-color:var(--primario);font-weight:600}
+[role=tabpanel]{padding:16px 24px 48px;max-width:980px}[role=tabpanel][hidden]{display:none}
+h2{font-size:1.1rem;margin:28px 0 8px}h2:first-child{margin-top:4px}h3{font-size:1rem;margin:20px 0 6px}
+.intro{color:var(--texto-2);margin:0 0 12px;font-size:.92rem}
+.tarjeta{border:1px solid var(--borde);border-radius:8px;padding:16px;background:var(--superficie);margin:12px 0}
+.vacio{border:1px dashed var(--borde);border-radius:8px;padding:24px;color:var(--texto-2);text-align:center}
+.boton{border:1px solid var(--borde);background:var(--superficie);border-radius:6px;padding:7px 14px;cursor:pointer;font-size:.9rem}
+.boton:hover{background:var(--fondo)}.boton.primario{background:var(--primario);border-color:var(--primario);color:#fff;font-weight:600;padding:10px 20px}
+.boton.primario:hover{background:#264c22}.enlace{border:0;background:none;color:var(--primario);text-decoration:underline;cursor:pointer;padding:0;font-size:.9rem}
+.cabecera-campo{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.cabecera-campo h2{margin:0}
+.historial{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin:12px 0 8px}.historial div{font-size:.75rem;text-align:center}
+.historial span{display:block;height:24px;border-radius:3px;border:1px solid rgba(0,0,0,.15);margin-bottom:2px}
+.mut{color:var(--texto-2);font-size:.86rem}.err{color:var(--problema)}.cargando{color:var(--texto-2)}
+/* estado */
+.estado{display:inline-block;font-size:.78rem;font-weight:600;padding:2px 8px;border-radius:4px;border:1px solid;white-space:nowrap}
+.estado.bien{color:var(--bien);background:var(--bien-fondo);border-color:#b9dbbb}.estado.atención{color:var(--atencion);background:var(--atencion-fondo);border-color:#ecd38f}
+.estado.problema{color:var(--problema);background:var(--problema-fondo);border-color:#efb7b0}.estado.sin{color:var(--texto-2);background:var(--fondo);border-color:var(--borde)}
+/* lista de preguntas */
+.preg{border:1px solid var(--borde);border-radius:8px;margin:8px 0;background:var(--superficie)}
+.preg>summary{list-style:none;cursor:pointer;padding:12px 16px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:start}
+.preg>summary::-webkit-details-marker{display:none}
+.preg .q{font-weight:600}.preg .r{grid-column:1/2;color:var(--texto-2);font-size:.92rem}
+.preg .abrir{grid-column:1/-1;color:var(--primario);font-size:.85rem;text-decoration:underline}
+.preg[open] .abrir::after{content:" (ocultar)"}.preg:not([open]) .abrir::after{content:""}
+.preg .cuerpo{padding:0 16px 16px;border-top:1px solid var(--borde-2)}
+.que-hacer{background:var(--primario-claro);border-left:4px solid var(--primario);padding:10px 12px;margin:12px 0;font-size:.92rem}
+.dato{border-top:1px solid var(--borde-2);padding:12px 0}
+.dato .fila{display:flex;justify-content:space-between;gap:12px;align-items:baseline}.dato .nombre{font-weight:600}.dato .valor{font-weight:700;white-space:nowrap}
+.dato p{margin:4px 0 8px;font-size:.9rem;color:var(--texto-2)}
+.escala{display:grid;grid-auto-columns:1fr;grid-auto-flow:column;gap:4px}
+.escala div{border:1px solid var(--borde);border-radius:4px;padding:6px 8px;font-size:.78rem;color:var(--texto-2);background:var(--fondo)}
+.escala div b{display:block;color:var(--texto);font-size:.8rem}
+.escala div.actual.bien{border:2px solid var(--bien);background:var(--bien-fondo)}.escala div.actual.atención{border:2px solid var(--atencion);background:var(--atencion-fondo)}
+.escala div.actual.problema{border:2px solid var(--problema);background:var(--problema-fondo)}
+.escala div.actual::before{content:"Su zona";display:block;font-weight:700;font-size:.72rem;color:var(--texto);text-transform:uppercase;letter-spacing:.03em}
+/* tablas */
+table{border-collapse:collapse;width:100%;font-size:.88rem}caption{text-align:left;color:var(--texto-2);font-size:.85rem;padding-bottom:6px}
+th,td{border-bottom:1px solid var(--borde-2);padding:8px;text-align:left;vertical-align:top}th{font-weight:600;color:var(--texto-2);background:#fafbf9}
+td.num,th.num{text-align:right}.tabla-scroll{overflow-x:auto}
+.cal{table-layout:fixed}.cal td,.cal th{text-align:center;padding:6px 2px;font-size:.76rem}.cal th:first-child{width:150px}.cal th:first-child,.cal td:first-child{text-align:left;white-space:nowrap}
+.c-bien{background:var(--bien-fondo)}.c-atención{background:var(--atencion-fondo)}.c-problema{background:var(--problema-fondo)}.c-fuera{background:#f6f7f5;color:#aaa}
+.leyenda-inline{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--texto-2);margin-top:6px}.leyenda-inline i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:4px;vertical-align:-1px;border:1px solid rgba(0,0,0,.15)}
+details.plegable{border:1px solid var(--borde);border-radius:8px;margin:12px 0}details.plegable>summary{cursor:pointer;padding:12px 16px;font-weight:600}details.plegable>div{padding:0 16px 16px}
+/* formulario */
+fieldset{border:1px solid var(--borde);border-radius:8px;padding:12px 16px;margin:12px 0}legend{font-weight:600;padding:0 6px}
+.ayuda-campo{font-size:.84rem;color:var(--texto-2);margin:2px 0 8px}
+.opciones{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px}
+.opciones label{display:flex;gap:8px;align-items:flex-start;border:1px solid var(--borde);border-radius:6px;padding:8px 10px;cursor:pointer;font-size:.9rem}
+.opciones label:has(input:checked){border-color:var(--primario);background:var(--primario-claro)}
+.secuencia{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.paso-rot{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--borde);border-radius:6px;padding:5px 8px;font-size:.9rem;background:var(--fondo)}
+.paso-rot button{border:0;background:none;cursor:pointer;color:var(--problema);font-weight:700;padding:0 2px}
+/* resultados */
+.recomendacion{border:2px solid var(--primario);background:var(--primario-claro);border-radius:8px;padding:16px;margin:16px 0}.recomendacion h3{margin:0 0 6px}
+.comp th,.comp td{text-align:center}.comp th:first-child,.comp td:first-child{text-align:left}.comp tr.hoy td{background:#fafbf6}
+.cmp{font-size:.8rem;font-weight:600;padding:2px 8px;border-radius:4px;white-space:nowrap}.cmp.mejor{background:var(--bien-fondo);color:var(--bien)}.cmp.peor{background:var(--problema-fondo);color:var(--problema)}.cmp.igual{background:var(--fondo);color:var(--texto-2)}
+.franja{display:flex;gap:1px;margin:6px 0 2px}.franja div{flex:1;height:18px}.franja-et{display:flex;gap:1px;font-size:.68rem;color:var(--texto-2)}.franja-et span{flex:1;text-align:center}
+.opcion h4{margin:16px 0 4px;font-size:.92rem}.opcion ul{margin:4px 0;padding-left:20px;font-size:.92rem}
+.crit{display:grid;grid-template-columns:200px 1fr 40px;gap:8px;font-size:.82rem;align-items:center;margin:2px 0}.crit .b{height:8px;background:var(--borde-2)}.crit .b i{display:block;height:100%;background:var(--primario)}
+.chart{width:100%;background:#fff;border:1px solid var(--borde);border-radius:4px}
+/* predicción */
+.anios-rot{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.anio-rot{border:1px solid var(--borde);border-radius:8px;padding:12px;background:var(--superficie);border-top:6px solid var(--c)}
+.anio-rot .a{font-size:.85rem;color:var(--texto-2)}.anio-rot .c{font-size:1.25rem;font-weight:700;margin:2px 0 6px}.anio-rot .d{font-size:.85rem;color:var(--texto-2)}
+.flecha{align-self:center;color:var(--texto-2)}
+.barra-h{display:flex;align-items:center;gap:6px}.barra-h span.b{display:inline-block;height:10px;background:var(--primario)}
+.prob{display:flex;height:22px;border-radius:4px;overflow:hidden;border:1px solid var(--borde)}.prob div{display:flex;align-items:center;justify-content:center;font-size:.72rem;color:#fff;white-space:nowrap}
+.est-seco{background:#b5653a}.est-normal{background:#8f8a6a}.est-humedo{background:#3f78b5}
+.tira{display:grid;grid-template-columns:repeat(45,1fr);gap:1px}.tira div{height:10px}
+.ctrl-pred{display:grid;grid-template-columns:230px 1fr 90px;gap:10px;align-items:center;margin:8px 0;font-size:.9rem}
+.ctrl-pred output{text-align:right;font-weight:600}
+.nota-pie{font-size:.85rem;color:var(--texto-2);border-top:1px solid var(--borde);margin-top:24px;padding-top:12px}
+@media (max-width:900px){#app{grid-template-columns:1fr;height:auto}#mapa-col{height:60vh}#capas{width:200px;font-size:.8rem}[role=tabpanel]{padding:16px}.escala{grid-auto-flow:row}}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>Explorador de rotaciones de cultivos</h1><p>Finney County, Kansas · clima NASA 1981-2025, suelos USDA, agua subterránea USGS y campos USDA</p></div>
+  <div style="display:flex;align-items:center;gap:16px">
+    <p style="max-width:360px">Herramienta de apoyo: no reemplaza su criterio ni la revisión de un asesor local.</p>
+    <div class="seg" id="idioma" role="group" aria-label="Idioma / Language" translate="no">
+      <button type="button" data-l="es" aria-pressed="true" lang="es">ES</button><button type="button" data-l="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+  </div>
+</header>
+<div id="app">
+  <div id="mapa-col">
+    <div id="mapa" role="region" aria-label="Mapa de campos de cultivo"></div>
+    <div id="fondo" class="panel-mapa seg" role="group" aria-label="Fondo del mapa">
+      <button data-f="sat" aria-pressed="true">Satélite</button><button data-f="topo" aria-pressed="false">Topográfico</button><button data-f="calles" aria-pressed="false">Calles</button>
+    </div>
+    <div id="capas" class="panel-mapa">
+      <label class="t" for="c-campos-ind">Colorear los campos según</label>
+      <select id="c-campos-ind">
+        <option value="ultimo">Cultivo sembrado en 2024</option>
+        <option value="barbecho">Años sin cultivo (2017-2024)</option>
+        <option value="pivote">Riego por pivote (forma circular)</option>
+      </select>
+      <div id="leyenda"></div>
+      <details style="margin-top:8px"><summary style="cursor:pointer">Otras capas</summary>
+        <label style="display:block;margin-top:8px"><input type="checkbox" id="c-grilla"> Clima de la región</label>
+        <select id="c-ind" aria-label="Indicador de clima">
+          <option value="deficit_mm">Agua que falta (mm/año)</option><option value="lluvia_mm">Lluvia anual (mm)</option>
+          <option value="dias_calor_35">Días sobre 35 °C</option><option value="tendencia_calor_decada">Aumento de días de calor por década</option>
+          <option value="heladas_tardias">Heladas tardías por año</option><option value="sequedad_primavera">Sequedad de primavera (0 a 1)</option>
+        </select>
+        <label style="display:block"><input type="checkbox" id="c-suelo"> Riesgo del suelo cerca del campo</label>
+        <select id="c-suelo-ind" aria-label="Riesgo del suelo"><option value="riesgo_viento">Erosión por viento</option><option value="riesgo_agua">Erosión por lluvia</option><option value="estres_hidrico">Poca agua almacenada</option></select>
+        <div id="leyenda2"></div>
+      </details>
+    </div>
+    <div id="estado-mapa" class="panel-mapa" role="status"><span id="estado-txt">Cargando los campos de Finney County…</span></div>
+  </div>
+
+  <div id="panel">
+    <div role="tablist" aria-label="Secciones">
+      <button role="tab" id="tab-campo" aria-controls="sec-campo" aria-selected="true">Mi campo</button>
+      <button role="tab" id="tab-rot" aria-controls="sec-rot" aria-selected="false">Comparar rotaciones</button>
+      <button role="tab" id="tab-pred" aria-controls="sec-pred" aria-selected="false">Predicción 2027-2029</button>
+      <button role="tab" id="tab-ayuda" aria-controls="sec-ayuda" aria-selected="false">Ayuda y glosario</button>
+    </div>
+
+    <section role="tabpanel" id="sec-campo" aria-labelledby="tab-campo"><div id="campo-cont"></div></section>
+
+    <section role="tabpanel" id="sec-rot" aria-labelledby="tab-rot" hidden>
+      <p class="intro" id="rot-zona"></p>
+      <form id="form-rot" onsubmit="return false">
+        <fieldset><legend>Lo más importante para usted</legend>
+          <p class="ayuda-campo">Marque todas las que quiera. Lo que marque pesa más al ordenar las opciones; si marca todo, todo pesa lo mismo.</p>
+          <div class="opciones" id="prioridades"></div>
+        </fieldset>
+        <fieldset><legend>Agua de riego disponible</legend>
+          <div class="seg" id="riego" role="group" aria-label="Agua de riego">
+            <button type="button" data-v="0" aria-pressed="true">No riego</button><button type="button" data-v="150" aria-pressed="false">Poca (150 mm)</button>
+            <button type="button" data-v="300" aria-pressed="false">Moderada (300 mm)</button><button type="button" data-v="450" aria-pressed="false">Abundante (450 mm)</button>
+          </div>
+          <p class="ayuda-campo" id="nota-riego">Milímetros de agua por año que puede aplicar. 25 mm equivalen a una pulgada.</p>
+        </fieldset>
+        <fieldset><legend>Lo que siembra hoy</legend>
+          <p class="ayuda-campo" id="nota-actual">Un cultivo por año, en el orden en que se repiten.</p>
+          <div class="secuencia" id="actual"></div>
+        </fieldset>
+        <fieldset><legend>Cultivos que no puede hacer</legend>
+          <p class="ayuda-campo">Por falta de maquinaria o de comprador cerca. Esas opciones se marcarán como no posibles.</p>
+          <div class="opciones" id="no-puede"></div>
+        </fieldset>
+        <fieldset><legend>Escenario de clima</legend>
+          <div class="seg" id="esc" role="group" aria-label="Escenario de clima">
+            <button type="button" data-l="0" data-t="0" aria-pressed="true">Clima actual</button><button type="button" data-l="-20" data-t="0" aria-pressed="false">20 % menos lluvia</button>
+            <button type="button" data-l="0" data-t="2" aria-pressed="false">2 °C más</button><button type="button" data-l="-20" data-t="2" aria-pressed="false">Ambos</button>
+          </div>
+          <p class="ayuda-campo">Recalcula los 45 años de clima con ese cambio para ver qué opciones resisten mejor.</p>
+        </fieldset>
+        <details class="plegable"><summary>Opciones avanzadas</summary><div>
+          <label class="mut" for="labranza">Preparación del suelo</label><br>
+          <select id="labranza" style="padding:6px;margin:4px 0 12px"><option value="cero">Siembra directa</option><option value="reducida" selected>Labranza mínima</option><option value="convencional">Arado o disco</option></select>
+          <div class="mut">Precios que recibe (USD por unidad). Si lo deja vacío se usa el promedio recibido en Kansas en las últimas 3 campañas (USDA NASS), que aparece en gris.</div><div class="opciones" id="precios" style="margin:6px 0 12px"></div>
+          <label class="mut" for="ing-min">Ganancia mínima necesaria (USD por acre)</label><br><input type="number" id="ing-min" style="padding:6px;margin:4px 0 12px" placeholder="opcional">
+          <div class="mut">Rotaciones a comparar (una por línea, "Nombre: cultivo-cultivo-…"). Cultivos válidos: <span id="lista-cult"></span></div>
+          <textarea id="alternativas" rows="5" style="width:100%;margin-top:4px;font-size:.88rem;padding:6px"></textarea>
+        </div></details>
+        <button class="boton primario" id="b-comparar" type="button">Comparar rotaciones</button> <span id="estado-rot" class="mut" role="status"></span>
+      </form>
+      <div id="rot-res"></div>
+    </section>
+
+    <section role="tabpanel" id="sec-pred" aria-labelledby="tab-pred" hidden><div id="pred-cont" class="cargando">Cargando el modelo de predicción…</div></section>
+
+    <section role="tabpanel" id="sec-ayuda" aria-labelledby="tab-ayuda" hidden><div id="glos" class="cargando">Cargando…</div></section>
+  </div>
+</div>
+
+<script>
+const API = location.protocol.startsWith("http") ? "" : "http://localhost:5000";
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const MES_LARGO = ["","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+const MES = ["","ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"], AGRO = [10,11,12,1,2,3,4,5,6,7,8,9];
+const FINNEY = [[37.73, -101.11], [38.27, -100.22]];
+const E = {zona: null, campo: null, ev: null, cat: null, glos: null, actual: ["trigo","sorgo","barbecho"], riego: 0, esc: [0, 0], pedido: 0, pedidoRot: 0};
+const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const num = (v, d = 0) => v == null || isNaN(v) ? "—" : Number(v).toLocaleString("es", {maximumFractionDigits: d});
+const nombreCultivo = k => (E.cat?.cultivos[k]?.nombre || k).split(" (")[0];
+async function api(ruta, cuerpo) {
+  const r = await fetch(API + ruta, cuerpo ? {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(cuerpo)} : {});
+  const j = await r.json().catch(() => ({error: "respuesta no válida del servidor"}));
+  if (!r.ok) throw new Error(j.error || r.statusText); return j;
+}
+function grupoPresionado(sel, f) { $$(`${sel} button`).forEach(b => b.onclick = () => { $$(`${sel} button`).forEach(x => x.setAttribute("aria-pressed", x === b)); f(b); }); }
+const ESTADO_TXT = {bien: "Bien", "atención": "Atención", problema: "Problema"};
+const estadoHTML = n => `<span class="estado ${ESTADO_TXT[n] ? n : "sin"}">${ESTADO_TXT[n] || "Sin dato"}</span>`;
+
+// ------------------------------------------------ pestañas (navegación libre)
+function abrirTab(id) {
+  $$("[role=tab]").forEach(t => t.setAttribute("aria-selected", t.id === id));
+  $$("[role=tabpanel]").forEach(p => p.hidden = p.getAttribute("aria-labelledby") !== id);
+  $("#panel").scrollTop = 0;
+}
+$$("[role=tab]").forEach(t => t.onclick = () => abrirTab(t.id));
+$("[role=tablist]").addEventListener("keydown", e => {
+  const tabs = $$("[role=tab]"), i = tabs.indexOf(document.activeElement); if (i < 0) return;
+  if (e.key === "ArrowRight" || e.key === "ArrowLeft") { const n = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); abrirTab(n.id); }
+});
+
+// ------------------------------------------------ mapa
+let mapa, fondos = {}, capaCampos, capaGrilla, capaSuelo, sel, marcador, campos, grillaJSON, sueloJSON, rend;
+const RAMPA = ["#fff5d6","#fdd38a","#f39c4c","#d9562b","#9e2a1c"], RAMPA_AZUL = ["#f1f4f8","#c4d6ea","#86afd7","#3f7fbf","#1f4e8c"];
+const IND = {deficit_mm: RAMPA, lluvia_mm: RAMPA_AZUL, dias_calor_35: RAMPA, tendencia_calor_decada: RAMPA, heladas_tardias: RAMPA_AZUL, sequedad_primavera: RAMPA};
+const colorR = (v, a, b, r) => v == null ? "#ccc" : r[Math.floor(Math.max(0, Math.min(.9999, (v - a) / ((b - a) || 1))) * r.length)];
+const BARB = ["#d4e8c9", "#f3e2a6", "#efb27a", "#d6603a", "#9e2a1c"];
+
+function iniciarMapa() {
+  if (!window.L) { $("#mapa").innerHTML = '<p class="err" style="padding:20px">No se pudo cargar el mapa. Revise su conexión a internet.</p>'; return; }
+  rend = L.canvas({padding: .3, tolerance: 4});
+  // Una sola superficie de dibujo para todas las capas: si cada capa crea su propio lienzo, el de arriba tapa los clics
+  // sobre los campos (era la causa de que, tras la primera selección, ya no se pudieran elegir campos).
+  mapa = L.map("mapa", {preferCanvas: true, renderer: rend, zoomAnimation: false, fadeAnimation: false, markerZoomAnimation: false}).fitBounds(FINNEY);
+  fondos.sat = L.layerGroup([L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {maxZoom: 19, attribution: "Imagen © Esri, Maxar"}),
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", {maxZoom: 19, opacity: .8})]);
+  fondos.topo = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}", {maxZoom: 19, attribution: "Topografía © Esri, USGS"});
+  fondos.calles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 19, attribution: "© OpenStreetMap"});
+  fondos.sat.addTo(mapa);
+  mapa.on("click", e => { if (E.zona) deseleccionar(); else elegirPunto(e.latlng); });
+  cargarCampos();
+}
+grupoPresionado("#fondo", b => { if (!mapa) return; Object.values(fondos).forEach(l => mapa.removeLayer(l)); fondos[b.dataset.f].addTo(mapa); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && E.zona) deseleccionar(); });
+
+function estadoMapa(html) { $("#estado-txt").innerHTML = html; }
+async function cargarCampos() {
+  estadoMapa("Cargando los campos de Finney County. La primera vez puede tardar un minuto.");
+  try {
+    campos = await api("/api/capas/campos");
+    if (campos.modo === "no disponible") throw new Error(campos.motivo);
+    if (!campos.con_historial) $("#c-campos-ind").innerHTML = `<option value="pivote">Riego por pivote (forma circular)</option><option value="todos">Sin colorear</option>`;
+    pintarCampos(); textoEstado();
+  } catch (e) { estadoMapa(`No se pudieron cargar los campos (${esc(e.message)}). Puede hacer clic en el mapa para analizar un punto.`); }
+}
+function textoEstado() {
+  if (E.zona) estadoMapa(`<span>${E.campo ? `Campo seleccionado: ${num(E.campo.acres)} acres.` : "Punto seleccionado."}</span><button class="boton" onclick="deseleccionar()">Quitar selección</button>`);
+  else estadoMapa(campos ? `Haga clic en un campo para ver su información (${num(campos.features.length)} campos).` : "Haga clic en el mapa para analizar un punto.");
+}
+function colorCampo(p) {
+  const k = $("#c-campos-ind").value;
+  return k === "ultimo" ? p.color : k === "barbecho" ? BARB[Math.min(4, p.anios_barbecho)] : k === "todos" ? "#8fbf6a" : (p.pivote_probable ? "#2f6fb5" : "#e2d8bb");
+}
+function pintarCampos() {
+  if (!mapa || !campos) return;
+  if (capaCampos) mapa.removeLayer(capaCampos);
+  const id = E.campo && E.campo.id;
+  capaCampos = L.geoJSON(campos, {renderer: rend,
+    style: f => f.properties.id === id ? {color: "#ffffff", weight: 4, fillColor: colorCampo(f.properties), fillOpacity: .9} : {color: "#1c2418", weight: .7, fillColor: colorCampo(f.properties), fillOpacity: .6},
+    onEachFeature: (f, l) => {
+      const p = f.properties;
+      l.bindTooltip(`${esc(p.ultimo_cultivo === "sin dato" ? "Campo" : p.ultimo_cultivo + " en 2024")} · ${num(p.acres)} acres${p.pivote_probable ? " · probable pivote" : ""}`, {sticky: true});
+      l.on("click", e => { L.DomEvent.stopPropagation(e); if (E.campo && E.campo.id === p.id) deseleccionar(); else elegirCampo(f); });
+    }}).addTo(mapa);
+  leyenda();
+}
+function leyenda() {
+  if (!campos) return;
+  const k = $("#c-campos-ind").value; let h = "";
+  if (k === "ultimo") { const n = {}; campos.features.forEach(f => n[f.properties.ultimo_cultivo] = (n[f.properties.ultimo_cultivo] || 0) + 1);
+    h = Object.entries(campos.leyenda || {}).filter(([x]) => n[x]).sort((a, b) => n[b[0]] - n[a[0]]).slice(0, 10).map(([x, c]) => `<div class="ley"><i style="background:${c}"></i>${esc(x)}</div>`).join(""); }
+  else if (k === "barbecho") h = ["Ninguno", "1 año", "2 años", "3 años", "4 o más"].map((x, i) => `<div class="ley"><i style="background:${BARB[i]}"></i>${x}</div>`).join("") + `<p class="mut" style="margin:4px 0 0">Más años sin cultivo significan más tiempo con el suelo expuesto al viento.</p>`;
+  else if (k === "pivote") h = `<div class="ley"><i style="background:#2f6fb5"></i>Circular: probable riego por pivote</div><div class="ley"><i style="background:#e2d8bb"></i>Otra forma: probable secano</div><p class="mut" style="margin:4px 0 0">Se deduce de la forma del campo; puede no ser exacto.</p>`;
+  $("#leyenda").innerHTML = h + `<p class="mut" style="margin:6px 0 0;font-size:.75rem">Fuente: ${esc(campos.fuente)}${campos.motivo ? `. Al tocar un campo se busca su historial en el mapa de cultivos del USDA.` : ""}</p>`;
+}
+$("#c-campos-ind").onchange = pintarCampos;
+function pintarGrilla() {
+  if (capaGrilla) { mapa.removeLayer(capaGrilla); capaGrilla = null; }
+  if (!$("#c-grilla").checked) { $("#leyenda2").innerHTML = ""; return; }
+  if (!grillaJSON) return api("/api/capas/grilla").then(g => { grillaJSON = g; pintarGrilla(); });
+  const k = $("#c-ind").value, v = grillaJSON.features.map(f => f.properties[k]).filter(x => x != null), a = Math.min(...v), b = Math.max(...v);
+  capaGrilla = L.geoJSON(grillaJSON, {renderer: rend, interactive: false, style: f => ({color: "#fff", weight: .5, fillColor: colorR(f.properties[k], a, b, IND[k]), fillOpacity: .4})}).addTo(mapa);
+  capaGrilla.bringToBack?.();
+  $("#leyenda2").innerHTML = `<div class="barra" style="background:linear-gradient(90deg,${IND[k].join(",")})"></div><div class="esc"><span>${num(a, 1)}</span><span>${num(b, 1)}</span></div><p class="mut" style="margin:2px 0">Celdas de unos 50 km. Aléjese en el mapa para ver toda la región.</p>`;
+}
+["#c-grilla", "#c-ind"].forEach(s => $(s).onchange = pintarGrilla);
+async function pintarSuelo() {
+  if (capaSuelo) { mapa.removeLayer(capaSuelo); capaSuelo = null; }
+  if (!$("#c-suelo").checked) return;
+  if (!E.ev) { $("#leyenda2").innerHTML = `<p class="mut">Primero seleccione un campo.</p>`; return; }
+  if (!sueloJSON || sueloJSON._para !== JSON.stringify(E.zona)) {
+    $("#leyenda2").innerHTML = `<p class="mut">Cargando suelos…</p>`;
+    try { sueloJSON = await api(`/api/capas/suelo?lat=${E.ev.zona.lat}&lon=${E.ev.zona.lon}&km=2`); sueloJSON._para = JSON.stringify(E.zona); } catch (e) { sueloJSON = {modo: "no disponible", motivo: e.message}; }
+  }
+  if (sueloJSON.modo === "no disponible") { $("#leyenda2").innerHTML = `<p class="mut">Suelos: ${esc(sueloJSON.motivo)}</p>`; return; }
+  const k = $("#c-suelo-ind").value;
+  capaSuelo = L.geoJSON(sueloJSON, {renderer: rend, interactive: false, style: f => ({color: "#333", weight: .6, fillColor: colorR(f.properties[k], 0, 1, RAMPA), fillOpacity: .55})}).addTo(mapa);
+  $("#leyenda2").innerHTML = `<div class="barra" style="background:linear-gradient(90deg,${RAMPA.join(",")})"></div><div class="esc"><span>Riesgo bajo</span><span>Riesgo alto</span></div>`;
+}
+["#c-suelo", "#c-suelo-ind"].forEach(s => $(s).onchange = pintarSuelo);
+
+// ------------------------------------------------ selección
+function elegirCampo(f) {
+  const g = f.geometry, anillo = g.type === "Polygon" ? g.coordinates[0] : g.coordinates.reduce((a, b) => b[0].length > a[0].length ? b : a)[0], p = f.properties;
+  if (p.rotacion_detectada) { E.actual = p.rotacion_detectada.slice(); pintarActual(); $("#nota-actual").textContent = "Tomado de lo sembrado en el campo seleccionado entre 2017 y 2024. Puede modificarlo."; }
+  if (p.pivote_probable && E.riego === 0) { fijarRiego(300); $("#nota-riego").textContent = "El campo seleccionado parece tener riego por pivote; se marcó riego moderado. Cámbielo si no corresponde."; }
+  seleccionar({poligono: {type: "Polygon", coordinates: [anillo]}}, p);
+}
+function elegirPunto(ll) { seleccionar({lat: +ll.lat.toFixed(4), lon: +ll.lng.toFixed(4)}, null); }
+function marcar() {
+  if (!mapa) return; if (sel) mapa.removeLayer(sel); if (marcador) mapa.removeLayer(marcador); sel = marcador = null;
+  if (!E.zona) return;
+  if (E.zona.poligono) sel = L.geoJSON(E.zona.poligono, {renderer: rend, interactive: false, style: {color: "#fff", weight: 3, dashArray: "6 4", fillOpacity: 0}}).addTo(mapa);
+  else marcador = L.marker([E.zona.lat, E.zona.lon], {interactive: false}).addTo(mapa);
+}
+async function completarHistorial(campo, z) {
+  if (!campo || campo.historial.some(x => x.codigo)) return;
+  const caja = $("#hist-faltante"); if (caja) caja.textContent = "Buscando lo sembrado en este campo en el mapa de cultivos del USDA…";
+  try {
+    const h = await api("/api/campos/historial", {zona: z});
+    if (E.campo !== campo) return;
+    if (h.modo === "no disponible") { if ($("#hist-faltante")) $("#hist-faltante").textContent = "No se encontró el historial de este campo (" + h.motivo + "). Indique su rotación en Comparar rotaciones."; return; }
+    Object.assign(campo, {historial: h.historial, rotacion_detectada: h.rotacion_detectada, rotacion_texto: h.rotacion_texto, anios_barbecho: h.anios_barbecho, ultimo_cultivo: h.ultimo_cultivo});
+    if (h.rotacion_detectada) { E.actual = h.rotacion_detectada.slice(); pintarActual(); $("#nota-actual").textContent = "Tomado de lo sembrado en el campo seleccionado entre 2017 y 2024 (USDA). Puede modificarlo."; }
+    pintarCampos(); if (E.ev) pintarCampo(E.ev);
+  } catch (e) { if ($("#hist-faltante")) $("#hist-faltante").textContent = "No se pudo consultar el historial: " + e.message; }
+}
+async function seleccionar(z, campo) {
+  E.zona = z; E.campo = campo; E.ev = null; pintarCampos(); marcar(); textoEstado();
+  $("#rot-res").innerHTML = ""; $("#rot-zona").textContent = campo ? `Campo seleccionado: ${num(campo.acres)} acres.` : "Punto seleccionado en el mapa.";
+  $("#campo-cont").innerHTML = cabeceraHTML() + `<p class="cargando">Analizando 45 años de clima, el suelo y el agua de la zona…</p>`;
+  const yo = ++E.pedido;
+  completarHistorial(campo, z);
+  try { const ev = await api("/api/evidencia", {zona: z, escenario: escObj()}); if (yo !== E.pedido) return; E.ev = ev; pintarCampo(ev); if ($("#c-suelo").checked) pintarSuelo(); }
+  catch (e) { if (yo === E.pedido) $("#campo-cont").innerHTML = cabeceraHTML() + `<p class="err">No se pudo analizar la zona: ${esc(e.message)}</p>`; }
+}
+function deseleccionar() {
+  E.pedido++; E.pedidoRot++; E.zona = null; E.campo = null; E.ev = null; sueloJSON = null;
+  if (capaSuelo) { mapa.removeLayer(capaSuelo); capaSuelo = null; }
+  pintarCampos(); marcar(); textoEstado(); vacio();
+  $("#rot-res").innerHTML = ""; $("#rot-zona").textContent = "Sin campo seleccionado: se usará el centro de Finney County.";
+}
+function vacio() {
+  $("#campo-cont").innerHTML = `<h2>Mi campo</h2><div class="vacio"><p style="margin:0 0 8px;font-weight:600;color:var(--texto)">No hay ningún campo seleccionado</p>
+    <p style="margin:0">Haga clic en un campo del mapa para ver lo que se sembró cada año y cómo son el clima, el suelo y el agua de la zona.<br>
+    Para quitar la selección, haga clic otra vez sobre el campo, en un lugar vacío del mapa, o presione Esc.</p></div>`;
+}
+function cabeceraHTML() {
+  const p = E.campo;
+  const titulo = p ? `Campo de ${num(p.acres)} acres` : "Punto seleccionado";
+  let h = `<div class="cabecera-campo"><div><h2>${titulo}</h2><div class="mut">${p ? (p.pivote_probable ? "Por su forma circular, probablemente se riega con pivote." : "Por su forma, probablemente es de secano.") : "Se analiza el clima, el suelo y el agua alrededor de este punto."}</div></div>
+    <button class="boton" onclick="deseleccionar()">Quitar selección</button></div>`;
+  if (p && p.historial.some(x => x.codigo)) {
+    h += `<div class="tarjeta tarjeta-hist"><h3 style="margin-top:0">Lo que se sembró cada año</h3><div class="historial">${p.historial.map(x => `<div><span style="background:${x.color}"></span><b>${x.anio}</b><br>${esc(x.nombre.split(" (")[0])}</div>`).join("")}</div>
+      <p style="margin:8px 0 0"><b>Rotación detectada:</b> ${esc(p.rotacion_texto)}</p>${p.anios_barbecho ? `<p class="mut" style="margin:4px 0 0">Quedó sin cultivo ${p.anios_barbecho} de 8 años; en esos años el suelo queda más expuesto al viento.</p>` : ""}
+      <p class="mut" style="margin:8px 0 0">Fuente: USDA, mapa de cultivos por satélite (Cropland Data Layer). Puede tener errores en campos pequeños.</p></div>`;
+  } else if (p) h += `<p class="mut" id="hist-faltante">Buscando lo sembrado en este campo…</p>`;
+  return h;
+}
+
+// ------------------------------------------------ pestaña "Mi campo"
+function datoHTML(d) {
+  return `<div class="dato"><div class="fila"><span class="nombre">${esc(d.nombre)}</span><span class="valor">${esc(d.texto_valor)}</span></div>
+    <p>${esc(d.explicacion)}${d.lectura ? ` <b>En su zona: ${esc(d.lectura)}.</b>` : ""}</p>
+    ${d.escala.length ? `<div class="escala" aria-label="Escala de referencia">${d.escala.map(e => `<div class="${e.actual ? "actual " + e.nivel : ""}"><b>${esc(e.rango)}</b>${esc(e.texto)}</div>`).join("")}</div>` : ""}</div>`;
+}
+function pintarCampo(ev) {
+  const s = ev.simple;
+  let h = cabeceraHTML();
+  if (ev.escenario.delta_lluvia_pct || ev.escenario.delta_temp_c) h += `<p class="que-hacer">Está viendo un escenario: lluvia ${ev.escenario.delta_lluvia_pct > 0 ? "+" : ""}${ev.escenario.delta_lluvia_pct} %, temperatura +${ev.escenario.delta_temp_c} °C.</p>`;
+  h += `<h2>Situación de la zona</h2><p class="intro">Basada en datos de 1981 a 2025. Abra cada tema para ver qué significa cada valor y cómo compararlo.</p>`;
+  h += s.tarjetas.map(t => `<details class="preg"><summary><span class="q">${esc(t.pregunta)}</span>${estadoHTML(t.nivel)}<span class="r">${esc(t.respuesta)}</span><span class="abrir">Ver explicación y valores</span></summary>
+    <div class="cuerpo"><div class="que-hacer"><b>Qué significa para su rotación:</b> ${esc(t.para_usted)}</div>${t.detalles.map(datoHTML).join("")}<p class="mut" style="margin:8px 0 0">Fuente: ${esc(t.fuente)}</p></div></details>`).join("");
+  h += desempenoHTML(ev.desempeno);
+  h += `<p class="mut">Cómo leer los estados: <b>Bien</b> = no limita los cultivos; <b>Atención</b> = limita en algunos años o cultivos; <b>Problema</b> = limita la mayoría de los años y conviene tenerlo en cuenta al elegir la rotación.</p>`;
+
+  h += `<h2>Cambios en el clima</h2><p class="intro">Promedio de los primeros 22 años comparado con los últimos 23.</p><div class="tabla-scroll"><table>
+    <thead><tr><th>Indicador</th><th class="num">${esc(s.antes_ahora[0]?.periodo_antes || "")}</th><th class="num">${esc(s.antes_ahora[0]?.periodo_ahora || "")}</th><th>Cambio</th><th>¿Es seguro?</th></tr></thead><tbody>
+    ${s.antes_ahora.map(a => { const d = a.unidad === "0-1" ? 2 : 0; return `<tr><td>${esc(a.nombre)}${a.unidad === "mm" ? " (mm)" : ""}</td><td class="num">${num(a.antes, d)}</td><td class="num">${num(a.ahora, d)}</td>
+      <td><span class="cmp ${a.tono}">${a.tono === "peor" ? "Peor" : a.tono === "mejor" ? "Mejor" : "Sin cambio"}</span> ${esc(a.frase.toLowerCase())}</td><td class="mut">${a.certeza === "cambio confirmado" ? "Sí, confirmado" : "No: puede ser variación natural"}</td></tr>`; }).join("")}</tbody></table></div>
+    <p class="mut">"Confirmado" significa que la prueba estadística indica que el cambio muy probablemente no es casualidad. "Humedad del suelo" va de 0 (seco) a 1 (saturado).</p>`;
+
+  const m = s.mes_a_mes;
+  h += `<h2>El año mes a mes</h2><p class="intro">Promedios de cada mes, de octubre a septiembre (el año agrícola del trigo).</p><div class="tabla-scroll"><table class="mensual">
+    <thead><tr><th>Mes</th><th class="num">Lluvia (mm)</th><th class="num">Agua que necesita un cultivo (mm)</th><th class="num">Agua que falta (mm)</th><th class="num">Días sobre 35 °C</th><th class="num">Años con helada</th><th>Situación</th></tr></thead><tbody>
+    ${m.map(x => `<tr><td>${MES_LARGO[x.mes]}</td><td class="num">${x.lluvia}</td><td class="num">${x.necesidad}</td>
+      <td class="num ${x.falta > 100 ? "c-problema" : x.falta > 60 ? "c-atención" : ""}">${x.falta}</td><td class="num ${x.calor >= 10 ? "c-problema" : x.calor >= 4 ? "c-atención" : ""}">${num(x.calor)}</td>
+      <td class="num">${Math.round(x.prob_helada * 100)} %</td><td>${estadoHTML(x.nivel)} <span class="mut">${esc(x.avisos.join(", "))}</span></td></tr>`).join("")}</tbody></table></div>
+    <p class="mut">"Agua que necesita un cultivo" es el 80 % de la demanda del ambiente para un cultivo en crecimiento. "Años con helada" es el porcentaje de años con al menos una noche bajo 0 °C en ese mes. De marzo a mayo el viento es más fuerte: no conviene dejar el suelo desnudo.</p>`;
+
+  h += `<h2>Meses de riesgo para cada cultivo</h2><p class="intro">Solo se muestran los meses en que el cultivo está en el campo.</p>${tablaVul(ev)}`;
+  h += `<details class="plegable" id="det-tec"><summary>Datos técnicos y fuentes (para asesores)</summary><div id="tecnico"></div></details>`;
+  $("#campo-cont").innerHTML = h;
+  pintarDesempeno(ev.desempeno);
+  $("#det-tec").addEventListener("toggle", e => { if (e.target.open && !$("#tecnico").innerHTML) pintarTecnico(ev); });
+}
+// ------------------------------------------------ desempeño de los cultivos (USDA NASS)
+function desempenoHTML(d) {
+  if (!d) return "";
+  let h = `<h2>Desempeño de los cultivos</h2><p class="intro">Lo que realmente pasó con los cultivos según el USDA (rendimientos, superficie cosechada y estado de los campos), comparado con el clima medido por NASA.</p>`;
+  if (d.cultivos.length) {
+    h += `<h3>En su condado</h3>` + d.cultivos.map((c, i) => `<details class="preg" data-i="${i}"><summary><span class="q">${esc(c.nombre)} <span class="mut" style="font-weight:400">· ${esc(c.lugar)} ${esc(c.periodo)}</span></span>${estadoHTML(c.estado)}<span class="r">${esc(c.resumen)}</span><span class="abrir">Ver explicación y valores</span></summary>
+      <div class="cuerpo"><div class="graf-rend"></div>${c.clima.length ? `<div class="que-hacer"><b>Relación con el clima de su zona (NASA POWER):</b> ${c.clima.map(esc).join(" ")} <span class="mut">Una relación "fuerte" se repite casi todos los años; "moderada", en muchos años; "débil" no se muestra.</span></div>` : ""}
+      ${c.detalles.map(datoHTML).join("")}<p class="mut" style="margin:8px 0 0">Fuente: USDA NASS, ${c.nivel_dato === "condado" ? "datos del condado" : "datos del distrito agrícola (el condado tiene pocos años)"}.</p></div></details>`).join("");
+  }
+  if (d.salud.length) {
+    h += `<h3>Estado de los cultivos durante la temporada (Kansas)</h3><p class="intro">Cada semana, agricultores y técnicos califican los campos de Kansas como muy malos, malos, regulares, buenos o excelentes. El gráfico muestra qué parte está en estado bueno o excelente.</p>
+      <label class="mut" for="sel-salud">Cultivo</label> <select id="sel-salud" style="padding:4px;margin-bottom:6px">${d.salud.map((s, i) => `<option value="${i}">${esc(s.nombre)}</option>`).join("")}</select>
+      <div id="graf-salud"></div><ul id="txt-salud"></ul>`;
+  }
+  if (d.humedad) h += `<h3>Humedad del suelo: satélite y terreno</h3><p>${esc(d.humedad.frase)}</p><div id="graf-hum"></div>
+      <p class="mut">Cada punto es una temporada (abril a septiembre). Por encima de 0, la temporada fue más húmeda que lo normal; por debajo, más seca. Línea verde: informes de terreno del USDA (campos con humedad adecuada en el subsuelo). Línea azul: humedad en la zona de raíces calculada por NASA POWER. Las dos se expresan en la misma escala para poder compararlas.</p>`;
+  if (d.calendario.length) h += `<h3>Fechas reales de siembra y cosecha (Kansas)</h3><p class="intro">Fecha en que se alcanza la mitad de la superficie del estado en cada etapa.</p><div class="tabla-scroll"><table>
+      <thead><tr><th>Cultivo</th><th>Etapa</th><th>Fecha típica hoy</th><th>Rango habitual</th><th>Hace 35-40 años</th><th>Cambio</th></tr></thead><tbody>
+      ${d.calendario.map(f => `<tr><td>${esc(f.nombre)}</td><td>${esc(f.etapa)}</td><td><b>${esc(f.reciente)}</b> <span class="mut">(${esc(f.periodo_reciente)})</span></td><td>${esc(f.temprano)} a ${esc(f.tarde)}</td><td>${esc(f.antes)} <span class="mut">(${esc(f.periodo_antes)})</span></td>
+        <td>${Math.abs(f.cambio_dias) < 3 ? "Sin cambio" : `${Math.abs(f.cambio_dias)} días ${f.cambio_dias < 0 ? "antes" : "después"}`}</td></tr>`).join("")}</tbody></table></div>
+      <p class="mut">"Rango habitual" va del año temprano al año tardío (8 de cada 10 años caen dentro). Sirve para revisar si las fechas de la rotación propuesta son realistas.</p>`;
+  return h;
+}
+function pintarDesempeno(d) {
+  if (!d) return;
+  $$("#campo-cont details.preg[data-i]").forEach(el => el.addEventListener("toggle", () => {
+    const c = d.cultivos[+el.dataset.i], g = el.querySelector(".graf-rend"); if (!el.open || g.innerHTML) return;
+    g.innerHTML = svg({x: c.serie.map(s => s.anio), series: [{nombre: `rendimiento (${c.unidad})`, y: c.serie.map(s => s.valor), color: "#2f5d2a", puntos: true, grosor: 1},
+      {nombre: "lo esperado según la tendencia", y: c.serie.map(s => s.esperado), color: "#8a5a00", punteada: true}, {nombre: "75 % de lo esperado (año malo)", y: c.serie.map(s => s.esperado * .75), color: "#b3261e", punteada: true, grosor: 1}]});
+  }));
+  const salud = () => { const s = d.salud[+$("#sel-salud").value];
+    $("#graf-salud").innerHTML = svg({x: s.semanas.map(w => w.fecha), series: [{nombre: "promedio", y: s.semanas.map(w => w.media), color: "#2f5d2a", grosor: 2.4},
+      {nombre: "año malo (peor 10 %)", y: s.semanas.map(w => w.p10), color: "#b3261e", punteada: true}, {nombre: "año bueno (mejor 10 %)", y: s.semanas.map(w => w.p90), color: "#2f6fb5", punteada: true},
+      {nombre: String(s.ultimo_anio), y: s.semanas.map(w => w.ultimo), color: "#555", grosor: 1.2}], min0: true, max: 100, sufijo: " %"});
+    $("#txt-salud").innerHTML = s.frases.map(f => `<li>${esc(f)}</li>`).join(""); };
+  if ($("#sel-salud")) { $("#sel-salud").onchange = salud; salud(); }
+  if (d.humedad) { const m = d.humedad.anual;
+    $("#graf-hum").innerHTML = svg({x: m.map(x => x.anio), series: [{nombre: "terreno (informes USDA)", y: m.map(x => x.obs), color: "#2f5d2a", puntos: true, grosor: 2},
+      {nombre: "satélite/modelo (NASA POWER)", y: m.map(x => x.modelo), color: "#2f6fb5", puntos: true, grosor: 2}], etiquetas: v => v > .4 ? "más húmedo" : v < -.4 ? "más seco" : "normal"}); }
+}
+function tablaVul(ev) {
+  const T = {bajo: ["c-bien", "Bien"], medio: ["c-atención", "Aten."], alto: ["c-problema", "Probl."]};
+  return `<div class="tabla-scroll"><table class="cal"><thead><tr><th>Cultivo</th>${AGRO.map(m => `<th>${MES[m]}</th>`).join("")}</tr></thead><tbody>${Object.entries(ev.vulnerabilidad).map(([c, d]) => {
+    const por = Object.fromEntries(d.meses.map(x => [x.mes, x]));
+    return `<tr><td>${esc(d.nombre.split(" (")[0])}</td>${AGRO.map(m => por[m] ? `<td class="${T[por[m].nivel][0]}" title="${esc(por[m].riesgos.join("; ") || "sin problemas destacados")}">${T[por[m].nivel][1]}</td>` : `<td class="c-fuera">–</td>`).join("")}</tr>`; }).join("")}</tbody></table></div>
+    <p class="mut">Bien = sin problemas destacados. Aten. (atención) = un problema en ese mes (falta de agua, calor durante la floración o helada). Probl. (problema) = falta mucha agua o se juntan dos problemas. Pase el cursor sobre una celda para ver el motivo.</p>`;
+}
+function pintarTecnico(ev) {
+  const r = ev.clima.resumen, a = ev.acuifero;
+  const fila = (k, d) => !d || d.valor == null ? "" : `<tr><td>${esc(d.nombre || k)}</td><td class="num">${num(d.valor, Math.abs(d.valor) < 10 ? 2 : 0)} ${esc(d.unidad || "")}</td><td>${esc(d.que_es || "")}</td></tr>`;
+  let h = `<p class="mut">Centro ${num(ev.zona.lat, 4)}, ${num(ev.zona.lon, 4)} · celda NASA POWER ${esc((ev.zona.celda_power || []).join(", "))}</p>
+    <h3>Clima ${esc(r.anios)}</h3><table>${Object.entries(r).filter(([, v]) => v && typeof v === "object").map(([k, v]) => fila(k, v)).join("")}</table>
+    <h3>Serie año por año</h3><select id="var-tend">${Object.entries(ev.clima.tendencias).map(([k, t]) => `<option value="${k}">${esc(t.nombre)}</option>`).join("")}</select><div id="graf-tend"></div><p id="txt-tend" class="mut"></p>
+    <h3>Suelo</h3><table>${Object.entries(ev.suelo).filter(([, v]) => v && typeof v === "object" && v.valor != null).map(([k, v]) => fila(k, v)).join("")}</table>`;
+  if (a && a.serie_anomalia_ft) h += `<h3>Agua subterránea (pozos USGS)</h3><div id="graf-acu"></div>`;
+  if (Object.keys(ev.rendimientos_nass || {}).length) h += `<h3>Rendimientos del condado (USDA NASS)</h3><table><thead><tr><th>Cultivo</th><th class="num">Secano</th><th class="num">Riego</th></tr></thead>${Object.entries(ev.rendimientos_nass).filter(([, v]) => v.secano || v.riego).map(([p, v]) => `<tr><td>${esc(p)}</td><td class="num">${v.secano ? num(v.secano.media, 1) + " " + esc(v.secano.unidad.toLowerCase()) : "—"}</td><td class="num">${v.riego ? num(v.riego.media, 1) : "—"}</td></tr>`).join("")}</table>`;
+  h += `<h3>Datos satelitales</h3><p class="mut">${esc(ev.glosario.satelite_vs_terreno)}</p><button class="boton" id="b-sat">Consultar Landsat, SMAP, ECOSTRESS y GPM</button><div id="sat"></div>
+    <h3>Fuentes</h3><table>${Object.entries(ev.fuentes).map(([k, x]) => `<tr><td>${esc(x.fuente || k)}</td><td>${esc(x.modo)}</td><td>${esc(x.motivo || "")}</td></tr>`).join("")}</table>
+    <h3>Información que falta</h3><ul>${ev.brechas.map(b => `<li>${esc(b)}</li>`).join("")}</ul>`;
+  $("#tecnico").innerHTML = h;
+  $("#var-tend").onchange = () => graficoTendencia(ev); graficoTendencia(ev);
+  if (a && a.serie_anomalia_ft) { const e = Object.entries(a.serie_anomalia_ft).filter(([y]) => +y >= 1970);
+    $("#graf-acu").innerHTML = svg({x: e.map(([y]) => y), series: [{nombre: "profundidad del agua respecto del promedio de cada pozo (pies; más = más hondo)", y: e.map(([, v]) => v), color: "#1f4e8c", puntos: true}]}); }
+  $("#b-sat").onclick = cargarSatelite;
+}
+function svg({series, x, w = 640, h = 230, max = null, sufijo = "", etiquetas = null}) {
+  const filas = Math.ceil(series.length / 2), m = {l: etiquetas ? 82 : 46, r: 12, t: 8 + filas * 15, b: 24}, W = w - m.l - m.r, H = h - m.t - m.b, todos = series.flatMap(s => s.y).filter(v => v != null && !isNaN(v));
+  let y0 = Math.min(0, ...todos), y1 = max ?? Math.max(...todos); if (y1 === y0) y1 = y0 + 1;
+  const X = i => m.l + (x.length === 1 ? W / 2 : i * W / (x.length - 1)), Y = v => m.t + H - (v - y0) / (y1 - y0) * H;
+  let g = `<svg viewBox="0 0 ${w} ${h}" class="chart" role="img">`;
+  for (let k = 0; k <= 4; k++) { const v = y0 + (y1 - y0) * k / 4; g += `<line x1="${m.l}" x2="${w - m.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#eee"/><text x="${m.l - 6}" y="${Y(v) + 4}" font-size="10" text-anchor="end" fill="#666">${etiquetas ? (k === 4 ? "más húmedo" : k === 0 ? "más seco" : "") : num(v, Math.abs(y1 - y0) < 5 ? 2 : 0)}</text>`; }
+  if (etiquetas && y0 < 0) g += `<line x1="${m.l}" x2="${w - m.r}" y1="${Y(0)}" y2="${Y(0)}" stroke="#999"/><text x="${m.l - 6}" y="${Y(0) + 4}" font-size="10" text-anchor="end" fill="#666">normal</text>`;
+  const p = Math.ceil(x.length / 12); x.forEach((v, i) => { if (i % p === 0) g += `<text x="${X(i)}" y="${h - 6}" font-size="10" text-anchor="middle" fill="#666">${esc(v)}</text>`; });
+  series.forEach(s => { g += `<polyline points="${s.y.map((v, i) => v == null || isNaN(v) ? null : `${X(i)},${Y(v)}`).filter(Boolean).join(" ")}" fill="none" stroke="${s.color}" stroke-width="${s.grosor || 1.6}" ${s.punteada ? 'stroke-dasharray="5 4"' : ""}/>`;
+    if (s.puntos) s.y.forEach((v, i) => { if (v != null) g += `<circle cx="${X(i)}" cy="${Y(v)}" r="2" fill="${s.color}"><title>${esc(x[i])}: ${num(v, 2)}</title></circle>`; }); });
+  return g.replace(/(text-anchor="end" fill="#666">)([^<]*)/g, (t, a, v) => a + v + sufijo) + series.map((s, i) => { const cx = m.l + 4 + (i % 2) * 290, cy = 4 + Math.floor(i / 2) * 15;
+    return `<line x1="${cx}" x2="${cx + 14}" y1="${cy + 5}" y2="${cy + 5}" stroke="${s.color}" stroke-width="3" ${s.punteada ? 'stroke-dasharray="4 3"' : ""}/><text x="${cx + 19}" y="${cy + 9}" font-size="10.5">${esc(s.nombre)}</text>`; }).join("") + `</svg>`;
+}
+function graficoTendencia(ev) {
+  const k = $("#var-tend").value, f = ev.clima.serie_anual, t = ev.clima.tendencias[k], xs = f.map(r => r.anio), ys = f.map(r => r[k]);
+  const ok = ys.filter(v => v != null), med = ok.reduce((a, b) => a + b, 0) / ok.length, xm = xs.reduce((a, b) => a + b, 0) / xs.length;
+  const mov = ys.map((_, i) => { const v = ys.slice(Math.max(0, i - 4), i + 1).filter(x => x != null); return i >= 4 ? v.reduce((a, b) => a + b, 0) / v.length : null; });
+  $("#graf-tend").innerHTML = svg({x: xs, series: [{nombre: "cada año", y: ys, color: "#9aa58f", puntos: true, grosor: .8}, {nombre: "promedio de 5 años", y: mov, color: "#2f5d2a", grosor: 2.2},
+    ...(t.pendiente_por_decada == null ? [] : [{nombre: "tendencia", y: xs.map(x => med + t.pendiente_por_decada / 10 * (x - xm)), color: "#b3261e", punteada: true}])]});
+  $("#txt-tend").textContent = t.pendiente_por_decada == null ? "" : `Cambio de ${num(t.pendiente_por_decada, 2)} por década; ${t.significativa ? "estadísticamente confirmado (p < 0,05)." : "no confirmado (p = " + num(t.p_valor, 2) + ")."}`;
+}
+async function cargarSatelite() {
+  $("#sat").innerHTML = `<p class="mut">Consultando servicios satelitales (1 a 3 minutos)…</p>`;
+  try { const s = await api(`/api/satelite?lat=${E.ev.zona.lat}&lon=${E.ev.zona.lon}`), ls = s.landsat, f = (n, x, t) => `<tr><td>${n}</td><td>${esc(x.modo)}</td><td>${t || esc(x.motivo || "")}</td></tr>`;
+    $("#sat").innerHTML = `<table>${f("Landsat: verdor (NDVI)", ls, ls.resumen ? `Meses con suelo mayormente desnudo: ${ls.resumen.meses_suelo_desnudo.map(m => MES[m]).join(", ") || "ninguno"}` : "")}${f("SMAP: humedad del suelo", s.smap, s.smap.mensual ? Object.entries(s.smap.mensual).map(([m, v]) => `${MES[m]} ${num(v, 2)}`).join(", ") : "")}${f("ECOSTRESS: temperatura de la superficie", s.ecostress, "")}${f("GPM: lluvias intensas", s.imerg, s.imerg.resumen ? `${s.imerg.resumen.dias_25mm_anio} días por año con más de 25 mm` : "")}</table>`;
+  } catch (e) { $("#sat").innerHTML = `<p class="err">${esc(e.message)}</p>`; }
+}
+
+// ------------------------------------------------ pestaña "Comparar rotaciones"
+const PRIOR = [["agua", "Cuidar el agua", "Usar poco riego y cultivos que resisten la sequía"], ["tierra", "Cuidar el suelo", "Menos erosión y más materia orgánica"],
+  ["dinero", "Ganar más", "Mayor ganancia por acre"], ["seguro", "Menos años malos", "Menos años con pérdida y daños por calor o helada"],
+  ["plagas", "Menos plagas y malezas", "Alternar cultivos distintos"], ["fert", "Menos fertilizante", "Incluir cultivos que dejan nitrógeno"], ["forraje", "Forraje para animales", "Producir pasto o ensilaje"]];
+function prioridades() {
+  const on = k => $(`#prioridades input[value="${k}"]`).checked ? 1 : .25;
+  return {agua: on("agua"), eros: on("tierra"), mo: on("tierra") * .8, ingreso: Math.max(on("dinero"), on("seguro") * .7), calor: on("seguro"), plagas: on("plagas"), n: on("fert"), forraje: on("forraje")};
+}
+async function iniciarFormulario() {
+  const c = E.cat = await api("/api/catalogo");
+  $("#prioridades").innerHTML = PRIOR.map(([k, t, d]) => `<label><input type="checkbox" value="${k}" ${["agua", "tierra", "dinero"].includes(k) ? "checked" : ""}><span><b>${t}</b><br><span class="mut">${d}</span></span></label>`).join("");
+  $("#no-puede").innerHTML = Object.entries(c.cultivos).filter(([k]) => k !== "barbecho").map(([k, v]) => `<label><input type="checkbox" value="${k}"> ${esc(v.nombre.split(" (")[0])}</label>`).join("");
+  $("#lista-cult").textContent = Object.keys(c.cultivos).join(", ");
+  $("#alternativas").value = Object.entries(c.rotaciones).map(([n, r]) => `${n}: ${r.join("-")}`).join("\n");
+  $("#precios").innerHTML = Object.entries(c.cultivos).filter(([, v]) => v.precio).map(([k, v]) => `<label style="display:block;border:0;padding:0">${esc(nombreCultivo(k))} (USD/${esc(v.unidad)})<input type="number" step="any" data-precio="${k}" placeholder="${v.precio}" style="width:100%;padding:4px"></label>`).join("");
+  pintarActual();
+}
+function pintarActual() {
+  const c = E.cat; if (!c) return;
+  $("#actual").innerHTML = E.actual.map((k, i) => `<span class="paso-rot">Año ${i + 1}: ${esc(nombreCultivo(k))}<button type="button" aria-label="Quitar ${esc(nombreCultivo(k))}" data-i="${i}">×</button></span>`).join("") +
+    `<select id="add-cult" aria-label="Agregar un año" style="padding:5px"><option value="">Agregar un año…</option>${Object.keys(c.cultivos).map(k => `<option value="${k}">${esc(nombreCultivo(k))}</option>`).join("")}</select>`;
+  $$("#actual button").forEach(b => b.onclick = () => { if (E.actual.length > 1) { E.actual.splice(+b.dataset.i, 1); pintarActual(); } });
+  $("#add-cult").onchange = e => { if (e.target.value && E.actual.length < 6) { E.actual.push(e.target.value); pintarActual(); } };
+}
+function fijarRiego(v) { E.riego = v; $$("#riego button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.v === v)); }
+grupoPresionado("#riego", b => { fijarRiego(+b.dataset.v); $("#nota-riego").textContent = "Milímetros de agua por año que puede aplicar. 25 mm equivalen a una pulgada."; });
+grupoPresionado("#esc", b => { E.esc = [+b.dataset.l, +b.dataset.t]; const habia = !!$("#rot-res").innerHTML;
+  if (E.zona) seleccionar(E.zona, E.campo); if (habia) comparar(); });
+const escObj = () => ({delta_lluvia_pct: E.esc[0], delta_temp_c: E.esc[1]});
+function formulario() {
+  const alt = {};
+  $("#alternativas").value.split("\n").map(l => l.trim()).filter(Boolean).forEach((l, i) => { const k = l.lastIndexOf(":"), [n, r] = k > 0 ? [l.slice(0, k).trim(), l.slice(k + 1)] : [`Opción ${i + 1}`, l];
+    alt[n] = r.split(/[-,]/).map(x => x.trim().toLowerCase()).filter(Boolean); });
+  return {zona: E.zona || {lat: 37.97, lon: -100.87}, prioridades: prioridades(), actual: E.actual, alternativas: alt, escenario: escObj(),
+    restricciones: {riego_mm: E.riego, labranza: $("#labranza").value, sin_maquinaria: $$("#no-puede input:checked").map(i => i.value), sin_mercado: [],
+      precios: Object.fromEntries($$("[data-precio]").filter(i => i.value).map(i => [i.dataset.precio, +i.value])), ingreso_minimo_usd_acre: $("#ing-min").value === "" ? null : +$("#ing-min").value}};
+}
+async function comparar() {
+  $("#estado-rot").textContent = "Calculando con 45 años de clima…"; $("#b-comparar").disabled = true;
+  const yo = ++E.pedidoRot;
+  try { const r = await api("/api/rotaciones", formulario()); if (yo !== E.pedidoRot) return; pintarResultado(r); $("#estado-rot").textContent = ""; }
+  catch (e) { if (yo === E.pedidoRot) $("#estado-rot").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  finally { $("#b-comparar").disabled = false; }
+}
+$("#b-comparar").onclick = comparar;
+
+const COLS = [["agua", "Agua", "usa menos riego y sufre menos la sequía"], ["suelo", "Suelo", "menos erosión y más materia orgánica"], ["dinero", "Ganancia", "más dinero por acre (diferencia de 10 USD o más)"],
+  ["seguridad", "Años malos", "menos años en que se pierde dinero"], ["plagas", "Plagas", "alterna más cultivos y corta los ciclos de plagas y malezas"]];
+function vsHoy(r, act, k) {
+  if (r === act) return `<span class="cmp igual">Actual</span>`;
+  let d = r.simple.valores[k] - act.simple.valores[k];
+  if (Math.abs(d) < ({dinero: 10}[k] || .05)) d = 0;
+  return d > 0 ? `<span class="cmp mejor">Mejor</span>` : d < 0 ? `<span class="cmp peor">Peor</span>` : `<span class="cmp igual">Igual</span>`;
+}
+const EST_COL = {cultivo: "var(--cultivo)", rastrojo: "var(--rastrojo)", desnudo: "var(--desnudo)"};
+const nombreOpcion = r => r.simple.es_actual ? "Rotación actual" : r.rotacion.replace(/^[A-Z] \(|\)$/g, "").replace(/^./, c => c.toUpperCase());
+const cicloTxt = r => r.ciclo.map(nombreCultivo).join(" → ");
+function pintarResultado(R) {
+  const vi = R.ranking.filter(r => r.posicion), a = vi[0], act = R.ranking.find(r => r.simple.es_actual);
+  let h = `<div class="recomendacion" role="region" aria-label="Recomendación"><h3>${a.simple.es_actual ? "Su rotación actual es la que mejor encaja con lo que eligió" : "Opción que mejor encaja con lo que eligió: " + esc(nombreOpcion(a))}</h3>
+    <p style="margin:0 0 8px"><b>${esc(cicloTxt(a))}</b></p>${a.simple.es_actual ? "" : `<p style="margin:0 0 8px">${esc(a.simple.resumen)}</p>`}<p style="margin:0 0 8px">${esc(a.simple.dinero)}</p>
+    <p class="mut" style="margin:0">Seguridad del resultado: ${esc(R.certeza)}</p></div>`;
+  h += `<h2>Comparación con su rotación actual</h2><div class="tabla-scroll"><table class="comp"><caption>"Mejor" o "Peor" indica cómo queda cada opción respecto de lo que siembra hoy.</caption>
+    <thead><tr><th>Opción</th>${COLS.map(([, t]) => `<th>${t}</th>`).join("")}<th class="num">Ganancia típica (USD/acre/año)</th></tr></thead><tbody>
+    ${R.ranking.map(r => `<tr class="${r.simple.es_actual ? "hoy" : ""}"><td><b>${esc(nombreOpcion(r))}</b>${r.problemas.length ? ` <span class="estado problema">No posible</span>` : ""}<br><span class="mut">${esc(cicloTxt(r))}</span></td>
+      ${COLS.map(([k]) => `<td>${vsHoy(r, act, k)}</td>`).join("")}<td class="num"><b>${num(r.metricas.margen_usd_acre)}</b></td></tr>`).join("")}</tbody></table></div>
+    <dl class="mut" style="display:grid;grid-template-columns:max-content 1fr;gap:2px 12px;margin:8px 0">${COLS.map(([, t, d]) => `<dt><b>${t}</b></dt><dd style="margin:0">${d}</dd>`).join("")}
+    <dt><b>Ganancia típica</b></dt><dd style="margin:0">ingreso por la cosecha menos semillas, fertilizante, químicos, cosecha y riego; no incluye arriendo ni maquinaria propia. Promedio de 45 años de clima.</dd></dl>`;
+  h += `<h2>Detalle de cada opción</h2>`;
+  h += R.ranking.map(r => { const s = r.simple, cal = r.calendario;
+    return `<details class="plegable opcion" ${r === a ? "open" : ""}><summary>${esc(nombreOpcion(r))} — ${esc(cicloTxt(r))}</summary><div>
+      ${r.problemas.length ? `<p class="err">No es posible para usted: ${esc(r.problemas.join("; "))}.</p>` : ""}
+      ${s.es_actual ? "" : `<p><b>Resumen:</b> ${esc(s.resumen)}</p>`}<p>${esc(s.dinero)}</p>
+      <h4>Cobertura del suelo durante un ciclo</h4>
+      <div class="franja" role="img" aria-label="Estado del suelo mes a mes">${cal.map(m => `<div style="background:${EST_COL[m.estado]}" title="${m.nombre}: ${m.estado === "cultivo" ? "con cultivo" : m.estado === "rastrojo" ? "con rastrojo" : "suelo desnudo"}"></div>`).join("")}</div>
+      <div class="franja-et">${cal.map((m, j) => `<span>${j % 3 === 0 ? m.nombre : ""}</span>`).join("")}</div>
+      <div class="leyenda-inline"><span><i style="background:var(--cultivo)"></i>Con cultivo</span><span><i style="background:var(--rastrojo)"></i>Con rastrojo (protegido)</span><span><i style="background:var(--desnudo)"></i>Suelo desnudo (riesgo de erosión)</span></div>
+      <h4>Ventajas</h4><ul>${(s.lo_bueno || []).map(x => `<li>${esc(x)}</li>`).join("") || "<li>Sin ventajas claras frente a la rotación actual.</li>"}</ul>
+      <h4>Riesgos a considerar</h4><ul>${r.riesgos.map(x => `<li>${esc(x)}</li>`).join("") || "<li>Ninguno destacado con estos datos.</li>"}</ul>
+      <h4>Consultar con su asesor</h4><ul>${r.validar_localmente.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+      <details class="plegable"><summary>Detalle técnico</summary><div>
+        <p class="mut">Puntaje ${num(r.puntaje, 1)} de 100 (entre ${r.rango_p10_p90.join(" y ")} en 8 de cada 10 simulaciones); primera en ${Math.round(r.prob_ser_primera * 100)} % de 300 simulaciones; ganancia entre ${r.margen_p10_p90.join(" y ")} USD/acre en 8 de cada 10 simulaciones${r.metricas.riego_mm_anio > 0 ? `; riego ${num(r.metricas.riego_mm_anio)} mm/año` : ""}.</p>
+        ${Object.entries(r.criterios).map(([k, v]) => `<div class="crit"><span>${esc(R.criterios[k])}</span><div class="b"><i style="width:${v * 100}%"></i></div><span>${num(v, 2)}</span></div>`).join("")}
+        <ul class="mut">${r.evidencia.map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+        <table><thead><tr><th>Cultivo</th><th class="num">Rendimiento</th><th class="num">% del máximo</th><th class="num">Ganancia</th><th class="num">Riego</th></tr></thead>${Object.entries(r.rendimiento_por_cultivo).filter(([, v]) => v.unidad).map(([k, v]) => `<tr><td>${esc(nombreCultivo(k))}</td><td class="num">${num(v.rend, 1)} ${esc(v.unidad)}/acre</td><td class="num">${Math.round(v.frac_potencial * 100)} %</td><td class="num">${num(v.margen)} USD</td><td class="num">${num(v.riego_mm)} mm</td></tr>`).join("")}</table>
+      </div></details></div></details>`; }).join("");
+  h += `<details class="plegable"><summary>¿Qué tan confiable es este cálculo?</summary><div><p>${esc(E.glos?.conceptos?.incertidumbre || "")}</p>
+    <p>Comparación del modelo con los rendimientos reales del condado (USDA NASS). Diferencias grandes indican supuestos que un asesor debería revisar.</p>
+    <table><thead><tr><th>Cultivo</th><th>Manejo</th><th class="num">Modelo</th><th class="num">Real</th><th class="num">Diferencia</th></tr></thead>${R.validacion.map(v => `<tr><td>${esc(v.cultivo)}</td><td>${esc(v.practica)}</td><td class="num">${num(v.simulado, 1)}</td><td class="num">${num(v.nass, 1)} ${esc(v.unidad)}</td><td class="num"><span class="estado ${Math.abs(v.error_pct) <= 15 ? "bien" : Math.abs(v.error_pct) <= 30 ? "atención" : "problema"}">${v.error_pct > 0 ? "+" : ""}${v.error_pct} %</span></td></tr>`).join("") || "<tr><td colspan=5>Sin datos para esta zona.</td></tr>"}</table></div></details>`;
+  h += `<p class="nota-pie">${esc(R.recordatorio)}</p>`;
+  $("#rot-res").innerHTML = h;
+}
+
+// ------------------------------------------------ predicción 2027-2029 (modelo FieldShift)
+const COL_CULT = {trigo: "#a87000", sorgo: "#e08a00", maiz: "#d4b000"}, NOM_CULT = {trigo: "Trigo", sorgo: "Sorgo", maiz: "Maíz"};
+const NOM_EST = {seco: "Seco", normal: "Normal", humedo: "Húmedo"};
+const P = {datos: null, sel: "Equilibrada", params: {}};
+const pct = v => `${Math.round(v * 100)} %`;
+async function cargarPrediccion(params) {
+  $("#estado-pred") ? $("#estado-pred").textContent = "Recalculando…" : null;
+  try {
+    P.datos = await api("/api/prediccion", params || {}); P.params = params || {};
+    if (!P.datos.resultados.some(r => r.estrategia === P.sel && r.factible)) P.sel = (P.datos.resultados.find(r => r.factible) || {}).estrategia || "Equilibrada";
+    pintarPrediccion();
+  } catch (e) { $("#pred-cont").innerHTML = `<p class="err">No se pudo calcular la predicción: ${esc(e.message)}</p>`; }
+}
+$("#tab-pred").addEventListener("click", () => { if (!P.datos) cargarPrediccion(); });
+function pintarPrediccion() {
+  const d = P.datos, R = d.resultados, r = R.find(x => x.estrategia === P.sel) || R[0];
+  const ref = R.find(x => x.estrategia === "Productividad" && x.factible);
+  let h = `<h2>Predicción para ${d.horizonte[0]}-${d.horizonte[d.horizonte.length - 1]}</h2>
+    <p class="intro">El modelo simula ${d.escenarios_simulados} futuros posibles del clima de Finney County y estima cuánto rendiría cada cultivo en cada uno. Luego busca la rotación de trigo, sorgo y maíz que mejor cumple la estrategia elegida, sin pasarse del agua disponible. Se calcula para todo el condado (punto NASA ${d.punto_nasa[0]}° N, ${Math.abs(d.punto_nasa[1])}° O), no para el campo seleccionado.</p>
+    <fieldset><legend>Elija una estrategia</legend><div class="seg" id="pred-est" role="group" aria-label="Estrategia">${R.map(x => `<button type="button" data-e="${esc(x.estrategia)}" aria-pressed="${x.estrategia === P.sel}" ${x.factible ? "" : "disabled"}>${esc(x.estrategia)}</button>`).join("")}</div>
+    <p class="ayuda-campo" style="margin-top:8px">Productividad: el mayor rendimiento promedio. Resiliencia: que los años malos sean lo menos malos posible. Equilibrada: un punto medio.</p></fieldset>`;
+  if (!r.factible) h += `<p class="err">${esc(r.motivo)}</p>`;
+  else {
+    h += `<h3>Rotación recomendada: estrategia ${esc(r.estrategia)}</h3><div class="anios-rot">${r.por_anio.map(a => `<div class="anio-rot" style="--c:${COL_CULT[a.cultivo]}"><div class="a">${a.anio}</div><div class="c">${NOM_CULT[a.cultivo]}</div>
+      <div class="d">Rendimiento esperado: <b>${pct(a.promedio)}</b> del promedio histórico.<br>En 8 de cada 10 escenarios: entre ${pct(a.p10)} y ${pct(a.p90)}.<br>Agua: ${a.agua_mm} mm</div></div>`).join("")}</div>
+      <p>${esc(r.explicacion)}</p>
+      <div class="tarjeta"><div class="dato" style="border-top:0;padding-top:0"><div class="fila"><span class="nombre">Rendimiento esperado de la rotación</span><span class="valor">${pct(r.promedio)} del promedio</span></div>
+        <p>Promedio de los tres años en los ${d.escenarios_simulados} escenarios. 100 % es el rendimiento promedio histórico de cada cultivo en Finney.</p></div>
+      <div class="dato"><div class="fila"><span class="nombre">En los años malos</span><span class="valor">${pct(r.cvar_20)} del promedio</span></div>
+        <p>Rendimiento promedio en el 20 % de los escenarios más desfavorables (los técnicos lo llaman CVaR 20 %). Cuanto más alto, mejor protegida está la rotación frente a años secos.</p></div>
+      <div class="dato"><div class="fila"><span class="nombre">Probabilidad de quedar bajo el promedio</span><span class="valor">${pct(r.prob_bajo_promedio)}</span></div>
+        <p>Parte de los escenarios en que la rotación rinde menos que el promedio histórico. Cerca de 50 % es normal: la mitad de los años son peores que el promedio.</p></div>
+      <div class="dato"><div class="fila"><span class="nombre">Agua que necesita</span><span class="valor">${num(r.agua_total_mm)} mm (${num(r.uso_agua_pct)} % del presupuesto)</span></div>
+        <p>Suma del agua de los tres cultivos frente al presupuesto de ${num(d.presupuesto_agua_mm)} mm para los tres años.${d.agua_es_ilustrativa ? " Son valores ilustrativos del modelo y deben reemplazarse por datos agronómicos verificados." : ""}</p></div></div>`;
+  }
+  h += `<h3>Comparación de estrategias</h3><div class="tabla-scroll"><table><thead><tr><th>Estrategia</th><th>Rotación</th><th class="num">Rendimiento esperado</th><th class="num">En los años malos</th><th class="num">Bajo el promedio</th><th class="num">Agua</th></tr></thead><tbody>
+    ${R.map(x => x.factible ? `<tr${x.estrategia === P.sel ? ' style="background:var(--primario-claro)"' : ""}><td><b>${esc(x.estrategia)}</b></td><td>${x.rotacion.map(c => NOM_CULT[c]).join(" → ")}</td>
+      <td class="num">${pct(x.promedio)}</td><td class="num">${pct(x.cvar_20)}${ref && x !== ref ? ` <span class="cmp ${x.cvar_20 > ref.cvar_20 + .002 ? "mejor" : x.cvar_20 < ref.cvar_20 - .002 ? "peor" : "igual"}">${x.cvar_20 >= ref.cvar_20 ? "+" : ""}${(100 * (x.cvar_20 - ref.cvar_20) / ref.cvar_20).toFixed(1)} %</span>` : ""}</td>
+      <td class="num">${pct(x.prob_bajo_promedio)}</td><td class="num">${num(x.agua_total_mm)} mm</td></tr>` : `<tr><td><b>${esc(x.estrategia)}</b></td><td colspan="5" class="err">${esc(x.motivo)}</td></tr>`).join("")}</tbody></table></div>
+    <p class="mut">Los porcentajes comparan con el rendimiento promedio histórico (100 %). La diferencia en "años malos" se mide respecto de la estrategia de productividad.</p>`;
+  if (r.factible) {
+    const hh = r.histograma, mx = Math.max(...hh.cuenta), W = 640, H = 170, bw = (W - 50) / hh.cuenta.length;
+    h += `<h3>Resultados en los ${d.escenarios_simulados} escenarios (estrategia ${esc(r.estrategia)})</h3>
+      <svg viewBox="0 0 ${W} ${H + 30}" class="chart" role="img" aria-label="Distribución de escenarios">${hh.cuenta.map((c, i) => { const x = 40 + i * bw, alto = c / mx * H, v = hh.desde[i];
+        return `<rect x="${x + 1}" y="${H - alto + 6}" width="${bw - 2}" height="${alto}" fill="${v + .05 <= r.cvar_20 + .025 ? "#b3261e" : v < 1 ? "#c9a35a" : "#2f5d2a"}"><title>${pct(v)}-${pct(v + .05)}: ${c} escenarios</title></rect>`; }).join("")}
+        ${hh.desde.map((v, i) => i % 2 === 0 ? `<text x="${40 + i * bw}" y="${H + 22}" font-size="10" fill="#666">${Math.round(v * 100)}%</text>` : "").join("")}</svg>
+      <div class="leyenda-inline"><span><i style="background:#b3261e"></i>Escenarios más desfavorables</span><span><i style="background:#c9a35a"></i>Bajo el promedio</span><span><i style="background:#2f5d2a"></i>En el promedio o mejor</span></div>
+      <p class="mut">Cada barra cuenta cuántos de los ${d.escenarios_simulados} futuros simulados terminan con ese rendimiento (promedio de los tres años). Una distribución angosta significa resultados más previsibles.</p>`;
+  }
+  const cl = d.clima, pr = cl.pronostico, ult = cl.ultimo, m = cl.matriz;
+  const porAnio = d.horizonte.map(a => { const q = pr.filter(x => x.anio === a); return {anio: a, seco: q.reduce((s, x) => s + x.seco, 0) / q.length, normal: q.reduce((s, x) => s + x.normal, 0) / q.length, humedo: q.reduce((s, x) => s + x.humedo, 0) / q.length}; });
+  h += `<h3>El clima que usa el modelo</h3><p class="intro">Cada trimestre de 1981 a 2025 se clasificó como seco, normal o húmedo según su lluvia comparada con 1981-2001. Con esa historia el modelo calcula qué tan probable es que a un trimestre le siga otro de cada tipo (cadena de Markov).</p>
+    <table><thead><tr><th>Año</th><th>Probabilidad de cada tipo de trimestre</th></tr></thead><tbody>${porAnio.map(a => `<tr><td>${a.anio}</td><td><div class="prob">${ESTADOS_P.map(e => `<div class="est-${e}" style="width:${a[e] * 100}%">${NOM_EST[e]} ${pct(a[e])}</div>`).join("")}</div></td></tr>`).join("")}</tbody></table>
+    <ul style="font-size:.92rem;margin-top:12px">
+      <li>Si un trimestre es <b>seco</b>, el siguiente también es seco en el ${pct(m.seco.seco)} de los casos.</li>
+      <li>Si un trimestre es <b>húmedo</b>, el siguiente también es húmedo en el ${pct(m.humedo.humedo)} de los casos.</li>
+      <li>Si un trimestre es <b>normal</b>, el siguiente es seco en el ${pct(m.normal.seco)} de los casos.</li>
+      <li>El último trimestre con datos (${ult.anio}, trimestre ${ult.trimestre}) fue <b>${NOM_EST[ult.estado].toLowerCase()}</b>. Desde ahí, en 2027-2029 el modelo espera trimestres secos con una probabilidad cercana al ${pct(porAnio[0].seco)}.</li></ul>
+    <div class="que-hacer"><b>Qué tan seguro es este pronóstico:</b> al probarlo con los años 2002 a 2023, la cadena de Markov acertó apenas un ${num(cl.validacion.mejora_pct, 2)} % mejor que usar el promedio histórico de cada trimestre. La lluvia de un trimestre anticipa muy poco la del siguiente. Por eso el modelo no da un solo pronóstico: simula ${d.escenarios_simulados} futuros posibles y elige rotaciones que funcionen bien en la mayoría de ellos.</div>
+    <h4 style="margin:16px 0 4px;font-size:.92rem">Historia de los trimestres, 1981-2025</h4>
+    <div class="tira" role="img" aria-label="Estado de cada trimestre">${Array.from({length: 4}, (_, q) => cl.historial.filter(x => x.trimestre === q + 1).map(x => `<div class="est-${x.estado}" title="${x.anio} T${x.trimestre}: ${NOM_EST[x.estado]} (${x.lluvia_mm} mm)"></div>`).join("")).join("")}</div>
+    <div class="mut" style="display:flex;justify-content:space-between;margin-top:2px"><span>1981</span><span>Una fila por trimestre (ene-mar, abr-jun, jul-sep, oct-dic)</span><span>2025</span></div>
+    <div class="leyenda-inline"><span><i class="est-seco"></i>Seco</span><span><i class="est-normal"></i>Normal</span><span><i class="est-humedo"></i>Húmedo</span></div>
+    <details class="plegable"><summary>Límites de lluvia usados para cada trimestre</summary><div><table><thead><tr><th>Trimestre</th><th class="num">Seco si llueve menos de</th><th class="num">Húmedo si llueve más de</th></tr></thead><tbody>
+      ${Object.entries(cl.limites_mm).map(([q, v]) => `<tr><td>${["", "Enero a marzo", "Abril a junio", "Julio a septiembre", "Octubre a diciembre"][q]}</td><td class="num">${v.seco_menos_de} mm</td><td class="num">${v.humedo_mas_de} mm</td></tr>`).join("")}</tbody></table></div></details>`;
+  h += `<h3>Cada cultivo en los escenarios</h3><div class="tabla-scroll"><table><thead><tr><th>Cultivo</th><th class="num">Promedio histórico</th><th class="num">Esperado 2027-2029</th><th class="num">Rango habitual</th><th class="num">Bajo el promedio</th><th class="num">Agua</th></tr></thead><tbody>
+    ${d.cultivos.map(c => `<tr><td><b>${NOM_CULT[c.cultivo]}</b></td><td class="num">${num(c.promedio_hist_bu_acre, 1)} bu/acre</td><td class="num">${pct(c.relativo_medio)}</td><td class="num">${pct(c.p10)} a ${pct(c.p90)}</td><td class="num">${pct(c.prob_bajo)}</td><td class="num">${c.agua_mm} mm</td></tr>`).join("")}</tbody></table></div>
+    <p class="mut">"Rango habitual" incluye 8 de cada 10 escenarios. Un rango angosto significa un cultivo más estable.</p>
+    <details class="plegable"><summary>Cómo se estiman los rendimientos y qué tan bien funciona</summary><div><table><thead><tr><th>Cultivo</th><th>Método</th><th>Error frente a usar el promedio</th></tr></thead><tbody>
+      ${d.cultivos.map(c => `<tr><td>${NOM_CULT[c.cultivo]}</td><td>${esc(c.evaluacion.metodo)}</td><td>${c.evaluacion.mejora_pct >= 0 ? `${num(c.evaluacion.mejora_pct, 1)} % menos error` : `${num(-c.evaluacion.mejora_pct, 1)} % más error con regresión; por eso se usan años con clima parecido`} (probado con ${c.evaluacion.prueba} años no usados para entrenar)</td></tr>`).join("")}</tbody></table>
+      <p class="mut">Los rendimientos se relacionan con qué parte del ciclo de cada cultivo cayó en trimestres secos o húmedos. A cada escenario se le suma un error tomado de los años reales, para reflejar lo que el clima no explica (plagas, granizo, manejo).</p></div></details>`;
+  const pp = P.params;
+  h += `<h3>Ajustar el modelo</h3><p class="intro">Cambie sus condiciones y el optimizador vuelve a buscar la mejor rotación (aparece como estrategia "Personalizada").</p><div class="tarjeta">
+    <div class="ctrl-pred"><label for="pr-av">¿Qué le preocupa más?</label><input type="range" id="pr-av" min="0" max="1" step=".1" value="${pp.aversion ?? .5}"><output id="o-av"></output></div>
+    <p class="ayuda-campo" style="margin:-4px 0 8px">Izquierda: ganar lo máximo en promedio. Derecha: evitar los años malos.</p>
+    <div class="ctrl-pred"><label for="pr-agua">Agua disponible para los 3 años</label><input type="range" id="pr-agua" min="900" max="2400" step="50" value="${pp.presupuesto_agua_mm ?? d.presupuesto_agua_mm}"><output id="o-agua"></output></div>
+    <div class="ctrl-pred"><label for="pr-maiz">Máximo de años con maíz</label><input type="range" id="pr-maiz" min="0" max="3" step="1" value="${pp.max_maiz ?? 2}"><output id="o-maiz"></output></div>
+    <div class="opciones" id="pr-excl" style="margin:8px 0">${["trigo", "sorgo", "maiz"].map(c => `<label><input type="checkbox" value="${c}" ${(pp.excluir || []).includes(c) ? "checked" : ""}> No sembrar ${NOM_CULT[c].toLowerCase()}</label>`).join("")}</div>
+    <button class="boton primario" id="b-pred" type="button">Recalcular rotación</button> <span id="estado-pred" class="mut" role="status"></span></div>
+    <details class="plegable"><summary>Todas las combinaciones posibles (${d.alternativas.length})</summary><div><table><thead><tr><th>Rotación</th><th class="num">Rendimiento esperado</th><th class="num">En los años malos</th><th class="num">Agua</th><th>¿Cumple las restricciones?</th></tr></thead><tbody>
+      ${d.alternativas.map(a => `<tr><td>${a.rotacion.map(c => NOM_CULT[c]).join(" → ")}</td><td class="num">${pct(a.promedio)}</td><td class="num">${pct(a.cvar_20)}</td><td class="num">${num(a.agua_total_mm)} mm</td><td>${a.factible ? "Sí" : "No"}</td></tr>`).join("")}</tbody></table>
+      <p class="mut">Ordenadas por la estrategia equilibrada. "No cumple" significa que repite un cultivo dos años seguidos, supera el agua o tiene demasiados años de maíz.</p></div></details>
+    <p class="nota-pie">Fuente: ${esc(d.fuente_datos)}. Método: ${esc(d.metodo_climatico)}; ${esc(d.metodo_optimizacion)}. Los resultados son simulaciones, no rendimientos comprobados en campos; deben revisarse con un asesor local.</p>`;
+  $("#pred-cont").innerHTML = h; $("#pred-cont").classList.remove("cargando");
+  $$("#pred-est button").forEach(b => b.onclick = () => { P.sel = b.dataset.e; pintarPrediccion(); });
+  const upd = () => { const v = +$("#pr-av").value; $("#o-av").textContent = v <= .2 ? "Promedio" : v >= .8 ? "Años malos" : "Ambos";
+    $("#o-agua").textContent = `${$("#pr-agua").value} mm`; $("#o-maiz").textContent = `${$("#pr-maiz").value} años`; };
+  ["#pr-av", "#pr-agua", "#pr-maiz"].forEach(x => $(x).oninput = upd); upd();
+  $("#b-pred").onclick = () => { P.sel = "Personalizada"; cargarPrediccion({aversion: +$("#pr-av").value, presupuesto_agua_mm: +$("#pr-agua").value, max_maiz: +$("#pr-maiz").value,
+    excluir: $$("#pr-excl input:checked").map(i => i.value)}); };
+}
+const ESTADOS_P = ["seco", "normal", "humedo"];
+
+// ------------------------------------------------ ayuda
+async function iniciarAyuda() {
+  const g = E.glos = await api("/api/glosario");
+  const T = {evapotranspiracion: "Evapotranspiración (ET)", balance_hidrico: "Balance de agua", ndvi: "NDVI (índice de verdor)", riesgo_helada: "Riesgo de heladas", anomalia_humedad: "Anomalía de humedad",
+    tendencia: "Tendencia", incertidumbre: "Incertidumbre", fijadoras_n: "Cultivos que fijan nitrógeno", coberturas: "Cultivos de cobertura", raices_profundas: "Cultivos de raíz profunda", tolerantes_sequia: "Cultivos tolerantes a la sequía"};
+  $("#glos").innerHTML = `<h2>Cómo usar esta herramienta</h2><ol><li>Haga clic en un campo del mapa. Para quitar la selección, vuelva a hacer clic sobre él, haga clic en un lugar vacío del mapa o presione Esc.</li>
+    <li>En <b>Mi campo</b> verá lo sembrado cada año y la situación de la zona. Abra cada tema para ver qué significa cada valor.</li>
+    <li>En <b>Comparar rotaciones</b> indique lo que le importa y si riega, y compare las opciones con lo que siembra hoy.</li>
+    <li>Cambie el fondo del mapa con los botones Satélite, Topográfico o Calles.</li></ol>
+    <h2>Glosario</h2><dl>${Object.entries(g.conceptos).map(([k, v]) => `<dt style="font-weight:600;margin-top:12px">${esc(T[k] || k)}</dt><dd style="margin:2px 0 0">${esc(v)}</dd>`).join("")}</dl>
+    <h2>Términos de la predicción 2027-2029</h2><dl>
+      <dt style="font-weight:600;margin-top:12px">Escenario</dt><dd style="margin:2px 0 0">Un futuro posible del clima, armado trimestre a trimestre según cómo se encadenaron los trimestres secos, normales y húmedos entre 1981 y 2025.</dd>
+      <dt style="font-weight:600;margin-top:12px">Cadena de Markov</dt><dd style="margin:2px 0 0">Método que estima la probabilidad del próximo trimestre usando solo cómo fue el trimestre actual.</dd>
+      <dt style="font-weight:600;margin-top:12px">Rendimiento relativo</dt><dd style="margin:2px 0 0">Rendimiento comparado con el promedio histórico del cultivo en Finney: 100 % es un año promedio.</dd>
+      <dt style="font-weight:600;margin-top:12px">Años malos (CVaR 20 %)</dt><dd style="margin:2px 0 0">Rendimiento promedio en el 20 % de los escenarios más desfavorables. Mide qué tan mal le iría a una rotación cuando el clima no acompaña.</dd>
+      <dt style="font-weight:600;margin-top:12px">Optimización</dt><dd style="margin:2px 0 0">Búsqueda matemática de la mejor combinación de cultivos para 2027, 2028 y 2029 que respete el agua disponible, no repita el mismo cultivo dos años seguidos y limite los años de maíz.</dd></dl>
+    <h2>Origen de los datos</h2><p>${esc(g.satelite_vs_terreno)}</p>
+    <table><tbody>${Object.entries(g.tipos_de_dato).map(([k, v]) => `<tr><th scope="row">${esc({satelite: "Satélite", reanalisis: "Modelo NASA POWER", terreno: "Medición en terreno", encuesta: "Estadística USDA", modelo_local: "Cálculo de esta herramienta"}[k] || k)}</th><td>${esc(v)}</td></tr>`).join("")}
+    <tr><th scope="row">Desempeño de los cultivos</th><td>USDA NASS QuickStats, Kansas 1981-2026: rendimientos y superficie sembrada y cosechada por condado; estado semanal de los cultivos, humedad del suelo y avance de siembra y cosecha informados por agricultores y técnicos; precios recibidos. Son datos medidos en terreno y encuestas, no estimaciones de esta herramienta.</td></tr>
+    <tr><th scope="row">Campos de cultivo</th><td>USDA NASS "Crop Sequence Boundaries": límites de cada campo y el cultivo de cada año entre 2017 y 2024, obtenido de imágenes satelitales. Si el servicio no responde se usan los campos de OpenStreetMap, sin historial. La forma circular sugiere riego por pivote, pero no lo confirma.</td></tr></tbody></table>
+    <details class="plegable"><summary>Lista técnica de indicadores</summary><div><table>${Object.values(g.indicadores).map(v => `<tr><td><b>${esc(v.nombre)}</b> (${esc(v.unidad)})</td><td>${esc(v.que_es)}</td></tr>`).join("")}</table></div></details>
+    <p class="nota-pie">Esta herramienta ayuda a ver patrones y posibilidades. Las decisiones finales son del agricultor, con el apoyo de expertos locales (K-State Research and Extension, NRCS).</p>`;
+  $("#glos").classList.remove("cargando");
+}
+
+// ------------------------------------------------ idioma (español / inglés)
+// El catálogo web/i18n_en.json (generado por scripts/catalogo_en.py) traduce todo el texto visible, incluido el que
+// genera el servidor. Al volver a español se restauran los textos originales sin recargar la página.
+const I18N = {lang: "es", cat: null, plant: [], orig: new Map(), attrs: new Map(), obs: null, ocupado: false};
+const MES_EN = {ene: "Jan", feb: "Feb", mar: "Mar", abr: "Apr", may: "May", jun: "Jun", jul: "Jul", ago: "Aug", sep: "Sep", oct: "Oct", nov: "Nov", dic: "Dec"};
+const RE_FECHA = /(^|[^\p{L}\d])(\d{1,2}) (ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)(?![\p{L}])/gu;
+const escRe = x => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+function compilarCatalogo(c) {
+  I18N.cat = c;
+  I18N.plant = c.plantillas.map(([es, en]) => {
+    let src = "", tipos = [];
+    for (const ch of es) { if (ch === "#") { src += "([-+−]?\\d[\\d.,]*)"; tipos.push("#"); } else if (ch === "@") { src += "((?:(?![.;!?]\\s+[A-ZÁÉÍÓÚÑ¿\"(]).)+?)"; tipos.push("@"); } else src += escRe(ch); }
+    return [new RegExp("^" + src + "$", "s"), en, tipos, es.replace(/[#@]/g, "").length];
+  });
+}
+function numEn(x) {   // formato español (1.450,5) -> inglés (1,450.5)
+  return x.replace(/(\d),(\d)/g, "$1\u0001$2").replace(/(\d{1,3})((?:\.\d{3})+)(?!\d)/g, (m, a, b) => a + b.replace(/\./g, ",")).replace(/\u0001/g, ".");
+}
+const fechasEn = x => x.replace(RE_FECHA, (m, pre, d, mes) => `${pre}${MES_EN[mes]} ${d}`);
+// Mismo algoritmo que rotacion/i18n.py (probado en tests/test_rotacion.py)
+const GENERICA = 4;
+const RE_ES = /[áéíóúñ¿¡]|(?<![\p{L}\d_])(de|del|la|las|los|el|que|con|para|por|en|un|una|y|se|su|sus|es|son|más|años|sin|cada|muy)(?![\p{L}\d_])/giu;
+const espanol = x => (x.match(RE_ES) || []).length;
+function aplicar(m, en, tipos, prof) {
+  return en.replace(/\{(\d+)\}/g, (_, i) => { const g = m[+i] || ""; return tipos[i - 1] === "@" ? tradTexto(g.trim(), prof + 1) : numEn(g); });
+}
+function tradTexto(t, prof = 0) {
+  const ex = I18N.cat.exactas;
+  if (ex[t] !== undefined) return ex[t];
+  if (/[.:;]$/.test(t) && ex[t.slice(0, -1)] !== undefined) return ex[t.slice(0, -1)] + t.slice(-1);
+  if (ex[t + "."] !== undefined && ex[t + "."].endsWith(".")) return ex[t + "."].slice(0, -1);
+  const f = t.match(/^(\d{1,2}) (ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)$/); if (f) return `${MES_EN[f[2]]} ${f[1]}`;
+  if (prof < 6) {
+    for (const [re, en, tipos, lit] of I18N.plant) { if (lit <= GENERICA) continue; const m = t.match(re); if (m) return aplicar(m, en, tipos, prof); }
+    const partes = t.split(/(?<=[.;!?])\s+(?=[A-ZÁÉÍÓÚÑ¿"(])/);
+    if (partes.length > 1) return partes.map(x => tradTexto(x, prof + 1)).join(" ");
+    if (/[.:;]$/.test(t) && t.length > 1) return tradTexto(t.slice(0, -1), prof + 1) + t.slice(-1);
+    let mejor = null;
+    for (const [re, en, tipos, lit] of I18N.plant) {
+      if (lit > GENERICA) continue; const m = t.match(re); if (!m) continue;
+      const r = aplicar(m, en, tipos, prof);
+      if (mejor === null || espanol(r) < espanol(mejor)) mejor = r;
+      if (espanol(r) === 0) break;
+    }
+    if (mejor !== null && mejor !== t && espanol(mejor) <= espanol(t)) return mejor;
+  }
+  let r = t;
+  for (const [es, en] of I18N.cat.frases) if (r.includes(es)) r = r.split(es).join(en);
+  return fechasEn(numEn(r));
+}
+function traducir(s) {
+  if (!s || !/[\p{L}\d]/u.test(s)) return s;
+  const pre = s.match(/^\s*/)[0], post = s.match(/\s*$/)[0], t = s.trim().replace(/\s+/g, " ");
+  if (!/\p{L}/u.test(t)) return pre + numEn(t) + post;
+  return pre + tradTexto(t) + post;
+}
+const ATR = ["title", "aria-label", "placeholder"];
+function traducirNodo(raiz) {
+  if (I18N.lang !== "en" || !I18N.cat) return;
+  I18N.ocupado = true;
+  const w = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT);
+  const nodos = []; if (raiz.nodeType === 3) nodos.push(raiz); while (w.nextNode()) nodos.push(w.currentNode);
+  for (const n of nodos) {
+    const p = n.parentElement; if (!p || ["SCRIPT", "STYLE", "TEXTAREA"].includes(p.tagName) || p.closest("[translate=no]")) continue;
+    if (I18N.orig.has(n) && n.nodeValue === I18N.orig.get(n).en) continue;
+    const es = n.nodeValue, en = traducir(es);
+    if (en !== es) { I18N.orig.set(n, {es, en}); n.nodeValue = en; }
+  }
+  const els = raiz.nodeType === 1 ? [raiz, ...raiz.querySelectorAll("[title],[aria-label],[placeholder]")] : [];
+  for (const el of els) for (const a of ATR) {
+    if (!el.hasAttribute || !el.hasAttribute(a) || el.closest("[translate=no]")) continue;
+    const prev = I18N.attrs.get(el) || {}; const v = el.getAttribute(a);
+    if (prev[a] && prev[a].en === v) continue;
+    const en = traducir(v); if (en !== v) { prev[a] = {es: v, en}; I18N.attrs.set(el, prev); el.setAttribute(a, en); }
+  }
+  I18N.ocupado = false;
+}
+function restaurarEspanol() {
+  I18N.ocupado = true;
+  for (const [n, v] of I18N.orig) if (n.isConnected && n.nodeValue === v.en) n.nodeValue = v.es;
+  for (const [el, m] of I18N.attrs) for (const a in m) if (el.isConnected && el.getAttribute(a) === m[a].en) el.setAttribute(a, m[a].es);
+  I18N.orig.clear(); I18N.attrs.clear(); I18N.ocupado = false;
+}
+async function cambiarIdioma(l) {
+  if (l === "en" && !I18N.cat) {
+    try { compilarCatalogo(await (await fetch(API + "/web/i18n_en.json")).json()); }
+    catch (e) { alert("No se pudo cargar la traducción / Could not load the translation"); return; }
+  }
+  I18N.lang = l; document.documentElement.lang = l;
+  $$("#idioma button").forEach(b => b.setAttribute("aria-pressed", b.dataset.l === l));
+  try { localStorage.setItem("idioma", l); } catch (e) {}
+  if (l === "en") traducirNodo(document.body); else restaurarEspanol();
+  document.title = l === "en" ? "Crop Rotation Explorer · Finney County" : "Explorador de rotaciones de cultivos · Finney County";
+}
+I18N.obs = new MutationObserver(ms => {
+  if (I18N.lang !== "en" || I18N.ocupado) return;
+  for (const m of ms) {
+    if (m.type === "childList") m.addedNodes.forEach(n => (n.nodeType === 1 || n.nodeType === 3) && traducirNodo(n));
+    else if (m.type === "characterData") traducirNodo(m.target);
+    else if (m.type === "attributes") traducirNodo(m.target);
+  }
+});
+I18N.obs.observe(document.body, {childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ATR});
+$$("#idioma button").forEach(b => b.onclick = () => cambiarIdioma(b.dataset.l));
+try { if (localStorage.getItem("idioma") === "en") cambiarIdioma("en"); } catch (e) {}
+
+vacio(); $("#rot-zona").textContent = "Sin campo seleccionado: se usará el centro de Finney County.";
+iniciarMapa();
+Promise.all([iniciarFormulario(), iniciarAyuda()]).catch(e => $("#campo-cont").innerHTML = `<p class="err">No se pudo conectar con el servidor (${esc(e.message)}). Verifique que esté corriendo <code>python -m rotacion.api</code>.</p>`);
+</script>
+</body>
+</html>
